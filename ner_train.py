@@ -42,12 +42,7 @@ eval_df = pd.DataFrame(eval_data, columns=["sentence_id", "words", "labels"])
 
 class NerModel:
     def __init__(self, dataset=None):
-
-        if dataset:
-            self.dataset = dataset
-        else:
-            raise Exception("Dataset is not set")
-
+        self.dataset = dataset
         labels_list=["O", "B-ACT",  "I-ACT", "B-OBJ", "I-OBJ", "B-VAL", "I-VAL", "B-VAR", "I-VAR"]
 
         # Create a NERModel
