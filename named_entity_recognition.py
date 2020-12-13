@@ -40,9 +40,22 @@ eval_data = [
 eval_df = pd.DataFrame(eval_data, columns=["sentence_id", "words", "labels"])
 
 # Create a NERModel
+args = {
+    'overwrite_output_dir': True,
+    'reprocess_input_data': True,
+    
+    'save_eval_checkpoints': False,
+    'save_steps': -1,
+    'save_model_every_epoch': False,
+    
+    'train_batch_size': 10,
+    'num_train_epochs': 5,
+    'max_seq_length': 256,
+    'gradient_accumulation_steps': 8
+}
+
 model = NERModel("bert", "bert-base-cased", use_cuda=False,
     args={"overwrite_output_dir": True, "reprocess_input_data": True})
-
 
 train_df = eval_df
 
