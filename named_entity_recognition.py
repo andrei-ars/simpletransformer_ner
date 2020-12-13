@@ -40,7 +40,7 @@ eval_data = [
 eval_df = pd.DataFrame(eval_data, columns=["sentence_id", "words", "labels"])
 
 # Create a NERModel
-args = {
+model_args = {
     'overwrite_output_dir': True,
     'reprocess_input_data': True,
     
@@ -54,8 +54,8 @@ args = {
     'gradient_accumulation_steps': 8
 }
 
-model = NERModel("bert", "bert-base-cased", use_cuda=False,
-    args={"overwrite_output_dir": True, "reprocess_input_data": True})
+model = NERModel("bert", "bert-base-cased", use_cuda=False, args=model_args)
+    # args={"overwrite_output_dir": True, "reprocess_input_data": True}
 
 train_df = eval_df
 
