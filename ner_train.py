@@ -59,8 +59,8 @@ class NerModel:
             'save_steps': -1,
             'save_model_every_epoch': False,
             
-            'train_batch_size': 10,
-            'num_train_epochs': 20,   # 5
+            'train_batch_size': 100,
+            'num_train_epochs': 5,   # 5
             'max_seq_length': 256,
             'gradient_accumulation_steps': 8,
 
