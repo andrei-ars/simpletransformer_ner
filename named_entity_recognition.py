@@ -49,7 +49,7 @@ args = {
     'save_model_every_epoch': False,
     
     'train_batch_size': 10,
-    'num_train_epochs': 5,
+    'num_train_epochs': 100,   # 5
     'max_seq_length': 256,
     'gradient_accumulation_steps': 8
 }
