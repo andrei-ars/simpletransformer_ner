@@ -72,11 +72,17 @@ class NerModel:
 
     def train(self):
         # # Train the model
-        self.model.train_model(self.dataset['train'])
+        if self.dataset:
+            self.model.train_model(self.dataset['train'])
+        else:
+            raise Exception("dataset is None")
 
     def eval(self):
         # # Evaluate the model
-        result, model_outputs, predictions = self.model.eval_model(self.dataset['val'])
+        if dataset:
+            result, model_outputs, predictions = self.model.eval_model(self.dataset['val'])
+        else:
+            raise Exception("dataset is None")
 
     def simple_test(self):
         # Predictions on arbitary text strings
@@ -131,11 +137,20 @@ class NerDataset:
 
 
 if __name__ == "__main__":
-    dataset = {}
-    dataset['train'] = NerDataset("dataset/train.txt").to_dataframe()
-    dataset['val'] = NerDataset("dataset/valid.txt").to_dataframe()
-    dataset['test'] = NerDataset("dataset/test.txt").to_dataframe()
-    model = NerModel(dataset)
-    model.train()
-    model.eval()
 
+    mode = "infer"
+
+    if mode == "train":
+        dataset = {}
+        dataset['train'] = NerDataset("dataset/train.txt").to_dataframe()
+        dataset['val'] = NerDataset("dataset/valid.txt").to_dataframe()
+        dataset['test'] = NerDataset("dataset/test.txt").to_dataframe()
+        model = NerModel(dataset)
+        model.train()
+        model.eval()
+
+    elif mode == "infer":
+        sentences = ["Click on the OK button", "Click on the BOQ OK EOQ button"]
+        model = NerModel()
+        result = model.predict(sentences)
+        print("result:", result)
