@@ -55,7 +55,7 @@ class NerModel:
             'save_model_every_epoch': False,
             
             'train_batch_size': 10, # 10
-            'num_train_epochs': 5,   # 5
+            'num_train_epochs': 10,   # 5
             'max_seq_length': 256,
             'gradient_accumulation_steps': 8,
 
@@ -76,6 +76,7 @@ class NerModel:
         # # Evaluate the model
         if dataset:
             result, model_outputs, predictions = self.model.eval_model(self.dataset['val'])
+            print("Evaluation result:", result)
         else:
             raise Exception("dataset is None")
 
@@ -133,7 +134,7 @@ class NerDataset:
 
 if __name__ == "__main__":
 
-    mode = "infer"
+    mode = "train"
 
     if mode == "train":
         dataset = {}
@@ -144,8 +145,10 @@ if __name__ == "__main__":
         model.train()
         model.eval()
 
-    elif mode == "infer":
-        sentences = ["Click on the OK button", "Click on the BOQ OK EOQ button"]
+    if mode in {"infer"}:
         model = NerModel()
+
+    if mode in {"train", "infer"}:
+        sentences = ["Click on the OK button", "Click on the BOQ OK EOQ button"]
         result = model.predict(sentences)
         print("result:", result)
