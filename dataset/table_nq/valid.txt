@@ -9,7 +9,7 @@ zzyi I-OBJ
 verify B-ACT
 first B-ORD
 Yeah B-OBJ
- I-OBJ
+. I-OBJ
 verify B-ACT
 first B-ORD
 zzvl B-OBJ
