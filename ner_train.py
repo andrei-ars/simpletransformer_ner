@@ -149,7 +149,7 @@ def get_labels_list(filepath):
 if __name__ == "__main__":
 
     mode = "train"
-    modelname = "nlp_data"
+    modelname = "table_nq"
 
     if mode == "train":
         dataset = {}
