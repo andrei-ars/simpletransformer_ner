@@ -39,14 +39,17 @@ eval_data = [
 eval_df = pd.DataFrame(eval_data, columns=["sentence_id", "words", "labels"])
 
 
-
 class NerModel:
-    def __init__(self, dataset=None):
+    def __init__(self, modelname="", dataset=None):
         self.dataset = dataset
-        labels_list=["O", "B-ACT",  "I-ACT", "B-OBJ", "I-OBJ", "B-VAL", "I-VAL", "B-VAR", "I-VAR"]
+        #labels_list = ["O", "B-ACT",  "I-ACT", "B-OBJ", "I-OBJ", "B-VAL", "I-VAL", "B-VAR", "I-VAR"]
+        #labels_list = dataset.get_labels_list()
+        labels_list = dataset['labels_list']
 
+        output_dir = "outputs_{}".format(modelname)
         # Create a NERModel
         model_args = {
+            'output_dir': output_dir,
             'overwrite_output_dir': True,
             'reprocess_input_data': True,
             
@@ -131,17 +134,31 @@ class NerDataset:
     #          'test': self.dataset.test,
     #            }
 
+def get_labels_list(filepath):
+    labels_list = []
+    with open(filepath) as fp:
+        for line in fp:
+            ls = line.split()
+            if len(ls) == 2:
+                labels_list.append(ls[0])
+            else:
+                logging.warning("bad format of the file {}".format(filepath))
+    return labels_list
+
 
 if __name__ == "__main__":
 
     mode = "train"
+    modelname = "nlp_data"
 
     if mode == "train":
         dataset = {}
-        dataset['train'] = NerDataset("dataset/train.txt").to_dataframe()
-        dataset['val'] = NerDataset("dataset/valid.txt").to_dataframe()
-        dataset['test'] = NerDataset("dataset/test.txt").to_dataframe()
-        model = NerModel(dataset)
+        dataset['train'] = NerDataset("dataset/{}/train.txt".format(modelname)).to_dataframe()
+        dataset['val'] = NerDataset("dataset/{}/valid.txt".format(modelname)).to_dataframe()
+        dataset['test'] = NerDataset("dataset/{}/test.txt".format(modelname)).to_dataframe()
+        dataset['labels_list'] = get_label_list("dataset/{}/tag.dict".format(modelname))
+        print("labels_list: {}".format(dataset['labels_list']))
+        model = NerModel(modelname=modelname, dataset=dataset)
         model.train()
         model.eval()
 
@@ -149,6 +166,7 @@ if __name__ == "__main__":
         model = NerModel()
 
     if mode in {"train", "infer"}:
-        sentences = ["Click on the OK button", "Click on the BOQ OK EOQ button"]
+        #sentences = ["Click on the OK button", "Click on the BOQ OK EOQ button"]
+        sentences = ["enter in city textbox", "enter Choose a flavor", "enter name in the last name textbox"]
         result = model.predict(sentences)
         print("result:", result)
