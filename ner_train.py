@@ -156,7 +156,7 @@ if __name__ == "__main__":
         dataset['train'] = NerDataset("dataset/{}/train.txt".format(modelname)).to_dataframe()
         dataset['val'] = NerDataset("dataset/{}/valid.txt".format(modelname)).to_dataframe()
         dataset['test'] = NerDataset("dataset/{}/test.txt".format(modelname)).to_dataframe()
-        dataset['labels_list'] = get_label_list("dataset/{}/tag.dict".format(modelname))
+        dataset['labels_list'] = get_labels_list("dataset/{}/tag.dict".format(modelname))
         print("labels_list: {}".format(dataset['labels_list']))
         model = NerModel(modelname=modelname, dataset=dataset)
         model.train()
