@@ -163,10 +163,15 @@ if __name__ == "__main__":
         model.eval()
 
     if mode in {"infer"}:
-        model = NerModel()
+        model = NerModel(modelname=modelname, dataset=dataset)
 
     if mode in {"train", "infer"}:
         #sentences = ["Click on the OK button", "Click on the BOQ OK EOQ button"]
-        sentences = ["enter in city textbox", "enter Choose a flavor", "enter name in the last name textbox"]
+        #sentences = ["enter in city textbox", "enter Choose a flavor", "enter name in the last name textbox"]
+        sentences = [
+            "click on Find an Agent after Renters Insurance",
+            "Hover over login after forgot your password?",
+            "click on Get a Quote next to Motor Home Insurance"
+                ]
         result = model.predict(sentences)
         print("result:", result)
