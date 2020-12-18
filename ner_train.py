@@ -148,7 +148,8 @@ def get_labels_list(filepath):
 
 if __name__ == "__main__":
 
-    mode = "train"
+    #mode = "train"
+    mode = "infer"
     modelname = "table_nq"
 
     if mode == "train":
