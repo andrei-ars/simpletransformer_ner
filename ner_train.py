@@ -156,12 +156,12 @@ if __name__ == "__main__":
     #modelname = "nlp_ext_nq"
 
 
-    if modelname == "nlp_ext"
+    if modelname == "nlp_ext":
         test_sentences = [
             "Double Click on a BOQ calendar EOQ from the list on the left side of the screen.",
             "Enter text into the BOQ password EOQ on the bottom left of the screen"
             ]
-    if modelname == "nlp_ext_nq"
+    if modelname == "nlp_ext_nq":
         test_sentences = [
             "Double Click on a calendar from the list on the left side of the screen.",
             "Enter text into the password on the bottom left of the screen"
