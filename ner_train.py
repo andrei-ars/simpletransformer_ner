@@ -150,11 +150,38 @@ if __name__ == "__main__":
 
     mode = "train"
     #mode = "infer"
-    modelname = "table_nq"
+
+    #modelname = "table_nq"
+    modelname = "nlp_ext"
+    #modelname = "nlp_ext_nq"
+
+
+    if modelname == "nlp_ext"
+        test_sentences = [
+            "Double Click on a BOQ calendar EOQ from the list on the left side of the screen.",
+            "Enter text into the BOQ password EOQ on the bottom left of the screen"
+            ]
+    if modelname == "nlp_ext_nq"
+        test_sentences = [
+            "Double Click on a calendar from the list on the left side of the screen.",
+            "Enter text into the password on the bottom left of the screen"
+            ]
+    elif modelname == "table_nq":
+        test_sentences = [
+            "click on Find an Agent after Renters Insurance",
+            "Hover over login after forgot your password?",
+            "click on Get a Quote next to Motor Home Insurance"
+            ]
+
+        #sentences = ["Click on the OK button", "Click on the BOQ OK EOQ button"]
+        #sentences = ["enter in city textbox", "enter Choose a flavor", "enter name in the last name textbox"]
+    else:
+        raise Exception("wrong model name")
+
 
     dataset = {}
     dataset['labels_list'] = get_labels_list("dataset/{}/tag.dict".format(modelname))
-    print("labels_list: {}".format(dataset['labels_list']))    
+    print("labels_list: {}".format(dataset['labels_list']))
     
     if mode == "train":
         dataset['train'] = NerDataset("dataset/{}/train.txt".format(modelname)).to_dataframe()
@@ -168,12 +195,5 @@ if __name__ == "__main__":
         model = NerModel(modelname=modelname, dataset=dataset)
 
     if mode in {"train", "infer"}:
-        #sentences = ["Click on the OK button", "Click on the BOQ OK EOQ button"]
-        #sentences = ["enter in city textbox", "enter Choose a flavor", "enter name in the last name textbox"]
-        sentences = [
-            "click on Find an Agent after Renters Insurance",
-            "Hover over login after forgot your password?",
-            "click on Get a Quote next to Motor Home Insurance"
-                ]
-        result = model.predict(sentences)
+        result = model.predict(test_sentences)
         print("result:", result)
