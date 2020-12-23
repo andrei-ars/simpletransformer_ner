@@ -40,7 +40,7 @@ eval_df = pd.DataFrame(eval_data, columns=["sentence_id", "words", "labels"])
 
 
 class NerModel:
-    def __init__(self, modelname="", dataset=None):
+    def __init__(self, modelname="", dataset=None, use_saved_model=False):
         self.dataset = dataset
         #labels_list = ["O", "B-ACT",  "I-ACT", "B-OBJ", "I-OBJ", "B-VAL", "I-VAL", "B-VAR", "I-VAR"]
         #labels_list = dataset.get_labels_list()
@@ -64,8 +64,11 @@ class NerModel:
 
             'labels_list': labels_list
         }
-
-        self.model = NERModel("bert", "bert-base-cased", use_cuda=False, args=model_args)
+                
+        if use_saved_model:
+            self.model = NERModel("bert", output_dir, use_cuda=False, args=model_args)
+        else:
+            self.model = NERModel("bert", "bert-base-cased", use_cuda=False, args=model_args)
             # args={"overwrite_output_dir": True, "reprocess_input_data": True}
 
     def train(self):
@@ -194,7 +197,7 @@ if __name__ == "__main__":
         model.eval()
 
     if mode in {"infer"}:
-        model = NerModel(modelname=modelname, dataset=dataset)
+        model = NerModel(modelname=modelname, dataset=dataset, use_saved_model=True)
 
     if mode in {"train", "infer"}:
         result = model.predict(test_sentences)
