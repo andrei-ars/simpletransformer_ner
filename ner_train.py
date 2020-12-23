@@ -175,7 +175,14 @@ if __name__ == "__main__":
         test_sentences = [
             "click on Find an Agent after Renters Insurance",
             "Hover over login after forgot your password?",
-            "click on Get a Quote next to Motor Home Insurance"
+            "click on Get a Quote next to Motor Home Insurance",
+            "Click on Lifestyle next to Bihar Election 2020",
+            "click on Renters Insurance before Find an Agent",
+            "click on Images next to Maps",
+            "click on Yes radio for Are you Hispanic or Latino?",
+            "click on Letters where Numbers greater than 3",
+            "Click on Manage External User button for Contact Detail",
+            "Click on Black Where ends with c"
             ]
 
         #sentences = ["Click on the OK button", "Click on the BOQ OK EOQ button"]
