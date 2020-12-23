@@ -149,8 +149,8 @@ def get_labels_list(filepath):
 
 if __name__ == "__main__":
 
-    mode = "train"
-    #mode = "infer"
+    #mode = "train"
+    mode = "infer"
 
     #modelname = "table_nq"
     #modelname = "nlp_ext"
@@ -165,7 +165,8 @@ if __name__ == "__main__":
     elif modelname == "nlp_ext_nq":
         test_sentences = [
             "Double Click on a calendar from the list on the left side of the screen.",
-            "Enter text into the password on the bottom left of the screen"
+            "Enter text into the password on the bottom left of the screen",
+            "Enter text into the second name box on the bottom left of the screen"
             ]
     elif modelname == "table_nq":
         test_sentences = [
@@ -197,4 +198,15 @@ if __name__ == "__main__":
 
     if mode in {"train", "infer"}:
         result = model.predict(test_sentences)
+        print("result:", result)
+
+    print("\nManually input")
+    while True:
+        input_text = input("Input text: ")
+        if input_text == 'q':
+            break
+        if "|" in input_text:
+            input_text, input_data = input_text.split("|")
+
+        result = model.predict([input_text])
         print("result:", result)
