@@ -153,8 +153,8 @@ if __name__ == "__main__":
     #mode = "infer"
 
     #modelname = "table_nq"
-    modelname = "nlp_ext"
-    #modelname = "nlp_ext_nq"
+    #modelname = "nlp_ext"
+    modelname = "nlp_ext_nq"
 
 
     if modelname == "nlp_ext":
