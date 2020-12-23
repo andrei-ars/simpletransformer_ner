@@ -110,7 +110,7 @@ class NerDataset:
 
         with open(path) as fp:
             count = 0
-            for line in fp:
+            for linenum, line in enumerate(fp):
                 ls = line.split()
                 if len(ls) == 2:
                     token, tag = ls
@@ -121,6 +121,7 @@ class NerDataset:
                         self.data.append([count, token, tag])
                 else:
                     print("len != 2")
+                    print("path={}, linenum={}".format(path, linenum))
                     raise Exception("NerDataset.init: len != 2")
 
         #train_df = pd.DataFrame(train_data, columns=["sentence_id", "words", "labels"])
