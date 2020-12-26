@@ -45,7 +45,7 @@ class NerModel:
 
     def eval(self):
         # # Evaluate the model
-        if dataset:
+        if self.dataset:
             result, model_outputs, predictions = self.model.eval_model(self.dataset['val'])
             print("Evaluation result:", result)
         else:
