@@ -45,15 +45,15 @@ train_data = [
     ],
     [
         "click anything where age is greater than 10",
-        "{'action': 'clickables', 'query': 'WHERE \"AGE IS\" > "10"', 'column_data_type': 'number', 'header_in_query': 'age is', 'header_to_do_action': '', 'value_in_query': '10', 'table_xpath': '', 'element_type': None}",
+        "{'action': 'clickables', 'query': 'WHERE \"AGE IS\" > \"10\"', 'column_data_type': 'number', 'header_in_query': 'age is', 'header_to_do_action': '', 'value_in_query': '10', 'table_xpath': '', 'element_type': None}",
     ],
     [
         "click hello where value is greater than 33",
-        "{'action': 'clickables', 'query': 'WHERE \"VALUE IS\" > "33"', 'column_data_type': 'number', 'header_in_query': 'value is', 'header_to_do_action': '', 'value_in_query': '33', 'table_xpath': '', 'element_type': None}",
+        "{'action': 'clickables', 'query': 'WHERE \"VALUE IS\" > \"33\"', 'column_data_type': 'number', 'header_in_query': 'value is', 'header_to_do_action': '', 'value_in_query': '33', 'table_xpath': '', 'element_type': None}",
     ],
     [
         "click world where hight is greater than 0",
-        "{'action': 'clickables', 'query': 'WHERE \"HIGHT IS\" > "0"', 'column_data_type': 'number', 'header_in_query': 'hight is', 'header_to_do_action': '', 'value_in_query': '0', 'table_xpath': '', 'element_type': None}",
+        "{'action': 'clickables', 'query': 'WHERE \"HIGHT IS\" > \"0\"', 'column_data_type': 'number', 'header_in_query': 'hight is', 'header_to_do_action': '', 'value_in_query': '0', 'table_xpath': '', 'element_type': None}",
     ],    
 ]
 
