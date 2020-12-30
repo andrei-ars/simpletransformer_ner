@@ -64,11 +64,11 @@ train_df = pd.DataFrame(
 eval_data = [
     [
         "click house where hight is greater than 15.",
-        "",
+        "{'action': 'clickables', 'query': 'WHERE \"HIGHT IS\" > \"15.\"', 'column_data_type': 'number', 'header_in_query': 'hight is', 'header_to_do_action': '', 'value_in_query': '15.', 'table_xpath': '', 'element_type': None}",
     ],
     [
         "click name after userlogin.",
-        "",
+        "{'label': 'name', 'action': 'clickables', 'element_type': None}",
     ],
 ]
 
@@ -77,7 +77,7 @@ eval_df = pd.DataFrame(
 )
 
 model_args = Seq2SeqArgs()
-model_args.num_train_epochs = 10
+model_args.num_train_epochs = 20
 model_args.no_save = True
 model_args.evaluate_generated_text = True
 model_args.evaluate_during_training = True
