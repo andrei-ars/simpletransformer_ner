@@ -112,6 +112,7 @@ model.train_model(
 results = model.eval_model(eval_df)
 
 # Use the model for prediction
+print("\n Prediction:")
 print(
     model.predict(
         [
