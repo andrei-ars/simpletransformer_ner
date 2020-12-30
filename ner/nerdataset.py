@@ -55,8 +55,6 @@ class NerDataset:
             
         for name in names:
             labels |= set(get_labels_list("dataset/{}/tag.dict".format(name)))
-            print("labels: {}".format(labels))
-
             if not labels_only:
                 train_data += NerPartDataset("{}/{}/train.txt".format(path, name)).as_list()
                 val_data += NerPartDataset("{}/{}/valid.txt".format(path, name)).as_list()
@@ -67,6 +65,7 @@ class NerDataset:
         labels = list(labels)
         labels.sort()
         labels = labels[-1:] + labels[:-1]   # in form as ['O', 'B-ACT', 'B-CNT',...
+        print("labels: {}".format(labels))
 
         self.dataset = {}
         self.dataset['labels_list'] = labels

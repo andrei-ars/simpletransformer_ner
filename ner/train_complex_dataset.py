@@ -20,16 +20,21 @@ if __name__ == "__main__":
         "Double Click on a calendar from the list on the left side of the screen.",
         "Enter text into the password on the bottom left of the screen",
         "Enter text into the second name box on the bottom left of the screen",
+        "Enter text into the Input name on the bottom left of the screen",
         "click on Find an Agent after Renters Insurance",
         "Hover over login after forgot your password?",
         "click on Get a Quote next to Motor Home Insurance",
         "Click on Lifestyle next to Bihar Election 2020",
         "click on Renters Insurance before Find an Agent",
         "click on Images next to Maps",
+        "click on Simple Images next to Hello Maps",
         "click on Yes radio for Are you Hispanic or Latino?",
         "click on Letters where Numbers greater than 3",
         "Click on Manage External User button for Contact Detail",
-        "Click on Black Where ends with c"
+        "Click on Black Where ends with c",
+        "Navigate to leads page by clicking on Next step",
+        "Change the page by clicking on Next button",
+        "Extract information by clicking on Next button",
         ]
 
     if mode == "train":
