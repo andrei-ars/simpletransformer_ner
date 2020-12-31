@@ -1,13 +1,9 @@
 # code from https://simpletransformers.ai/docs/seq2seq-specifics/
 
 import os
+import sys
 import logging
-
 import pandas as pd
-from simpletransformers.seq2seq import (
-    Seq2SeqModel,
-    Seq2SeqArgs,
-)
 
 
 os.system("rm -rf outputs/")
@@ -16,6 +12,20 @@ logging.basicConfig(level=logging.INFO)
 transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.WARNING)
 
+
+train_data = []
+train_file = "./dataset/train.txt"
+with open(train_file) as fp:
+    for i, line in enumerate(fp):
+        line = line.strip()
+        if i % 3 == 0:
+            input_text = line
+        elif i % 3 == 1:
+            target_text  = line
+        elif i % 3 == 2:
+            train_data.append([input_text, target_text])
+
+"""
 train_data = [
     [
         "click photo",
@@ -75,10 +85,12 @@ train_data = [
     ],    
  
 ]
+"""
 
 train_df = pd.DataFrame(
     train_data, columns=["input_text", "target_text"]
 )
+print(train_df)
 
 eval_data = [
     [
@@ -93,6 +105,13 @@ eval_data = [
 
 eval_df = pd.DataFrame(
     eval_data, columns=["input_text", "target_text"]
+)
+
+
+
+from simpletransformers.seq2seq import (
+    Seq2SeqModel,
+    Seq2SeqArgs,
 )
 
 model_args = Seq2SeqArgs()

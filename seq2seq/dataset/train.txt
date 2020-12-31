@@ -1,0 +1,813 @@
+verify text "workshop"
+{'label': 'workshop', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Assert "66666" is on the page
+{'label': '66666', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "example domain" is on the screen
+{'label': 'example domain', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "example" is on the screen
+{'label': 'example', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "examplkfkkvkkvkvle domain" is on the screen
+{'label': 'examplkfkkvkkvkvle domain', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "forceSocialPhoto" on the screen
+{'label': 'forceSocialPhoto', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "Forms" on screen
+{'label': 'Forms', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "From today's featured article" exist on the screen
+{'label': "From today's featured article", 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "home"
+{'label': 'home', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "home" is on the page
+{'label': 'home', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "Home" is on the page
+{'label': 'Home', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "India - Wikipedia" is on page
+{'label': 'India - Wikipedia', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "jameel" is on the screen
+{'label': 'jameel', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "Log In to Sandbox" is on screen
+{'label': 'Log In to Sandbox', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "Log In" is visible on the page
+{'label': 'Log In', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "Next >>>" is on the screen
+{'label': 'Next >>>', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "No thanks" on the screen
+{'label': 'No thanks', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "Order number " exist on the screen
+{'label': 'Order number ', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "Products" is on the page
+{'label': 'Products', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "testsym-1600774040831" on the screen
+{'label': 'testsym-1600774040831', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "USA" is on the page
+{'label': 'USA', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "Venezuela - Wikipedia" is on page
+{'label': 'Venezuela - Wikipedia', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert "wrong test"
+{'label': 'wrong test', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert (Verify "Log In" is on the page)
+{'label': 'Log In', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert [text] is visible on the page
+{'label': '[ text ] is visible on the page', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+assert _label(_rx(\d*)+ZZZZZZZZ) is not on the screen
+{'label': '1_quoted_aiqlabel is not on the screen', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': '(\\d*)(ZZZZZZZZ)'}; []
+
+Assert pop-up exists
+{'verify_not_exist': False, 'verify_window_type': 'pop-up', 'is_it_a_soft_assert': False}; []
+
+Assert variable ${condition} is "False"
+{'label': 'False', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Decision3} is "Execute"
+{'label': 'Execute', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Decision4} is "Execute"
+{'label': 'Execute', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Decision5A} is "Execute"
+{'label': 'Execute', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Decision5B} is "Nested"
+{'label': 'Nested', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Decision6A} is "Execute"
+{'label': 'Execute', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Decision6B} is "Nested"
+{'label': 'Nested', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Decision7A} is "Execute"
+{'label': 'Execute', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Decision8A} is "Execute If Block"
+{'label': 'Execute If Block', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Decision9A} is "Execute If Block"
+{'label': 'Execute If Block', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Decision9B} is "Execute Elif Block"
+{'label': 'Execute Elif Block', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${is_email_valid} is "True"
+{'label': 'True', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${is_phone_valid} is "True"
+{'label': 'True', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${password} is pass2
+{'label': 'variable $ { password } is pass2', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${TC03_Variable} is "False"
+{'label': 'False', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${TC03_Variable} is "True"
+{'label': 'True', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+assert variable ${test} is some
+{'label': 'variable $ { test } is some', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${username} is "user1"
+{'label': 'user1', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${username} is xyz
+{'label': 'variable $ { username } is xyz', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Variable1} is "Execute If Block"
+{'label': 'Execute If Block', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Variable1} is "Execute"
+{'label': 'Execute', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Variable2} is "Execute Elif Block"
+{'label': 'Execute Elif Block', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Variable2} is "Nested"
+{'label': 'Nested', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Variable2} is "True"
+{'label': 'True', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${Variable_value} is "true"
+{'label': 'true', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert variable ${var} is xyz
+{'label': 'variable $ { var } is xyz', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+Assert verify "Place Order" is on the screen
+{'label': 'Place Order', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': False, 'label_regex_val': None}; []
+
+assert {"xpath":"//*[@id="username"]"} is visible
+{'xpath': '//*[@id="username"]', 'data': 'visible', 'negative_verify': False, 'is_it_a_soft_assert': False, 'verify_type': 'elem_status'}; []
+
+assert {"xpath":"//button"} is disabled
+{'xpath': '//button', 'data': 'disabled', 'negative_verify': False, 'is_it_a_soft_assert': False, 'verify_type': 'elem_status'}; []
+
+assert {"xpath":"//button"} is enabled
+{'xpath': '//button', 'data': 'enabled', 'negative_verify': False, 'is_it_a_soft_assert': False, 'verify_type': 'elem_status'}; []
+
+assert {"xpath":"//button"} is exist
+{'xpath': '//button', 'data': None, 'negative_verify': False, 'is_it_a_soft_assert': False, 'verify_type': 'exists'}; []
+
+assert {"xpath":"//button"} is visible
+{'xpath': '//button', 'data': 'visible', 'negative_verify': False, 'is_it_a_soft_assert': False, 'verify_type': 'elem_status'}; []
+
+assert {"xpath":"//buttonxyz"} is doesnt exist
+{'xpath': '//buttonxyz', 'data': None, 'negative_verify': True, 'is_it_a_soft_assert': False, 'verify_type': 'exists'}; []
+
+Assert {xpath:"//*[@alt="Sorted Ascending"]"} is exists
+{'xpath': '//*[@alt="Sorted Ascending"]', 'data': None, 'negative_verify': False, 'is_it_a_soft_assert': False, 'verify_type': 'exists'}; []
+
+Assert {xpath:"//*[@alt='Sorted Ascending']"} is exists
+{'xpath': "//*[@alt='Sorted Ascending']", 'data': None, 'negative_verify': False, 'is_it_a_soft_assert': False, 'verify_type': 'exists'}; []
+
+Assert {xpath:"//*[@class="hn-text-dark headerTextPosition" and text()="JCI Corporate General Account"]"} is not visible
+{'xpath': '//*[@class="hn-text-dark headerTextPosition" and text()="JCI Corporate General Account"]', 'data': 'visible', 'negative_verify': True, 'is_it_a_soft_assert': False, 'verify_type': 'elem_status'}; []
+
+click " Hello?"
+{'label': ' Hello?', 'action': 'clickables', 'element_type': None}; []
+
+click "Assign Sym to Trainee" for "AIQtest1955"
+{'label': 'Assign Sym to Trainee', 'action': 'clickables', 'element_type': None}; [{'type': 'container', 'args': {'container_label': 'AIQtest1955'}}]
+
+click "Assign Sym to Trainee" for "AIQtest3405"
+{'label': 'Assign Sym to Trainee', 'action': 'clickables', 'element_type': None}; [{'type': 'container', 'args': {'container_label': 'AIQtest3405'}}]
+
+click "Assign Sym to Trainee" for "AIQtest5078"
+{'label': 'Assign Sym to Trainee', 'action': 'clickables', 'element_type': None}; [{'type': 'container', 'args': {'container_label': 'AIQtest5078'}}]
+
+click "Assign Sym to Trainee" for "AIQtest7234"
+{'label': 'Assign Sym to Trainee', 'action': 'clickables', 'element_type': None}; [{'type': 'container', 'args': {'container_label': 'AIQtest7234'}}]
+
+click "Assign Sym to Trainee" for "AIQtest8849"
+{'label': 'Assign Sym to Trainee', 'action': 'clickables', 'element_type': None}; [{'type': 'container', 'args': {'container_label': 'AIQtest8849'}}]
+
+click "Assign Sym to Trainee" for "AIQtest9411"
+{'label': 'Assign Sym to Trainee', 'action': 'clickables', 'element_type': None}; [{'type': 'container', 'args': {'container_label': 'AIQtest9411'}}]
+
+click "checkbox" for "3116"
+{'label': 'checkbox', 'action': 'clickables', 'element_type': None}; [{'type': 'container', 'args': {'container_label': '3116'}}]
+
+click "New York City - Wikipedia"
+{'label': 'New York City - Wikipedia', 'action': 'clickables', 'element_type': None}; []
+
+click "Upload audio"
+{'label': 'Upload audio', 'action': 'clickables', 'element_type': None}; []
+
+Click at "No" radio for "Ethnicity and Race"
+{'label': 'No', 'action': 'clickables', 'element_type': 'checkbox'}; [{'type': 'container', 'args': {'container_label': 'Ethnicity and Race'}}]
+
+click first "Yeah."
+{'label': 'Yeah.', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+click for ' Trainee '
+{'label': '', 'action': 'clickables', 'element_type': None}; [{'type': 'container', 'args': {'container_label': "' Trainee '"}}]
+
+Click on  first "Add Anytime Document"
+{'label': 'Add Anytime Document', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+Click on  first "ASGNMT"
+{'label': 'ASGNMT', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+Click on  first "Enabled"
+{'label': 'Enabled', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+Click on  first "kitta86@gmail.com"
+{'label': 'kitta86@gmail.com', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+Click on  first "Save"
+{'label': 'Save', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+Click on  first "Search"
+{'label': 'Search', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+Click on  {xpath:"( //*[@aria-haspopup="true"] )[17]"}
+{'label': ' ', 'action': 'clickables', 'xpath': '( //*[@aria-haspopup="true"] )[17]'}; []
+
+Click on  {xpath:"( //*[@focusable="false"] )[12]"}
+{'label': ' ', 'action': 'clickables', 'xpath': '( //*[@focusable="false"] )[12]'}; []
+
+Click on  {xpath:"( //*[@focusable="false"] )[17]"}
+{'label': ' ', 'action': 'clickables', 'xpath': '( //*[@focusable="false"] )[17]'}; []
+
+Click on  {xpath:"(//*[@aria-hidden="true"])[9]"}
+{'label': ' ', 'action': 'clickables', 'xpath': '(//*[@aria-hidden="true"])[9]'}; []
+
+click on "Click to Activate Sym" for "AIQtest8849"
+{'label': 'Click to Activate Sym', 'action': 'clickables', 'element_type': None}; [{'type': 'container', 'args': {'container_label': 'AIQtest8849'}}]
+
+click on "Click to Activate Sym" for "AIQtest9411"
+{'label': 'Click to Activate Sym', 'action': 'clickables', 'element_type': None}; [{'type': 'container', 'args': {'container_label': 'AIQtest9411'}}]
+
+click on "Click to Activate Sym" for "AIQtest9699"
+{'label': 'Click to Activate Sym', 'action': 'clickables', 'element_type': None}; [{'type': 'container', 'args': {'container_label': 'AIQtest9699'}}]
+
+Click on "colors" Where Numbers >= 3
+{'action': 'clickables', 'query': 'WHERE "NUMBERS" >= "3"', 'column_data_type': 'number', 'header_in_query': 'Numbers', 'header_to_do_action': 'colors', 'value_in_query': '3', 'table_xpath': '', 'element_type': None}; [{'type': 'default ordinal', 'args': {'ordinal': 1}}]
+
+Click on "Filter Pak, 2032R/2038R SN-G_000001- Compact Tractors"
+{'label': 'Filter Pak, 2032R/2038R SN-G_000001- Compact Tractors', 'action': 'clickables', 'element_type': None}; []
+
+click on "fork.png" icon
+{'label': 'fork.png', 'action': 'clickables', 'element_type': None}; []
+
+click on "Get a Quote" next to " Motor Home Insurance"
+{'label': 'Get a Quote', 'action': 'clickables', 'element_type': None}; [{'type': 'next', 'args': {'contextual_label': ' Motor Home Insurance'}}]
+
+click on "jsfiddle.png" icon
+{'label': 'jsfiddle.png', 'action': 'clickables', 'element_type': None}; []
+
+click on "Letters" where Numbers  greater than 3
+{'action': 'clickables', 'query': 'WHERE "NUMBERS " > "3"', 'column_data_type': 'number', 'header_in_query': 'Numbers ', 'header_to_do_action': 'Letters', 'value_in_query': '3', 'table_xpath': '', 'element_type': None}; [{'type': 'default ordinal', 'args': {'ordinal': 1}}]
+
+Click on "Manage External User" button for "Contact Detail"
+{'label': 'Manage External User', 'action': 'clickables', 'element_type': None}; [{'type': 'container', 'args': {'container_label': 'Contact Detail'}}]
+
+Click on "Mr."
+{'label': 'Mr.', 'action': 'clickables', 'element_type': None}; []
+
+Click on "Mrs."
+{'label': 'Mrs.', 'action': 'clickables', 'element_type': None}; []
+
+Click on "New Lead"
+{'label': 'New Lead', 'action': 'clickables', 'element_type': None}; []
+
+click on "No" radio for "Is English your first/native language?"
+{'label': 'No', 'action': 'clickables', 'element_type': 'checkbox'}; [{'type': 'container', 'args': {'container_label': 'Is English your first/native language?'}}]
+
+Click on "San Jose, CA"
+{'label': 'San Jose, CA', 'action': 'clickables', 'element_type': None}; []
+
+Click on "secondary checkbox"
+{'label': 'secondary checkbox', 'action': 'clickables', 'element_type': None}; []
+
+Click on "When actual wait time exceeds threshold"
+{'label': 'When actual wait time exceeds threshold', 'action': 'clickables', 'element_type': None}; []
+
+Click on "Yes" radio for "Are You a U.S. Citizen?"
+{'label': 'Yes', 'action': 'clickables', 'element_type': 'checkbox'}; [{'type': 'container', 'args': {'container_label': 'Are You a U.S. Citizen?'}}]
+
+click on "Yes" radio for "Are you Hispanic or Latino?"
+{'label': 'Yes', 'action': 'clickables', 'element_type': 'checkbox'}; [{'type': 'container', 'args': {'container_label': 'Are you Hispanic or Latino?'}}]
+
+Click on 1st "Manage External User"
+{'label': 'Manage External User', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': '1st'}}]
+
+Click on 2nd "My Account"
+{'label': 'My Account', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 2, 'original_ordinal_string': '2nd'}}]
+
+click on 5
+{'label': '5', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 5, 'original_ordinal_string': '5'}}]
+
+Click on Community portal
+{'label': 'community portal', 'action': 'clickables', 'element_type': None}; []
+
+Click on convert button
+{'label': 'convert', 'action': 'clickables', 'element_type': None}; []
+
+click on Create New Account
+{'label': 'create new account', 'action': 'clickables', 'element_type': None}; []
+
+click on Current events
+{'label': 'current events', 'action': 'clickables', 'element_type': None}; []
+
+click on English
+{'label': 'english', 'action': 'clickables', 'element_type': None}; []
+
+click on Find an Agent after Renters Insurance
+{'label': 'find an agent', 'action': 'clickables', 'element_type': None}; [{'type': 'after', 'args': {'contextual_label': 'Renters Insurance'}}]
+
+click on First "Direct to Order" btton
+{'label': 'Direct to Order', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+Click on First "kitta86@gmail.com"
+{'label': 'kitta86@gmail.com', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+Click on first "None"
+{'label': 'None', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+click on first "Select Elevation"
+{'label': 'Select Elevation', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+click on first "Select Structure"
+{'label': 'Select Structure', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+click on first "Select Unit"
+{'label': 'Select Unit', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+Click on first "Start Quote"
+{'label': 'Start Quote', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+click on first "Start Quote"
+{'label': 'Start Quote', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+Click on first "Verify Address"
+{'label': 'Verify Address', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+Click on first "Yes"
+{'label': 'Yes', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 1, 'original_ordinal_string': 'first'}}]
+
+click on Get a Quote next to Motor Home Insurance
+{'label': 'get a quote', 'action': 'clickables', 'element_type': None}; [{'type': 'next', 'args': {'contextual_label': 'to Motor Home Insurance'}}]
+
+click on Get started
+{'label': 'get started', 'action': 'clickables', 'element_type': None}; []
+
+click on gh-shop-a
+{'label': 'gh - shop - a', 'action': 'clickables', 'element_type': None}; []
+
+click on hl-card-header__headline
+{'label': 'hl - card - header__headline', 'action': 'clickables', 'element_type': None}; []
+
+Click on Homes
+{'label': 'homes', 'action': 'clickables', 'element_type': None}; []
+
+click on Images next to Maps
+{'label': 'images', 'action': 'clickables', 'element_type': None}; [{'type': 'next', 'args': {'contextual_label': 'to Maps'}}]
+
+click on India - Wikipedia
+{'label': 'india - wikipedia', 'action': 'clickables', 'element_type': None}; []
+
+Click on India after Latest
+{'label': 'india', 'action': 'clickables', 'element_type': None}; [{'type': 'after', 'args': {'contextual_label': 'Latest'}}]
+
+Click on Lifestyle next to Bihar Election 2020
+{'label': 'lifestyle', 'action': 'clickables', 'element_type': None}; [{'type': 'next', 'args': {'contextual_label': 'to Bihar Election 2020'}}]
+
+click on Log In
+{'label': 'log in', 'action': 'clickables', 'element_type': None}; []
+
+Click on Logout
+{'label': 'logout', 'action': 'clickables', 'element_type': None}; []
+
+click on New
+{'label': 'new', 'action': 'clickables', 'element_type': None}; []
+
+click on new button
+{'label': 'new', 'action': 'clickables', 'element_type': None}; []
+
+Click on Politics before Entertainment
+{'label': 'politics', 'action': 'clickables', 'element_type': None}; [{'type': 'before', 'args': {'contextual_label': 'Entertainment'}}]
+
+click on Renters Insurance before Find an Agent
+{'label': 'renters insurance find', 'action': 'clickables', 'element_type': None}; [{'type': 'before', 'args': {'contextual_label': 'Find an Agent'}}]
+
+click on Run this fiddle
+{'label': 'run this fiddle', 'action': 'clickables', 'element_type': None}; []
+
+click on Save
+{'label': 'save', 'action': 'clickables', 'element_type': None}; []
+
+Click on Save button
+{'label': 'save', 'action': 'clickables', 'element_type': None}; []
+
+Click on second "Bob Partner User" in Name
+{'label': 'Bob Partner User', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 2, 'original_ordinal_string': 'second'}}]
+
+Click on second "Stan All Roles" under "Name"
+{'label': 'Stan All Roles', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 2, 'original_ordinal_string': 'second'}}]
+
+Click on second "Stan Partner User" under "Name"
+{'label': 'Stan Partner User', 'action': 'clickables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': 2, 'original_ordinal_string': 'second'}}]
+
+click on Sports events
+{'label': 'sports events', 'action': 'clickables', 'element_type': None}; []
+
+Click on Start Application
+{'label': 'start application', 'action': 'clickables', 'element_type': None}; []
+
+click on Submit
+{'label': 'submit', 'action': 'clickables', 'element_type': None}; []
+
+click on Twitter
+{'label': 'twitter', 'action': 'clickables', 'element_type': None}; []
+
+click {xpath:'"//canvas"}'}
+{'label': ' ', 'action': 'clickables', 'xpath': '//canvas'}; []
+
+click {xpath:'"//h2"}'}
+{'label': ' ', 'action': 'clickables', 'xpath': '//h2'}; []
+
+click {xpath:'"//img"}'}
+{'label': ' ', 'action': 'clickables', 'xpath': '//img'}; []
+
+click {xpath:'"//span"}'}
+{'label': ' ', 'action': 'clickables', 'xpath': '//span'}; []
+
+click {xpath:'"//textarea"}'}
+{'label': ' ', 'action': 'clickables', 'xpath': '//textarea'}; []
+
+End block
+{'label': 'block', 'action': 'end', 'element_type': None}; []
+
+end block
+{'label': 'block', 'action': 'end', 'element_type': None}; []
+
+Enter "User ID"
+{'label': 'User ID', 'action': 'enterables', 'element_type': None}; []
+
+enter Choose a flavor
+{'label': 'choose a flavor', 'action': 'enterables', 'element_type': None}; []
+
+enter in city textbox
+{'label': 'city', 'action': 'enterables', 'element_type': None}; []
+
+Enter in {xpath:"//*[@id="setupSearch"]"}
+{'label': ' ', 'action': 'enterables', 'xpath': '//*[@id="setupSearch"]'}; []
+
+enter input r4 wide mb16 mt8 password
+{'label': 'input r4 wide mb16 mt8 password', 'action': 'enterables', 'element_type': None}; []
+
+enter Last Name
+{'label': 'name', 'action': 'enterables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': -1, 'original_ordinal_string': 'last'}}]
+
+enter name in the last name textbox
+{'label': 'name in the last name', 'action': 'enterables', 'element_type': None}; [{'type': 'ordinal', 'args': {'ordinal': -1, 'original_ordinal_string': 'last'}}]
+
+Enter new password
+{'label': 'new password', 'action': 'enterables', 'element_type': None}; []
+
+Enter text in "Order name" textbox
+{'label': 'Order name', 'action': 'enterables', 'element_type': None}; []
+
+Enter text in "OrderName"
+{'label': 'OrderName', 'action': 'enterables', 'element_type': None}; []
+
+Enter text in "phSearchInput"
+{'label': 'phSearchInput', 'action': 'enterables', 'element_type': None}; []
+
+Enter text in "QuoteName" textbox
+{'label': 'QuoteName', 'action': 'enterables', 'element_type': None}; []
+
+Enter text in "Review" Where Location is Mysore
+{'action': 'enterables', 'query': 'WHERE "LOCATION" = "Mysore"', 'column_data_type': 'string', 'header_in_query': 'Location', 'header_to_do_action': 'Review', 'value_in_query': 'Mysore', 'table_xpath': '', 'element_type': None}; [{'type': 'default ordinal', 'args': {'ordinal': 1}}]
+
+Enter text in "ToLocation-Block"
+{'label': 'ToLocation-Block', 'action': 'enterables', 'element_type': None}; []
+
+Enter username
+{'label': 'username', 'action': 'enterables', 'element_type': None}; []
+
+Enter {xpath: "//*[contains(text()
+{'label': '{ xpath : //*[contains(text ( )', 'action': 'enterables', 'element_type': None}; []
+
+select "Graduate Degree" in "Select an Option"
+{'label': 'Graduate Degree', 'action': 'selectables', 'element_type': None}; []
+
+select "Individual" in "PAN_APPLCNT_STATUS"
+{'label': 'Individual', 'action': 'selectables', 'element_type': None}; []
+
+select "Machine Type"
+{'label': 'Machine Type', 'action': 'selectables', 'element_type': None}; []
+
+select "Partnership Firm" in "PAN_APPLCNT_STATUS"
+{'label': 'Partnership Firm', 'action': 'selectables', 'element_type': None}; []
+
+select "Product Type"
+{'label': 'Product Type', 'action': 'selectables', 'element_type': None}; []
+
+Set screen to 1080
+{'custom_size': {'width': 1920, 'height': 1080}}; []
+
+Set screen to 1080p
+{'custom_size': {'width': 1920, 'height': 1080}}; []
+
+Set screen to 720
+{'custom_size': {'width': 1280, 'height': 720}}; []
+
+Set screen to 900
+{'custom_size': {'width': 1600, 'height': 900}}; []
+
+Set screen to Full HD
+{'custom_size': {'width': 1920, 'height': 1080}}; []
+
+Set screen to hd
+{'custom_size': {'width': 1280, 'height': 720}}; []
+
+Set screen to mobile phone
+{'custom_size': {'width': 500, 'height': 800}}; []
+
+Set screen to tablet
+{'custom_size': {'width': 700, 'height': 1000}}; []
+
+Set screen to tablet landscape
+{'custom_size': {'width': 1000, 'height': 700}}; []
+
+Set text in {xpath: "//*[@id="s_user_middle_nm"]"}
+{'label': ' ', 'action': 'enterables', 'xpath': '//*[@id="s_user_middle_nm"]'}; []
+
+Set text in {xpath: "descendant-or-self::*[@id = 's_user_first_nm']"}
+{'label': ' ', 'action': 'enterables', 'xpath': "descendant-or-self::*[@id = 's_user_first_nm']"}; []
+
+Switch to new tab
+{'switch_tab': -1}; []
+
+Switch to new tab
+{'switch_tab': -1}; []
+
+switch to new window
+{'switch_tab': -1}; []
+
+Switch to window with title "WhatsApp Inc. (@WhatsApp) / Twitter"
+{'switch_tab': 'WhatsApp Inc. (@WhatsApp) / Twitter'}; []
+
+Take  screenshot
+{}; []
+
+take screenshot
+{}; []
+
+Take screenshot
+{}; []
+
+Take Screenshot
+{}; []
+
+Take screenshot
+{}; []
+
+verify "Audio sym activated." on the screen
+{'label': 'Audio sym activated.', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "contact detail" is on the screen
+{'label': 'contact detail', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "Contact Information" present on screen
+{'label': 'Contact Information', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "Deutsc" is on the page
+{'label': 'Deutsc', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "done" on the screen
+{'label': 'done', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "enable mic" on the screen
+{'label': 'enable mic', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "English" is on the page
+{'label': 'English', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "example domain" is on the screen
+{'label': 'example domain', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "final score:" on the screen
+{'label': 'final score:', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "Forms" is on the page
+{'label': 'Forms', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "hello" on the screen
+{'label': 'hello', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "Hello?" on the screen
+{'label': 'Hello?', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "hi" on the screen
+{'label': 'hi', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "Italiano" is on the page
+{'label': 'Italiano', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "Leads" is on the screen
+{'label': 'Leads', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "Log In" is on the screen
+{'label': 'Log In', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "Mr. Last Name Test Step" on the screen
+{'label': 'Mr. Last Name Test Step', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "New Quote" is visible
+{'label': 'New Quote', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "No Thanks" button is on the screen
+{'label': 'No Thanks', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "Nokia 105 2019 (Single SIM, Black)"
+{'label': 'Nokia 105 2019 (Single SIM, Black)', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "opp054" on the screen
+{'label': 'opp054', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "opp118" on the screen
+{'label': 'opp118', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "opp208" on the screen
+{'label': 'opp208', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "opp882" on the screen
+{'label': 'opp882', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "Switch to Lightning Experience" link is on the page
+{'label': 'Switch to Lightning Experience', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "Test Cases" is on the page
+{'label': 'Test Cases', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "testsym-1600774040831" on the screen
+{'label': 'testsym-1600774040831', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify "Unit of Measure: " on screen
+{'label': 'Unit of Measure: ', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "User Information" present on screen
+{'label': 'User Information', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify "uuuu" is on the screen
+{'label': 'uuuu', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify [text] is visible on the page
+{'label': '[ text ] is visible on the page', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify _label(_rx(\d*)+ZZZZZZZZ) is not on the screen
+{'label': '1_quoted_aiqlabel is not on the screen', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': '(\\d*)(ZZZZZZZZ)'}; []
+
+verify alert exists
+{'verify_not_exist': False, 'verify_window_type': 'alert', 'is_it_a_soft_assert': True}; []
+
+Verify alert is exists
+{'verify_not_exist': False, 'verify_window_type': 'alert', 'is_it_a_soft_assert': True}; []
+
+verify class of {xpath: "//*[@id="Login"]"} is "button r4 wide primary"
+{'xpath': '//*[@id="Login"]', 'data': 'button r4 wide primary', 'negative_verify': False, 'is_it_a_soft_assert': True, 'verify_type': 'attr_match', 'attr': 'class'}; []
+
+verify Google is not on the page
+{'label': 'google is not on the page', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify id of {xpath: "//*[@id="Login"]"} is "Login"
+{'xpath': '//*[@id="Login"]', 'data': 'Login', 'negative_verify': False, 'is_it_a_soft_assert': True, 'verify_type': 'attr_match', 'attr': 'id'}; []
+
+verify image of dog is on the page
+{'verify_image_label': 'dog is on the page', 'is_it_a_soft_assert': True}; []
+
+verify lang of {xpath: "//*[@id="site-navigation"]/p/span[2]/a"} is "en"
+{'xpath': '//*[@id="site-navigation"]/p/span[2]/a', 'data': 'en', 'negative_verify': False, 'is_it_a_soft_assert': True, 'verify_type': 'attr_match', 'attr': 'lang'}; []
+
+verify name of {xpath: "//*[@id="username"]"} is "username"
+{'xpath': '//*[@id="username"]', 'data': 'username', 'negative_verify': False, 'is_it_a_soft_assert': True, 'verify_type': 'attr_match', 'attr': 'name'}; []
+
+verify new alert exists
+{'verify_not_exist': False, 'verify_window_type': 'alert', 'is_it_a_soft_assert': True}; []
+
+Verify new tab exists
+{'verify_not_exist': False, 'verify_window_type': 'tab', 'is_it_a_soft_assert': True}; []
+
+verify new tab exists
+{'verify_not_exist': False, 'verify_window_type': 'tab', 'is_it_a_soft_assert': True}; []
+
+Verify new window exists
+{'verify_not_exist': False, 'verify_window_type': 'window', 'is_it_a_soft_assert': True}; []
+
+verify new window exists
+{'verify_not_exist': False, 'verify_window_type': 'window', 'is_it_a_soft_assert': True}; []
+
+verify Pakistan
+{'label': 'pakistan', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify pop up exists
+{'verify_not_exist': False, 'verify_window_type': 'pop up', 'is_it_a_soft_assert': True}; []
+
+verify pop-up exists
+{'verify_not_exist': False, 'verify_window_type': 'pop-up', 'is_it_a_soft_assert': True}; []
+
+Verify text  "converted a lead to this account."
+{'label': 'converted a lead to this account.', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "03/01/2021"
+{'label': '03/01/2021', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "8.00"
+{'label': '8.00', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "CV Builder PDF"
+{'label': 'CV Builder PDF', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "CV Template Word DOC"
+{'label': 'CV Template Word DOC', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "Data saved."
+{'label': 'Data saved.', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "Leads"
+{'label': 'Leads', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "Log In"
+{'label': 'Log In', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "New Lead"
+{'label': 'New Lead', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "Next >>>"
+{'label': 'Next >>>', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "Refresh to load content."
+{'label': 'Refresh to load content.', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "Regular"
+{'label': 'Regular', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "Switch to Lightning Experience"
+{'label': 'Switch to Lightning Experience', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify text "The Free Encyclopedia"
+{'label': 'The Free Encyclopedia', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify value of {xpath: "//*[@id="Login"]"} is "Log In"
+{'xpath': '//*[@id="Login"]', 'data': 'Log In', 'negative_verify': False, 'is_it_a_soft_assert': True, 'verify_type': 'attr_match', 'attr': 'value'}; []
+
+verify variable ${check.checked} is "true"
+{'label': 'true', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify variable ${dropdown_result} is "True"
+{'label': 'True', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify variable ${Lead_Name} is ${lead_check}
+{'label': 'variable $ { lead_name } is $ { lead_check }', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify variable ${output_state_check} is "true"
+{'label': 'true', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify variable ${score} is "1/1"
+{'label': '1/1', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify variable ${state_check} is "true"
+{'label': 'true', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify variable ${test} is something
+{'label': 'variable $ { test } is something', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify variable ${var_xpath} is From today's featured article
+{'label': "variable $ { var_xpath } is from today 's featured article", 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify variable ${xyz.tag_name} is "input"
+{'label': 'input', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+Verify variable ${xyz.tag_name} is "tfds"
+{'label': 'tfds', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
+verify Yahoo is not on the page
+{'label': 'yahoo is not on the page', 'action': 'verifiables', 'element_type': None, 'is_it_a_soft_assert': True, 'label_regex_val': None}; []
+
