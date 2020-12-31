@@ -24,37 +24,53 @@ train_data = [
     ],
     [
         "click the third user photo.",
-        "{'label': 'the third user photo .', 'action': 'clickables', 'element_type': None}",
+        "{'label': 'user photo .', 'action': 'clickables', 'element_type': None}",
     ],
     [
-        "click anything for login",
-        "{'label': 'anything', 'action': 'clickables', 'element_type': None}",
+        "click OK for login",
+        "{'label': 'OK', 'action': 'clickables', 'element_type': None}",
     ],
     [
-        "click anything before login.",
-        "{'label': 'anything', 'action': 'clickables', 'element_type': None}",
+        "click OK before login.",
+        "{'label': 'OK', 'action': 'clickables', 'element_type': None}",
     ],
     [
         "click anything1 after login1.",
         "{'label': 'anything1', 'action': 'clickables', 'element_type': None}",
     ],
-
     [
-        "click anything2 next to login2",
-        "{'label': 'anything2 login2', 'action': 'clickables', 'element_type': None}",
+        "click anything3 next to login2",
+        "{'label': 'anything3', 'action': 'clickables', 'element_type': None}",
     ],
     [
-        "click anything where age is greater than 10",
-        "{'action': 'clickables', 'query': 'WHERE \"AGE IS\" > \"10\"', 'column_data_type': 'number', 'header_in_query': 'age is', 'header_to_do_action': '', 'value_in_query': '10', 'table_xpath': '', 'element_type': None}",
+        "hover photo1",
+        "{'label': 'photo1', 'action': 'hoverables', 'element_type': None}",
     ],
     [
-        "click hello where value is greater than 33",
-        "{'action': 'clickables', 'query': 'WHERE \"VALUE IS\" > \"33\"', 'column_data_type': 'number', 'header_in_query': 'value is', 'header_to_do_action': '', 'value_in_query': '33', 'table_xpath': '', 'element_type': None}",
+        "hover last row",
+        "{'label': 'row', 'action': 'hoverables', 'element_type': None}",
     ],
     [
-        "click world where hight is greater than 0",
-        "{'action': 'clickables', 'query': 'WHERE \"HIGHT IS\" > \"0\"', 'column_data_type': 'number', 'header_in_query': 'hight is', 'header_to_do_action': '', 'value_in_query': '0', 'table_xpath': '', 'element_type': None}",
+        "hover the third user photo.",
+        "{'label': 'user photo', 'action': 'hoverables', 'element_type': None}",
+    ],
+    [
+        "hover window for login",
+        "{'label': 'window', 'action': 'hoverables', 'element_type': None}",
+    ],
+    [
+        "hover world before login.",
+        "{'label': 'world', 'action': 'hoverables', 'element_type': None}",
+    ],
+    [
+        "hover anything1 after login1.",
+        "{'label': 'anything1', 'action': 'hoverables', 'element_type': None}",
+    ],
+    [
+        "hover anything2 next to login2",
+        "{'label': 'anything2', 'action': 'hoverables', 'element_type': None}",
     ],    
+ 
 ]
 
 train_df = pd.DataFrame(
@@ -63,12 +79,12 @@ train_df = pd.DataFrame(
 
 eval_data = [
     [
-        "click house where hight is greater than 15.",
-        "{'action': 'clickables', 'query': 'WHERE \"HIGHT IS\" > \"15.\"', 'column_data_type': 'number', 'header_in_query': 'hight is', 'header_to_do_action': '', 'value_in_query': '15.', 'table_xpath': '', 'element_type': None}",
+        "click house after name",
+        "{'label': 'house', 'action': 'clickables', 'element_type': None}",
     ],
     [
-        "click name after userlogin.",
-        "{'label': 'name', 'action': 'clickables', 'element_type': None}",
+        "hover the user photo next to sim",
+        "{'label': 'the user photo', 'action': 'hoverables', 'element_type': None}",
     ],
 ]
 
@@ -115,8 +131,8 @@ results = model.eval_model(eval_df)
 print("\n Predictions:")
 results = model.predict(
         [
-            "click something where width is greater than 99.",
-            "click name after userlogin."
+            "hover house next to name",
+            "click name after userlogin"
         ]
     )
 print(results)
