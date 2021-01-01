@@ -42,6 +42,10 @@ train_data = [
         "Type Search",
     ],
     [
+        "Buy this product by entering full info",
+        "Enter full info",
+    ],    
+    [
         "Login to the website by clicking on Sigh",
         "Click on Sigh",
     ],    
@@ -108,7 +112,8 @@ model_args.evaluate_during_training_verbose = True
 # Initialize model
 model = Seq2SeqModel(
     encoder_decoder_type="bart",
-    encoder_decoder_name="facebook/bart-large",
+    #encoder_decoder_name="facebook/bart-large",
+    encoder_decoder_name="facebook/bart-base",
     args=model_args,
     use_cuda=False,
 )
