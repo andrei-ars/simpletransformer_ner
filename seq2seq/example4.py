@@ -111,6 +111,10 @@ eval_data = [
         "Type username and password",
     ],
     [
+        "Log out by typing Exit",
+        "Type Exit",
+    ],    
+    [
         "Log out from the website by pressing OK button",
         "Press OK button",
     ],
@@ -121,7 +125,7 @@ eval_df = pd.DataFrame(
 )
 
 model_args = Seq2SeqArgs()
-model_args.num_train_epochs = 15
+model_args.num_train_epochs = 10
 model_args.no_save = True
 model_args.evaluate_generated_text = True
 model_args.evaluate_during_training = True
@@ -158,18 +162,18 @@ results = model.eval_model(eval_df)
 
 # Use the model for prediction
 print("\n Predictions:")
-results = model.predict(
+input_texts = 
         [
             "Navigate to the next application by clicking on Quit",
-            "Click on login on the right side of the screen",
-            "Login to this website by entering username and password",
+            "Click at login on the right side of the screen",
+            "Login to this website by typing username and password",
             "Log out by typing Exit",
             "Log out from the website by pressing OK button",
         ]
-    )
-print(results)
-for i, result in enumerate(results):
-    print("{}: {}".format(i, result))
+output_texts = model.predict(input_texts)
+print(output_texts)
+for i, pair in enumerate(zip(input_texts, output_texts)):
+    print("{}: {} --> {}".format(i, pair[0], pair[1]))
 """
 1) 
 ["{'label': 'anything is', 'action': 'clickables', 'element_type", 
