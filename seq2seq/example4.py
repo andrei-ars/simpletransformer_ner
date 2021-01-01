@@ -121,7 +121,7 @@ eval_df = pd.DataFrame(
 )
 
 model_args = Seq2SeqArgs()
-model_args.num_train_epochs = 10
+model_args.num_train_epochs = 15
 model_args.no_save = True
 model_args.evaluate_generated_text = True
 model_args.evaluate_during_training = True
@@ -193,3 +193,16 @@ for i, result in enumerate(results):
 
 
 """
+
+
+
+print("\nManually input")
+while True:
+    input_text = input("Input text: ")
+    if input_text == 'q':
+        break
+    if "|" in input_text:
+        input_text, input_data = input_text.split("|")
+
+    result = model.predict([input_text])
+    print("result:", result)
