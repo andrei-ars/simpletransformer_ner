@@ -19,47 +19,55 @@ transformers_logger.setLevel(logging.WARNING)
 train_data = [
     [
         "Navigate to leads page by clicking on Next step",
-        "click on Next step",
+        "Click on Next step",
     ],
     [
         "Navigate to the next page by clicking on Go exit",
-        "click on Go exit",
+        "Click on Go exit",
     ],
     [
         "Navigate to the next website by clicking on Exit",
-        "click on Exit",
+        "Click on Exit",
     ],    
     [
         "Login to the application by clicking on abc",
-        "click on abc",
+        "Click on abc",
+    ],
+    [
+        "Change web page by doing task1",
+        "Do task1",
+    ],
+    [
+        "Find out what happened by typing Search",
+        "Type Search",
     ],
     [
         "Login to the website by clicking on Sigh",
-        "click on Sigh",
+        "Click on Sigh",
     ],    
     [
         "Login to website by clicking on qwerty",
-        "click on qwerty",
+        "Click on qwerty",
     ],
     [
-        "Click on something in login window",
-        "Click on something",
+        "Click at something in login window",
+        "Click at something",
     ],
     [
         "Click on OK in login window",
         "Click on OK",
     ],
     [
-        "Click on OKAY in home page",
-        "Click on OKAY",
+        "Click at OKAY in home page",
+        "Click at OKAY",
     ],    
     [
-        "click on login on left side of the screen",
-        "click on login",
+        "Click on login on left side of the screen",
+        "Click on login",
     ],
     [
-        "click on username on left side of the display",
-        "click on username",
+        "Click on username on left side of the display",
+        "Click on username",
     ],
 ]
 
@@ -70,11 +78,19 @@ train_df = pd.DataFrame(
 eval_data = [
     [
         "Navigate to the next application by clicking on Quit",
-        "click on Quit",
+        "Click on Quit",
     ],
     [
-        "click on login on the right side of the screen",
-        "click on login",
+        "Click at login on the right side of the screen",
+        "Click at login",
+    ],
+    [
+        "Login to this website by entering username and password",
+        "Enter username and password",
+    ],
+    [
+        "Log out from the website by pressing OK button",
+        "Press OK button",
     ],
 ]
 
@@ -83,7 +99,7 @@ eval_df = pd.DataFrame(
 )
 
 model_args = Seq2SeqArgs()
-model_args.num_train_epochs = 20
+model_args.num_train_epochs = 10
 model_args.no_save = True
 model_args.evaluate_generated_text = True
 model_args.evaluate_during_training = True
@@ -122,7 +138,9 @@ print("\n Predictions:")
 results = model.predict(
         [
             "Navigate to the next application by clicking on Quit",
-            "click on login on the right side of the screen"
+            "Click on login on the right side of the screen",
+            "Login to this website by entering username and password",
+            "Log out from the website by pressing OK button"
         ]
     )
 print(results)
