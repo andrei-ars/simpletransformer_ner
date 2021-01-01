@@ -2,6 +2,7 @@
 
 import os
 import logging
+import random
 
 import pandas as pd
 from simpletransformers.seq2seq import (
@@ -42,9 +43,13 @@ train_data = [
         "Type Search",
     ],
     [
+        "Login to the google mail by entering your password",
+        "Enter your password",
+    ],  
+    [
         "Buy this product by entering full info",
         "Enter full info",
-    ],    
+    ],
     [
         "Login to the website by clicking on Sigh",
         "Click on Sigh",
@@ -75,6 +80,7 @@ train_data = [
     ],
 ]
 
+random.shuffle(train_data)
 train_df = pd.DataFrame(
     train_data, columns=["input_text", "target_text"]
 )
@@ -152,6 +158,25 @@ print(results)
 for i, result in enumerate(results):
     print("{}: {}".format(i, result))
 """
+1) 
 ["{'label': 'anything is', 'action': 'clickables', 'element_type", 
 "{'label': 'action': 'clickables', 'element_type': None}"]
+
+2) bart-large
+            "Navigate to the next application by clicking on Quit",
+            "Click on login on the right side of the screen",
+            "Login to this website by entering username and password",
+            "Log out from the website by pressing OK button"
+0: Click on
+1: Click on login
+2: Click to this website
+3: Click OK button
+
+3) bart-base:
+0: Click on Quit
+1: Click on login
+2: Click on username and password
+3: Click on OK button
+
+
 """
