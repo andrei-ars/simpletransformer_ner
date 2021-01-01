@@ -129,10 +129,8 @@ model_args.evaluate_during_training_verbose = True
 
 # Initialize model
 model = Seq2SeqModel(
-    encoder_decoder_type="distilbert",
-    encoder_decoder_name="distilbert-base-uncased-distilled-squad",
-    #encoder_decoder_type="bart",
-    #encoder_decoder_name="facebook/bart-large",
+    encoder_decoder_type="bart",
+    encoder_decoder_name="facebook/bart-large",
     #encoder_decoder_name="facebook/bart-base",
     args=model_args,
     use_cuda=False,
