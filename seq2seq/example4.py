@@ -129,9 +129,10 @@ model_args.evaluate_during_training_verbose = True
 
 # Initialize model
 model = Seq2SeqModel(
-    encoder_decoder_type="bart",
+    encoder_decoder_type="electra",
+    #encoder_decoder_type="bart",
     #encoder_decoder_name="facebook/bart-large",
-    encoder_decoder_name="facebook/bart-base",
+    #encoder_decoder_name="facebook/bart-base",
     args=model_args,
     use_cuda=False,
 )
@@ -192,6 +193,21 @@ for i, result in enumerate(results):
 3: Click on OK button
 
 
+            "Navigate to the next application by clicking on Quit",
+            "Click on login on the right side of the screen",
+            "Login to this website by entering username and password",
+            "Log out by typing Exit",
+            "Log out from the website by pressing OK button",
+0: Click on Quit
+1: Click on login
+2: Click username and password
+3: Type Exit
+4: Click OK button
+
+Login to this website by typing username and password
+result: ['Click username and password']
+Click at login on the right side of the screen
+result: ['Click at login']
 """
 
 
