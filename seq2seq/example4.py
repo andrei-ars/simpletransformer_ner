@@ -162,8 +162,7 @@ results = model.eval_model(eval_df)
 
 # Use the model for prediction
 print("\n Predictions:")
-input_texts = 
-        [
+input_texts = [
             "Navigate to the next application by clicking on Quit",
             "Click at login on the right side of the screen",
             "Login to this website by typing username and password",
