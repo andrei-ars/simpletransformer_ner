@@ -29,6 +29,14 @@ train_data = [
     [
         "Navigate to the next website by clicking on Exit",
         "Click on Exit",
+    ],
+    [
+        "Test this input field by typing ABC",
+        "Type ABC",
+    ],
+    [
+        "Test this audio box by saying Hello",
+        "Say hello",
     ],    
     [
         "Login to the application by clicking on abc",
@@ -43,12 +51,12 @@ train_data = [
         "Type Search",
     ],
     [
-        "Login to the google mail by entering your password",
-        "Enter your password",
+        "Login to the google mail by typing your password",
+        "Type your password",
     ],  
     [
-        "Buy this product by entering full info",
-        "Enter full info",
+        "Buy this product by writing full info",
+        "Write full info",
     ],
     [
         "Login to the website by clicking on Sigh",
@@ -63,20 +71,24 @@ train_data = [
         "Click at something",
     ],
     [
-        "Click on OK in login window",
-        "Click on OK",
+        "Hover on OK in login window",
+        "Hover on OK",
     ],
     [
         "Click at OKAY in home page",
         "Click at OKAY",
-    ],    
+    ],
+    [
+        "Select OKAY in the home page",
+        "Select OKAY",
+    ],
     [
         "Click on login on left side of the screen",
         "Click on login",
     ],
     [
-        "Click on username on left side of the display",
-        "Click on username",
+        "Hover on username on left side of the display",
+        "Hover on username",
     ],
 ]
 
@@ -95,8 +107,8 @@ eval_data = [
         "Click at login",
     ],
     [
-        "Login to this website by entering username and password",
-        "Enter username and password",
+        "Login to this website by typing username and password",
+        "Type username and password",
     ],
     [
         "Log out from the website by pressing OK button",
@@ -151,7 +163,8 @@ results = model.predict(
             "Navigate to the next application by clicking on Quit",
             "Click on login on the right side of the screen",
             "Login to this website by entering username and password",
-            "Log out from the website by pressing OK button"
+            "Log out by typing Exit",
+            "Log out from the website by pressing OK button",
         ]
     )
 print(results)
