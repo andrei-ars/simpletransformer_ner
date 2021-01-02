@@ -6,7 +6,7 @@ logging.basicConfig(level=logging.INFO)
 transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.WARNING)
 
-model = LanguageGenerationModel("gpt2", "outputs/from_scratch/", args={"max_length": 200}, use_cuda=False)
+model = LanguageGenerationModel("gpt2", "outputs/fine-tuned/", args={"max_length": 200}, use_cuda=False)
 # model = LanguageGenerationModel("gpt2", "outputs/fine-tuned", args={"max_length": 200})
 # model = LanguageGenerationModel("gpt2", "gpt2", args={"max_length": 200})
 
