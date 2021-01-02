@@ -210,6 +210,14 @@ Login to this website by typing username and password
 result: ['Click username and password']
 Click at login on the right side of the screen
 result: ['Click at login']
+
+4) bart-large
+0: Navigate to the next application by clicking on Quit --> Click on Quit
+1: Click at login on the right side of the screen --> Click at login
+2: Login to this website by typing username and password --> Type username
+3: Log out by typing Exit --> Type Exit
+4: Log out from the website by pressing OK button --> Click OK button
+
 """
 
 
