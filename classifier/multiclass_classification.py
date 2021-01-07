@@ -140,6 +140,9 @@ if __name__ == "__main__":
     )
     train_model(model, dataset)
 
-
-
-predictions, raw_outputs = model.predict(["Some arbitary sentence"])
+    predictions, raw_outputs = model.predict(
+            ["verify BOQ New Quote EOQ is visible on the page .",
+             "Fill in text in BOQ Street Address line 1 EOQ ."]
+            )
+    print("raw_outputs:", raw_outputs)
+    print("predictions:", predictions)
