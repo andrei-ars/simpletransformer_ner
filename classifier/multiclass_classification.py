@@ -198,8 +198,8 @@ def test_model(model, index_to_label):
 
 if __name__ == "__main__":
 
-    #mode = "train"
-    mode = "infer"
+    mode = "train"
+    #mode = "infer"
 
     dataset = ActionDataset(data_path="./dataset_action")
     print("train dataset size:", len(dataset['train']))
