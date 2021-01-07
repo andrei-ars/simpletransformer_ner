@@ -180,7 +180,7 @@ def test_model(model, index_to_label):
         true_label = true_labels[i]
         predicted_label = predicted_labels[i]
         print("True={}, predicted={}".format(true_label, predicted_label))
-        if true_label == predicted_label
+        if true_label == predicted_label:
             count += 1
         else:
             print("wrong prediction")
