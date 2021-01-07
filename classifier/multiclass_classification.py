@@ -25,7 +25,8 @@ class ActionDataset():
         else:
             raise Exception("data_path {} is not a file or a directory.".format(data_path))
 
-        data = [[sample[0], sample[2]] for sample in data]
+        #data = [[sample[0], sample[2]] for sample in data]
+        data = list(map(lambda x: (x[0], x[2]), data))
         # We will get:
         # [['Click zzdo .', 22], ['fill somedata .', 18], ['verify last BOQ zzxu zzpu EOQ .', 16],...
 
@@ -73,7 +74,7 @@ class ActionDataset():
     #    return data
 
     def load_docs_from_file(self, filepath):
-        """ A single file filepath contains all docs. It should have the following form:
+        """ A single file filepath contains all docsIt should have the following form:
                     label ::: word word word
         """
         df = pd.read_csv(filepath, sep=' ::: ', names=['label','text'], engine='python')
@@ -119,7 +120,81 @@ def train_model(model, dataset):
     print("wrong_predictions:", wrong_predictions)
     return result, model_outputs, wrong_predictions
 
+
+
+def test_model(model, index_to_label):
+
+    samples = [
+       ("Navigate to url www.hi.net/#/login .", "OPEN_WEBSITE"),
+
+       ("Fill in text in BOQ Street Address line 1 EOQ .", "ENTER"),
+       ('Set text in XPATH .', "ENTER"),
+
+       ("choose XPATH New PAN Indian Citizen Form 49A .", "SELECT"),
+       ('select BOQ Type EOQ .', "SELECT"),
+       ('select Type .', "SELECT"),
+       ('select .', "SELECT"),
+       ('select BOQ Partnership Firm EOQ in BOQ PAN_APPLCNT_STATUS EOQ .', "SELECT"),
+
+       ("Click XPATH .", "CLICK"),
+       ("Press XPATH .",  "CLICK"),
+       ('click BOQ Log In EOQ .',  "CLICK"),
+       ('Click on first BOQ MoreVert EOQ .', "CLICK"),
+
+       ("assert password after username .", "VERIFY"),
+       ("assert username .", "VERIFY"),
+       ('Verify text BOQ Disable Test Case EOQ .', "VERIFY"),
+
+       ("Verify XPATH width is BOQ 235px EOQ .", "VERIFY_CSSPROP"),
+
+       ("Verify XPATH is enabled .", "VERIFY_XPATH"),
+       ("Verify XPATH is google .", "VERIFY_XPATH"),
+       ('Verify XPATH contains Current or contains events .', "VERIFY_XPATH"),
+       ('Verify XPATH contains Current or ends with events .', "VERIFY_XPATH"),
+       ('Verify XPATH is Related Changes .', "VERIFY_XPATH"),
+       ('verify XPATH is ername .', "VERIFY_XPATH"),
+       
+       ('scroll down .', "SCROLL_ACTION"),
+       ('scroll up .', "SCROLL_ACTION"),
+       
+       ('Hit Enter .', "HIT"),
+       ('Hit escape .', "HIT"),
+       ('Hit spacebar .', "HIT"),
+       ('hit tab .', "HIT"),
+       ('hit up arrow key .', "HIT"),
+       ('Begin block Block1 .', "BEGIN"),
+
+       ('verify BOQ New Quote EOQ is visible on the page .', "VERIFY"),
+       ('verify BOQ INSIDEQOUTES1 EOQ is visible on the page .', "VERIFY"),
+    ]
+
+    input_texts = map(lambda x: x[0], samples)
+    true_labels = map(lambda x: x[1], samples)
+    predictions, raw_outputs = model.predict(input_texts)
+    predicted_labels = list(map(lambda index: index_to_label[index], predictions))
+    print("predictions:", predictions)
+    print("predicted_labels:", predicted_labels)
+
+    count = 0
+    for i in range(len(samples)):
+        true_label = true_labels[i]
+        predicted_label = predicted_labels[i]
+        print("True={}, predicted={}".format(true_label, predicted_label))
+        if true_label == predicted_label
+            count += 1
+        else:
+            print("wrong prediction")
+
+    total_count = len(samples)
+    acc = count / total_count
+    print("\nacc = {:.4f}  [{}/{}]".format(acc, count, total_count))
+    return acc
+
+
 if __name__ == "__main__":
+
+    #mode = "train"
+    mode = "infer"
 
     dataset = ActionDataset(data_path="./dataset_action")
     print("train dataset size:", len(dataset['train']))
@@ -132,17 +207,31 @@ if __name__ == "__main__":
     print("num_labels:", num_labels)
 
     # Create a ClassificationModel
-    model = ClassificationModel(
-        "bert", "bert-base-cased", 
-        num_labels=num_labels,
-        args={"reprocess_input_data": True, "overwrite_output_dir": True},
-        use_cuda=False
-    )
-    train_model(model, dataset)
+    if mode == "train":
+        model = ClassificationModel(
+            "bert", 
+            "bert-base-cased", 
+            num_labels=num_labels,
+            args={"reprocess_input_data": True, "overwrite_output_dir": True},
+            use_cuda=False
+        )        
+        train_model(model, dataset)
+    
+    elif mode == "infer":
+        outputs_dir = "outputs"
+        model = ClassificationModel(
+            "bert", 
+            outputs_dir, 
+            num_labels=num_labels,
+            args={"reprocess_input_data": True, "overwrite_output_dir": False},
+            use_cuda=False
+        )        
 
     predictions, raw_outputs = model.predict(
             ["verify BOQ New Quote EOQ is visible on the page .",
              "Fill in text in BOQ Street Address line 1 EOQ ."]
             )
-    print("raw_outputs:", raw_outputs)
     print("predictions:", predictions)
+
+    test_model(model, dataset.index_to_label)
+
