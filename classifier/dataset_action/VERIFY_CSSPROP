@@ -1,0 +1,128 @@
+verify XPATH fontsize BOQ 26px EOQ .
+verify that XPATH fontsize BOQ 26px EOQ .
+assert XPATH fontsize BOQ 26px EOQ .
+assert that XPATH fontsize BOQ 26px EOQ .
+verify XPATH zzan BOQ zzax EOQ .
+verify that XPATH zzcd BOQ zzgj EOQ .
+assert XPATH zzmb BOQ zzdd EOQ .
+assert that XPATH zzae BOQ zzsp EOQ .
+verify XPATH fontfamily is BOQ serif EOQ .
+verify that XPATH fontfamily is BOQ serif EOQ .
+assert XPATH fontfamily is BOQ serif EOQ .
+assert that XPATH fontfamily is BOQ serif EOQ .
+verify XPATH zzbs is BOQ zzcp EOQ .
+verify that XPATH zzlc is BOQ zzbo EOQ .
+assert XPATH zznc is BOQ zzao EOQ .
+assert that XPATH zzhv is BOQ zzvf EOQ .
+verify XPATH textalign is BOQ end EOQ .
+verify that XPATH textalign is BOQ end EOQ .
+assert XPATH textalign is BOQ end EOQ .
+assert that XPATH textalign is BOQ end EOQ .
+verify XPATH zzmw is BOQ zzmc EOQ .
+verify that XPATH zzty is BOQ zzuw EOQ .
+assert XPATH zzqf is BOQ zzcl EOQ .
+assert that XPATH zzcb is BOQ zzql EOQ .
+verify XPATH height is BOQ 5px EOQ .
+verify that XPATH height is BOQ 5px EOQ .
+assert XPATH height is BOQ 5px EOQ .
+assert that XPATH height is BOQ 5px EOQ .
+verify XPATH zzkn is BOQ zzrg EOQ .
+verify that XPATH zzus is BOQ zzfw EOQ .
+assert XPATH zzxt is BOQ zzjg EOQ .
+assert that XPATH zzyh is BOQ zzlz EOQ .
+verify XPATH width is BOQ 6px EOQ .
+verify that XPATH width is BOQ 6px EOQ .
+assert XPATH width is BOQ 6px EOQ .
+assert that XPATH width is BOQ 6px EOQ .
+verify XPATH zzvu is BOQ zzco EOQ .
+verify that XPATH zzzx is BOQ zzmf EOQ .
+assert XPATH zzjk is BOQ zzuo EOQ .
+assert that XPATH zzxn is BOQ zzpb EOQ .
+verify XPATH backgroundcolor is BOQ # ffffff EOQ .
+verify that XPATH backgroundcolor is BOQ # ffffff EOQ .
+assert XPATH backgroundcolor is BOQ # ffffff EOQ .
+assert that XPATH backgroundcolor is BOQ # ffffff EOQ .
+verify XPATH zzqh is BOQ zzjv EOQ .
+verify that XPATH zzca is BOQ zzsc EOQ .
+assert XPATH zzsl is BOQ zzaq EOQ .
+assert that XPATH zzla is BOQ zzaj EOQ .
+verify XPATH color is BOQ # e01719 EOQ .
+verify that XPATH color is BOQ # e01719 EOQ .
+assert XPATH color is BOQ # e01719 EOQ .
+assert that XPATH color is BOQ # e01719 EOQ .
+verify XPATH zzlm is BOQ zztp EOQ .
+verify that XPATH zzhe is BOQ zzoq EOQ .
+assert XPATH zzpi is BOQ zzle EOQ .
+assert that XPATH zzjs is BOQ zzns EOQ .
+verify XPATH display is BOQ hello1 EOQ .
+verify that XPATH display is BOQ hello1 EOQ .
+assert XPATH display is BOQ hello1 EOQ .
+assert that XPATH display is BOQ hello1 EOQ .
+verify XPATH zztx is BOQ zzbp EOQ .
+verify that XPATH zzwd is BOQ zzpi EOQ .
+assert XPATH zzwa is BOQ zzzi EOQ .
+assert that XPATH zzti is BOQ zzxp EOQ .
+verify XPATH fontsize 26px .
+verify that XPATH fontsize 26px .
+assert XPATH fontsize 26px .
+assert that XPATH fontsize 26px .
+verify XPATH zzgk zzab .
+verify that XPATH zzci zzxp .
+assert XPATH zzlk zzap .
+assert that XPATH zzue zzfm .
+verify XPATH fontfamily is serif .
+verify that XPATH fontfamily is serif .
+assert XPATH fontfamily is serif .
+assert that XPATH fontfamily is serif .
+verify XPATH zztv is zzld .
+verify that XPATH zzlx is zzrf .
+assert XPATH zzep is zzfo .
+assert that XPATH zzix is zzrz .
+verify XPATH textalign is end .
+verify that XPATH textalign is end .
+assert XPATH textalign is end .
+assert that XPATH textalign is end .
+verify XPATH zzfj is zzil .
+verify that XPATH zzsj is zzng .
+assert XPATH zzzq is zzpq .
+assert that XPATH zzhp is zzho .
+verify XPATH height is 5px .
+verify that XPATH height is 5px .
+assert XPATH height is 5px .
+assert that XPATH height is 5px .
+verify XPATH zzho is zznh .
+verify that XPATH zzez is zzpq .
+assert XPATH zzcb is zzln .
+assert that XPATH zzky is zzqd .
+verify XPATH width is 6px .
+verify that XPATH width is 6px .
+assert XPATH width is 6px .
+assert that XPATH width is 6px .
+verify XPATH zznq is zzdj .
+verify that XPATH zzgr is zzhy .
+assert XPATH zzip is zzoo .
+assert that XPATH zzoy is zzfz .
+verify XPATH backgroundcolor is # ffffff .
+verify that XPATH backgroundcolor is # ffffff .
+assert XPATH backgroundcolor is # ffffff .
+assert that XPATH backgroundcolor is # ffffff .
+verify XPATH zzdo is zzsr .
+verify that XPATH zzkj is zzhb .
+assert XPATH zzey is zzoq .
+assert that XPATH zzaz is zzlw .
+verify XPATH color is # e01719 .
+verify that XPATH color is # e01719 .
+assert XPATH color is # e01719 .
+assert that XPATH color is # e01719 .
+verify XPATH zzwg is zzon .
+verify that XPATH zzhd is zzql .
+assert XPATH zzej is zzap .
+assert that XPATH zzho is zzbc .
+verify XPATH display is hello1 .
+verify that XPATH display is hello1 .
+assert XPATH display is hello1 .
+assert that XPATH display is hello1 .
+verify XPATH zzqw is zzta .
+verify that XPATH zzsm is zzwg .
+assert XPATH zzdx is zzgc .
+assert that XPATH zzza is zzjp .

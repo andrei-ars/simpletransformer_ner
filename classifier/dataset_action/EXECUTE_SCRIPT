@@ -1,0 +1,16 @@
+Exec BOQ INSIDEQOUTES1 EOQ .
+Exec BOQ INSIDEQOUTES1 EOQ .
+exec BOQ INSIDEQOUTES1 EOQ returning out21 .
+exec BOQ INSIDEQOUTES1 EOQ returning zzyy .
+exec BOQ INSIDEQOUTES1 EOQ with infname returning outlname .
+exec BOQ INSIDEQOUTES1 EOQ with zzzp returning zzag .
+Exec JSSCRIPT with var1 returning var2 .
+Exec script JSSCRIPT with var1 returning var2 .
+Exec JSSCRIPT with zzkh returning zznz .
+Exec script JSSCRIPT with zzlb returning zzix .
+Exec BASHSCRIPT with var1 returning var2 .
+Exec script BASHSCRIPT with var1 returning var2 .
+Exec BASHSCRIPT with zzbw returning zztg .
+Exec script BASHSCRIPT with zzgb returning zztw .
+Exec PYSCRIPT with var1 returning var2 .
+Exec PYSCRIPT with zzjj returning zziw .

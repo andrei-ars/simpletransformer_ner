@@ -1,0 +1,16 @@
+verify BOQ some text EOQ is on the screen .
+verify that BOQ some text EOQ is on the screen .
+assert BOQ some text EOQ is on the screen .
+assert that BOQ some text EOQ is on the screen .
+verify BOQ zzag zzab EOQ is on the screen .
+verify that BOQ zzdu zzhi EOQ is on the screen .
+assert BOQ zzjk zzmz zzew EOQ is on the screen .
+assert that BOQ zzzx zzft zzlk zzhr EOQ is on the screen .
+verify some text is on the screen .
+verify that some text is on the screen .
+assert some text is on the screen .
+assert that some text is on the screen .
+verify zzix zztg zzfj zzvy zzdx is on the screen .
+verify that zzjh is on the screen .
+assert zzfz is on the screen .
+assert that zzax zzqb zzfa zzre zznk zzsd is on the screen .
