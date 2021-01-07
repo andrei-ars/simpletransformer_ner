@@ -168,8 +168,8 @@ def test_model(model, index_to_label):
        ('verify BOQ INSIDEQOUTES1 EOQ is visible on the page .', "VERIFY"),
     ]
 
-    input_texts = map(lambda x: x[0], samples)
-    true_labels = map(lambda x: x[1], samples)
+    input_texts = list(map(lambda x: x[0], samples))
+    true_labels = list(map(lambda x: x[1], samples))
     predictions, raw_outputs = model.predict(input_texts)
     predicted_labels = list(map(lambda index: index_to_label[index], predictions))
     print("predictions:", predictions)
