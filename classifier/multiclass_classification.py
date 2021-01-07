@@ -1,3 +1,8 @@
+"""
+Results:
+acc = 0.7188  [23/32]
+
+"""
 import os
 import sys
 import pandas as pd
@@ -32,7 +37,7 @@ class ActionDataset():
 
         random.shuffle(data)
         data_size = len(data)
-        train_part = 0.7
+        train_part = 0.95
         train_size = int(train_part * data_size)
         train_data = data[:train_size]
         val_data = data[train_size:]
@@ -212,7 +217,10 @@ if __name__ == "__main__":
             "bert", 
             "bert-base-cased", 
             num_labels=num_labels,
-            args={"reprocess_input_data": True, "overwrite_output_dir": True},
+            args={"reprocess_input_data": True, 
+                    "overwrite_output_dir": True,
+                    'num_train_epochs': 2,   # 5
+                 },
             use_cuda=False
         )        
         train_model(model, dataset)
