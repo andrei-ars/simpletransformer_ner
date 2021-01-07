@@ -4,7 +4,7 @@ import pandas as pd
 import random
 import logging
 
-#from simpletransformers.classification import ClassificationModel
+from simpletransformers.classification import ClassificationModel
 
 
 class ActionDataset():
@@ -117,9 +117,7 @@ def train_model(model, dataset):
     print("result:", result)
     print("model_outputs:", model_outputs)
     print("wrong_predictions:", wrong_predictions)
-
     return result, model_outputs, wrong_predictions
-
 
 if __name__ == "__main__":
 
