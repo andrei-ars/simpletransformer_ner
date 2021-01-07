@@ -128,9 +128,15 @@ if __name__ == "__main__":
     print("Example of train data:")
     print(dataset['train'][:10])
 
+    num_labels = dataset.index_to_label
+    print("num_labels:", num_labels)
+
     # Create a ClassificationModel
     model = ClassificationModel(
-        "bert", "bert-base-cased", num_labels=3, args={"reprocess_input_data": True, "overwrite_output_dir": True}
+        "bert", "bert-base-cased", 
+        num_labels=num_labels,
+        args={"reprocess_input_data": True, "overwrite_output_dir": True},
+        use_cuda=False
     )
     train_model(model, dataset)
 
