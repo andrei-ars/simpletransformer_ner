@@ -128,7 +128,7 @@ if __name__ == "__main__":
     print("Example of train data:")
     print(dataset['train'][:10])
 
-    num_labels = dataset.index_to_label
+    num_labels = len(dataset.index_to_label)
     print("num_labels:", num_labels)
 
     # Create a ClassificationModel
