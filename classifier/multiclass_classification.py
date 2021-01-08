@@ -184,11 +184,12 @@ def test_model(model, index_to_label):
     for i in range(len(samples)):
         true_label = true_labels[i]
         predicted_label = predicted_labels[i]
-        print("True={}, predicted={}".format(true_label, predicted_label))
         if true_label == predicted_label:
+            print("+ {}".format(predicted_label))
             count += 1
         else:
-            print("wrong prediction")
+            print("- wrong prediction: true={}, predicted={}".format(true_label, predicted_label))
+            
 
     total_count = len(samples)
     acc = count / total_count
@@ -214,8 +215,8 @@ if __name__ == "__main__":
     # Create a ClassificationModel
     if mode == "train":
         model = ClassificationModel(
-            model_type="roberta", #"bert", 
-            model_name="roberta-base", 
+            model_type="distilbert", #"roberta", #"bert", 
+            model_name="distilbert-base-cased" #"roberta-base", # "bert-base-cased"
             num_labels=num_labels,
             args={"reprocess_input_data": True, 
                     "overwrite_output_dir": True,
