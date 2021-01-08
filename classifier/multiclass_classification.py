@@ -214,8 +214,8 @@ if __name__ == "__main__":
     # Create a ClassificationModel
     if mode == "train":
         model = ClassificationModel(
-            "roberta" #"bert", 
-            "roberta-base-cased", 
+            model_type="roberta", #"bert", 
+            model_name="roberta-base-cased", 
             num_labels=num_labels,
             args={"reprocess_input_data": True, 
                     "overwrite_output_dir": True,
