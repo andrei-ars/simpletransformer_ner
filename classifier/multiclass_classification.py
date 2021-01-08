@@ -215,7 +215,7 @@ if __name__ == "__main__":
     if mode == "train":
         model = ClassificationModel(
             model_type="roberta", #"bert", 
-            model_name="roberta-base-cased", 
+            model_name="roberta-base", 
             num_labels=num_labels,
             args={"reprocess_input_data": True, 
                     "overwrite_output_dir": True,
