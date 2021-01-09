@@ -215,8 +215,8 @@ if __name__ == "__main__":
     # Create a ClassificationModel
     if mode == "train":
         model = ClassificationModel(
-            model_type="distilbert", #"roberta", #"bert", 
-            model_name="distilbert-base-cased", # "bert-base-cased"; "xlnet-base-cased"
+            model_type="roberta", #"roberta", #"bert", 
+            model_name="roberta-base", # "bert-base-cased"; "xlnet-base-cased"
             num_labels=num_labels,
             args={"reprocess_input_data": True, 
                     "overwrite_output_dir": True,
