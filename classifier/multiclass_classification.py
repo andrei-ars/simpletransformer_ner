@@ -220,7 +220,7 @@ if __name__ == "__main__":
             num_labels=num_labels,
             args={"reprocess_input_data": True, 
                     "overwrite_output_dir": True,
-                    'num_train_epochs': 1,   # 5
+                    'num_train_epochs': 2,   # 5
                  },
             use_cuda=False
         )        
