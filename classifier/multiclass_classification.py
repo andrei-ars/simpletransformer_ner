@@ -216,7 +216,7 @@ if __name__ == "__main__":
     if mode == "train":
         model = ClassificationModel(
             model_type="albert", #"roberta", #"bert", 
-            model_name="albert-base-cased", # "bert-base-cased"; "xlnet-base-cased"
+            model_name="albert-base-v1", # "bert-base-cased"; "xlnet-base-cased"
             num_labels=num_labels,
             args={"reprocess_input_data": True, 
                     "overwrite_output_dir": True,
