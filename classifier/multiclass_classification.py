@@ -213,14 +213,15 @@ if __name__ == "__main__":
     print("num_labels:", num_labels)
 
     # Create a ClassificationModel
+    #  model_name is set to None to train a Language Model from scratch.
     if mode == "train":
         model = ClassificationModel(
-            model_type="albert", #"roberta", #"bert", 
-            model_name="albert-base-v2", # "bert-base-cased"; "xlnet-base-cased"
+            model_type="bert", #"roberta", #"bert", 
+            model_name=None, # "bert-base-cased"; "xlnet-base-cased"
             num_labels=num_labels,
             args={"reprocess_input_data": True, 
                     "overwrite_output_dir": True,
-                    'num_train_epochs': 1,   # 5
+                    'num_train_epochs': 5,   # 5
                     'train_batch_size': 32,
                  },
             use_cuda=False
