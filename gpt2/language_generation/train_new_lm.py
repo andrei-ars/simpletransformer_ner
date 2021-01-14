@@ -47,7 +47,7 @@ train_file = f"data/train.txt"
 test_file = f"data/test.txt"
 
 #model = LanguageModelingModel("gpt2", None, args=train_args, train_files=train_file,)
-model = LanguageModelingModel("bert", None, args=train_args, train_files=train_file,)
+model = LanguageModelingModel("bert", None, args=train_args, train_files=train_file, use_cuda=False)
 
 model.train_model(
     train_file, eval_file=test_file,
