@@ -116,7 +116,7 @@ def train_model(model, dataset):
     eval_df = pd.DataFrame(dataset['val'])
 
     # Train the model
-    model.train_model(train_df, eval_file=eval_df)
+    model.train_model(train_df, eval_df=eval_df)
 
     # Evaluate the model
     result, model_outputs, wrong_predictions = model.eval_model(eval_df)
