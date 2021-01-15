@@ -1,0 +1,224 @@
+select BOQ text EOQ .
+choose BOQ text EOQ .
+select BOQ zzhu zzjn EOQ .
+choose BOQ zzrc zzkj EOQ .
+select BOQ some label EOQ .
+select some label .
+choose BOQ some label EOQ .
+choose some label .
+select BOQ zzdj EOQ .
+select zzwj zzrx .
+choose BOQ zzwu zzbj zzpi EOQ .
+choose zzpf .
+select BOQ object EOQ .
+select object .
+choose BOQ object EOQ .
+choose object .
+select BOQ zzcm zzyf zzrp EOQ .
+select zzsb zzao .
+choose BOQ zzut EOQ .
+choose zzkv zzzd .
+select user label .
+choose user label .
+select zzqr zzas label .
+choose zzgk zzys zzpp label .
+select object .
+choose object .
+select zzxc zzhp .
+choose zzru zzsm .
+select hello world .
+choose hello world .
+select zzcn .
+choose zzyp zzlb zzoc .
+select BOQ anything EOQ .
+choose BOQ anything EOQ .
+select BOQ zzvv EOQ .
+choose BOQ zzcl EOQ .
+select BOQ hello world EOQ .
+choose BOQ hello world EOQ .
+select BOQ zzkp zzsz EOQ .
+choose BOQ zziw zzxj zznh EOQ .
+select BOQ photo EOQ .
+choose BOQ photo EOQ .
+select BOQ zzeg zzah EOQ .
+choose BOQ zzzr zzek zzup EOQ .
+select last BOQ row EOQ .
+choose last BOQ row EOQ .
+select last BOQ zzwt EOQ .
+choose last BOQ zzgt EOQ .
+select the last BOQ xyz EOQ .
+choose the last BOQ xyz EOQ .
+select the last BOQ zzfb zzyy zzme EOQ .
+choose the last BOQ zzhv zzrr EOQ .
+select the first BOQ INSIDEQOUTES1 EOQ .
+choose the first BOQ INSIDEQOUTES1 EOQ .
+select the first BOQ zzup zzph EOQ .
+choose the first BOQ zzck zzge EOQ .
+select second BOQ something EOQ .
+choose second BOQ something EOQ .
+select second BOQ zzar EOQ .
+choose second BOQ zzux EOQ .
+select the second BOQ ttt EOQ .
+choose the second BOQ ttt EOQ .
+select the second BOQ zzqw zzpc EOQ .
+choose the second BOQ zzxr EOQ .
+select the third BOQ user photo EOQ .
+choose the third BOQ user photo EOQ .
+select the third BOQ zzoo zzwz zzws EOQ .
+choose the third BOQ zzbe zzcc EOQ .
+select BOQ anything EOQ for BOQ login EOQ .
+choose BOQ anything EOQ for BOQ login EOQ .
+select BOQ zzoo zzni EOQ for BOQ zzoc zzbr zznu EOQ .
+choose BOQ zzho zzbs EOQ for BOQ zzvl EOQ .
+select third BOQ someone EOQ for BOQ login EOQ .
+choose third BOQ someone EOQ for BOQ login EOQ .
+select third BOQ zzhv zzkk zzpg EOQ for BOQ zzzu zzfm zzfw EOQ .
+choose third BOQ zzaa zzlb zzmt EOQ for BOQ zzsh zzry zzvo EOQ .
+select BOQ anything EOQ before BOQ login EOQ .
+choose BOQ anything EOQ before BOQ login EOQ .
+select BOQ zztj zzmg zzdf EOQ before BOQ zzba EOQ .
+choose BOQ zzcp zzlm EOQ before BOQ zzov zzka EOQ .
+select BOQ anything1 EOQ after BOQ login1 EOQ .
+choose BOQ anything1 EOQ after BOQ login1 EOQ .
+select BOQ zzst zzgk zzrw EOQ after BOQ zzsl zzeh zzgt EOQ .
+choose BOQ zzim zztz zzpx EOQ after BOQ zzvo EOQ .
+select BOQ anything2 EOQ next to BOQ login2 EOQ .
+choose BOQ anything2 EOQ next to BOQ login2 EOQ .
+select BOQ zzcj zznh zzpx EOQ next to BOQ zzco zzua zzip EOQ .
+choose BOQ zzwj EOQ next to BOQ zzff EOQ .
+select BOQ anything EOQ where BOQ age EOQ is greater than NUMBER .
+choose BOQ anything EOQ where BOQ age EOQ is greater than NUMBER .
+select BOQ zzdb zzhj zzdu EOQ where BOQ zzdu EOQ is greater than NUMBER .
+choose BOQ zzwa zzhy EOQ where BOQ zzmb zzfy EOQ is greater than NUMBER .
+select BOQ anything1 EOQ where age1 is less than NUMBER .
+choose BOQ anything1 EOQ where age1 is less than NUMBER .
+select BOQ zzpu zzpm zzmw EOQ where zzgl is less than NUMBER .
+choose BOQ zzis EOQ where zzfg zzfe zzjw is less than NUMBER .
+select BOQ anything EOQ where BOQ param EOQ is myname .
+choose BOQ anything EOQ where BOQ param EOQ is myname .
+select BOQ zzze zzkq zzws EOQ where BOQ zzoi zzfp EOQ is myname .
+choose BOQ zzww EOQ where BOQ zzbm EOQ is myname .
+select BOQ anything EOQ where BOQ param EOQ is NUMBER .
+choose BOQ anything EOQ where BOQ param EOQ is NUMBER .
+select BOQ zzbm zzss zzah EOQ where BOQ zzwa EOQ is NUMBER .
+choose BOQ zziv zzrc zzgw EOQ where BOQ zznw zzuu EOQ is NUMBER .
+select BOQ anything EOQ where colname > NUMBER .
+choose BOQ anything EOQ where colname > NUMBER .
+select BOQ zzdg zzhl zzlp EOQ where zzev > NUMBER .
+choose BOQ zzry zzbx EOQ where zzvo zzgi zzhw > NUMBER .
+select BOQ anything1 EOQ where colname1 > = NUMBER .
+choose BOQ anything1 EOQ where colname1 > = NUMBER .
+select BOQ zzxd zzcs zzzy EOQ where zzem zzkg zzez > = NUMBER .
+choose BOQ zznx zzzh EOQ where zzzl zzek zzhw > = NUMBER .
+select BOQ somename EOQ where colnamex < NUMBER .
+choose BOQ somename EOQ where colnamex < NUMBER .
+select BOQ zzgu zzry zzvn EOQ where zzwa < NUMBER .
+choose BOQ zzyg zzdd EOQ where zzqt < NUMBER .
+select BOQ somename1 EOQ where colnamex1 < = NUMBER .
+choose BOQ somename1 EOQ where colnamex1 < = NUMBER .
+select BOQ zzws zzlj EOQ where zzdd zzbk < = NUMBER .
+choose BOQ zzfn zzjc zztq EOQ where zzjd < = NUMBER .
+select BOQ username EOQ where colnamexy = NUMBER .
+choose BOQ username EOQ where colnamexy = NUMBER .
+select BOQ zzhh zzwz zzml EOQ where zzdf zzjc = NUMBER .
+choose BOQ zzia zzmg zzst EOQ where zzml zzwa zzbk = NUMBER .
+select BOQ username EOQ where colnamexy = textvalue .
+choose BOQ username EOQ where colnamexy = textvalue .
+select BOQ zzzj EOQ where zziu zzol zzwb = textvalue .
+choose BOQ zzte zzyp EOQ where zzhh zzaq = textvalue .
+select anything .
+choose anything .
+select zzda zzvc zzad .
+choose zzsu zzgl .
+select hello world .
+choose hello world .
+select zzxy zzlv zzco .
+choose zziy .
+select photo .
+choose photo .
+select zzsa zzty .
+choose zzmy zzzs zzst .
+select last row .
+choose last row .
+select last zzku .
+choose last zzhg zzer .
+select the last xyz .
+choose the last xyz .
+select the last zzlw .
+choose the last zznk zzwr zzvq .
+select the first INSIDEQOUTES1 .
+choose the first INSIDEQOUTES1 .
+select the first zzhb zzey zzpa .
+choose the first zzld zznh zzqd .
+select second something .
+choose second something .
+select second zzdy .
+choose second zzbq zzwr zzoa .
+select the second ttt .
+choose the second ttt .
+select the second zzmd zzry .
+choose the second zzlm zzhk .
+select the third user photo .
+choose the third user photo .
+select the third zzjs .
+choose the third zzjp .
+select anything for login .
+choose anything for login .
+select zzos zzsl zzjh for zzhr .
+choose zznb zzwz zzqr for zzds zzhk zzcd .
+select third someone for login .
+choose third someone for login .
+select third zzra zzau for zzcg .
+choose third zzbv for zzhq .
+select anything before login .
+choose anything before login .
+select zzpj before zzsk zzsm .
+choose zzba zzhy before zzij .
+select anything1 after login1 .
+choose anything1 after login1 .
+select zzhs zzav after zzmv zzyl .
+choose zzpz zzkq after zzae zzyk .
+select anything2 next to login2 .
+choose anything2 next to login2 .
+select zzgk zzfk next to zzbj zzjm .
+choose zzui zzrn next to zzkj zznk zzhb .
+select anything where age is greater than NUMBER .
+choose anything where age is greater than NUMBER .
+select zzzb where zzae zzos is greater than NUMBER .
+choose zzmr where zzdb zzou zzfy is greater than NUMBER .
+select anything1 where age1 is less than NUMBER .
+choose anything1 where age1 is less than NUMBER .
+select zzfd where zzvn zzuc zzun is less than NUMBER .
+choose zzjh zzwj zzgw where zzgt zztn is less than NUMBER .
+select anything where param is myname .
+choose anything where param is myname .
+select zzrn zzkj zzsa where zzwu zzhc zzom is myname .
+choose zzwv zzrx where zzqj zzua zzor is myname .
+select anything where param is NUMBER .
+choose anything where param is NUMBER .
+select zzoz where zzcl is NUMBER .
+choose zzel zzac zzqo where zzrv zzlt is NUMBER .
+select anything where colname > NUMBER .
+choose anything where colname > NUMBER .
+select zzwz where zzou > NUMBER .
+choose zznk where zzue zzkz > NUMBER .
+select anything1 where colname1 > = NUMBER .
+choose anything1 where colname1 > = NUMBER .
+select zzlt zzvp zzdn where zzic > = NUMBER .
+choose zzyu where zzoe zzdo zzjg > = NUMBER .
+select somename where colnamex < NUMBER .
+choose somename where colnamex < NUMBER .
+select zzgr zzly where zzag < NUMBER .
+choose zzam where zzmk zztp zzfz < NUMBER .
+select somename1 where colnamex1 < = NUMBER .
+choose somename1 where colnamex1 < = NUMBER .
+select zzfp zzpq zzri where zzsr zzri < = NUMBER .
+choose zzpf zzdk where zznf zzcc zzfu < = NUMBER .
+select username where colnamexy = NUMBER .
+choose username where colnamexy = NUMBER .
+select zzyv zzai zznv where zzkw = NUMBER .
+choose zzoi zzlq zzaa where zzpf = NUMBER .
+select username where colnamexy = textvalue .
+choose username where colnamexy = textvalue .
+select zzwx zzbf zzzd where zznk = textvalue .
+choose zzre zzmz where zzwz zzno zzmy = textvalue .

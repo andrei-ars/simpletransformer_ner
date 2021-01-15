@@ -1,0 +1,50 @@
+set screen size NUMBER .
+set screen size size NUMBER .
+set the screen size size NUMBER .
+set window size size NUMBER .
+set the window size size NUMBER .
+set screen size NUMBER * NUMBER .
+set screen size size NUMBER * NUMBER .
+set the screen size size NUMBER * NUMBER .
+set window size size NUMBER * NUMBER .
+set the window size size NUMBER * NUMBER .
+set screen size to NUMBER * NUMBER .
+set screen size size to NUMBER * NUMBER .
+set the screen size size to NUMBER * NUMBER .
+set window size size to NUMBER * NUMBER .
+set the window size size to NUMBER * NUMBER .
+set screen NUMBER .
+set screen size NUMBER .
+set the screen size NUMBER .
+set window size NUMBER .
+set the window size NUMBER .
+set screen NUMBER * NUMBER .
+set screen size NUMBER * NUMBER .
+set the screen size NUMBER * NUMBER .
+set window size NUMBER * NUMBER .
+set the window size NUMBER * NUMBER .
+set screen to NUMBER .
+set screen size to NUMBER .
+set the screen size to NUMBER .
+set window size to NUMBER .
+set the window size to NUMBER .
+set screen to NUMBER * NUMBER .
+set screen size to NUMBER * NUMBER .
+set the screen size to NUMBER * NUMBER .
+set window size to NUMBER * NUMBER .
+set the window size to NUMBER * NUMBER .
+Set screen to mobile phone .
+set screen size to mobile phone .
+set the screen size to mobile phone .
+set window size to mobile phone .
+set the window size to mobile phone .
+Set screen to hd .
+set screen size to hd .
+set the screen size to hd .
+set window size to hd .
+set the window size to hd .
+Set screen to Full HD .
+set screen size to Full HD .
+set the screen size to Full HD .
+set window size to Full HD .
+set the window size to Full HD .
