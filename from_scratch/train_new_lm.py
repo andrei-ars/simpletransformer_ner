@@ -10,7 +10,7 @@ transformers_logger.setLevel(logging.WARNING)
 train_args = {
     "reprocess_input_data": True,
     "overwrite_output_dir": True,
-    "num_train_epochs": 20,
+    "num_train_epochs": 1,
     "save_eval_checkpoints": True,
     "block_size": 509,
     "max_seq_length": 509,
