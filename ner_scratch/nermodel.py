@@ -42,7 +42,7 @@ class NerModel:
     def train(self):
         # # Train the model
         if self.dataset:
-            self.model.train_model(self.dataset['train'], eval_df=self.dataset['val'])
+            self.model.train_model(self.dataset['train'], eval_data=self.dataset['val'])
         else:
             raise Exception("dataset is None")
 
