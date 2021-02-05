@@ -26,18 +26,22 @@ class NerModel:
             'save_model_every_epoch': False,
             
             'train_batch_size': 10, # 10
-            'num_train_epochs': 10,   # 5
+            'num_train_epochs': 8,   # 5
             'max_seq_length': 256,
             'gradient_accumulation_steps': 8,
 
             'labels_list': labels_list
         }
-                
+
+        self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
+
+        """
         if use_saved_model:
             self.model = NERModel("bert", output_dir, use_cuda=False, args=model_args)
         else:
             self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
             # args={"overwrite_output_dir": True, "reprocess_input_data": True}
+        """
 
     def train(self):
         # # Train the model
