@@ -8,8 +8,8 @@ from nerdataset import get_labels_list
 
 if __name__ == "__main__":
 
-    #mode = "train"
-    mode = "infer"
+    mode = "train"
+    #mode = "infer"
 
     #modelname = "table_nq"
     #modelname = "nlp_ext"
