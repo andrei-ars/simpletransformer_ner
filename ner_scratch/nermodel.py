@@ -33,7 +33,8 @@ class NerModel:
             'labels_list': labels_list
         }
 
-        self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
+        #self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
+        self.model = NERModel("bert", None, use_cuda=False, args=model_args)
 
         """
         if use_saved_model:
