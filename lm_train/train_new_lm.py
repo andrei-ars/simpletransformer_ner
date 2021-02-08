@@ -10,7 +10,7 @@ transformers_logger.setLevel(logging.WARNING)
 train_args = {
     "reprocess_input_data": True,
     "overwrite_output_dir": True,
-    "num_train_epochs": 1,
+    "num_train_epochs": 5,
     "save_eval_checkpoints": True,
     "block_size": 509,
     "max_seq_length": 509,
@@ -28,8 +28,8 @@ train_args = {
     "sliding_window": True,
     "use_multiprocessing": False,
     "vocab_size": 10000,
-    "output_dir": f"../outputs/from_scratch_",
-    "best_model_dir": f"../outputs/from_scratch/best_model",
+    "output_dir": f"../lm_outputs/from_scratch_",
+    "best_model_dir": f"../lm_outputs/from_scratch/best_model",
     "fp16": False,
     "local_rank": -1,
 }
