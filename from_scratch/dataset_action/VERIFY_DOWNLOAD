@@ -1,8 +1,0 @@
-Verify BOQ randomname.ext EOQ was downloaded .
-assert BOQ randomname.ext EOQ was downloaded .
-Verify BOQ zzrp EOQ was downloaded .
-assert BOQ zzzn EOQ was downloaded .
-Verify randomname.ext was downloaded .
-assert randomname.ext was downloaded .
-Verify zzbd was downloaded .
-assert zzyd was downloaded .
