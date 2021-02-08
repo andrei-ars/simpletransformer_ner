@@ -1,0 +1,54 @@
+Capture and attach screen print: Request Status"
+"Verify the Edit button is displayed.
+Click the Edit button
+Capture and attach screen print: Edit, Cancel Request, Save and Submit buttons"
+"Navigate to the Approver sectional link and verify the following is displayed:
+Label: Approver, Required*
+- Name* -  single-select dropdown list: displays: Enter FirstName, LastName or UserID
+Assign an approver and Save the request
+
+Capture and attach screen print: Request page (entirely)
+
+"
+"Submit the Request
+
+
+Capture and attach screen print: Request Status
+
+"
+Sign out
+Using Test Prerequisite 1, Login to Batch system as a Submitter. Record the User Id and User Name
+"Navigate to the Equipment tab of the request - Request Number - captured in step 69. Verify the Edit button is displayed. Click the Edit button.
+Captured and attached screen print: Edit, Cancel Request, Save and Submit buttons"
+"Update the Site/Legal Product category/Batch Type: VDR/Drug/Lab.
+Select the value for Reason for this Batch and Optional Equipment fields. Save the request
+
+Capture and attach screen print: Equipment Information section"
+"Select a Manufacturing Date for the bench in the in the Book Equipment in Calendar section. Save the Request
+Capture and attach screen print: Book Equipment in Calendar section"
+"Click the Cancel Request button
+
+Click the No button
+Cancel the request by clicking Yes for the Confirmation Message. Click the Ok button
+
+
+Capture and attach screen print: Confirmation messsage, request status prior and after cancel"
+"Navigate to the Equipment tab. Click the Edit button
+Click the Submit button
+Verify the following in the header:
+- Updated: displays current date
+- Type: displays Drug - Lab
+Capture and attach screen print: Header"
+Sign out
+Using Test Prerequisite 1, Login to Batch system as a Packaging Partner . Record the User Id and User Name
+"Navigate to the Equipment tab of the request - Request Number - captured in step 69. Verify the Edit button is not displayed.
+Captured and attached screen print: Equipment tab"
+Sign out
+Using Test Prerequisite 1, Login to Batch system as a Approver. Record the User Id and User Name
+"Navigate to the Equipment tab of the request - Request Number - captured in step 69. Verify the Edit button is displayed. Remove the approver assigned in step 69. Save and Submit the Request
+Captured and attached screen print: Equipment tab"
+Sign out
+Using Test Prerequisite 1, Login to Batch system as a Submitter. Record the User Id and User Name
+"Navigate to the Equipment tab of the request - Request Number - captured in step 69. Verify the Edit button is not displayed. 
+Captured and attached screen print: Equipment tab"
+Sign out

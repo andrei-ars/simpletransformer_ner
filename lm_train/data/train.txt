@@ -1,0 +1,2673 @@
+open website http://dev.internal.autonomiq.ai
+Save it as array_var_191129 ["item 1", "item 2", "item 3"]
+enter username ${array_var_191129[0]}
+take screenshot
+open website http://ec2-54-183-158-145.us-west-1.compute.amazonaws.com/details/25/188
+get element details(enter username) and save as xyz
+enter username ${xyz.tag_name}
+verify variable ${_3.before.tag_name} is "input" 
+get element details(enter password) and save as _aaa
+enter password ${_aaa.tag_name}
+enter username ${_aaa.location.x}
+Open website https://login.salesforce.com/
+enter username. enter password. click on login
+open website https://www.wikipedia.org/
+Set screen to hd
+Set screen to mobile phone
+Set screen to tablet
+Set screen to tablet landscape
+Set screen to 1080
+Set screen to 720
+Set screen to 900
+Set screen to Full HD
+Set screen size - 200 * 200
+open website https://login.salesforce.com/
+Run ${main_block} for 2  times
+begin block main_block
+Run ${login}
+Run ${create_lead}
+Run ${logout}
+End block
+Flow Name Instruction Data
+logout click on "userNavLabel"
+click on "Logout"
+Flow Name Instruction Data
+create_lead click on "Leads Tab"
+click on New
+enter First Name #{[a-z][0-9][A-Z]test}
+enter Last Name #{[a-z][0-9][A-Z]test}
+enter Company #{[a-z][0-9][A-Z]comp}
+click on save
+Flow Name Instruction Data
+login enter username kitta86@gmail.com
+enter password Autonomiq1!
+click on "Login"
+wait for 2 secs
+if {xpath:'//a[@id='tryLexDialogX']'} is visible, click on close
+wait for 2 secs
+open website https://public.internal.autonomiq.ai/
+verify image of "sample.jpeg"
+## next step should fail
+verify image of "George_Bush.jpeg"
+Wait 1 secs
+open website https://www.google.com/
+wait 10 sec
+if new alert exists, Switch to alert and click on ok
+enter try one
+Wait 5 secs
+exec _js{alert("hello world")} 
+if new alert exists, Switch to alert and click on ok
+enter try two
+Wait 1 secs
+exec _js{alert("hello world")} 
+## next step should fail
+enter try three
+wait 1 sec
+open website https://www.google.com/
+enter text and save it as my_var Atlanta
+enter text and save it my_var Atlanta
+enter text and save as my_var Atlanta
+﻿Test Steps Data
+open website https://www.indiegogo.com/
+click on login
+Hover over login
+Hover over "login" after "forgot your password?"
+Hover over "login" after forgot your password?
+Hover over login after "forgot your password?"
+Hover over login after forgot your password?
+wait for 2 secs
+﻿Test Steps Data
+Open Website https://www.travelers.com/quiz/workplace-safety/workforce-pressure#
+Click "Start Now"
+Assert "Attracting & Hiring"
+click on "yes" next to "Do you have a formal process designed to attract the most qualified job candidates?"
+Click on "yes" next to "Does your interview process include behavioral questioning focused on safety-related problem solving skills?"
+Click not sure next to "Do your job descriptions clearly define work and safety expectations, required tasks and special equipment skills necessary for the position?"
+Click not sure next to "Do your job descriptions clearly define working conditions, as well as potential hazards and safety methods to minimize risk?"
+Click not sure next to "Do you require background screening as part of your hiring process?"
+open website https://www.google.com/
+open the website https://www.cnn.com/
+open web site https://www.google.com/
+open the web site https://www.cnn.com/
+open new website https://www.google.com/
+open site https://www.cnn.com/
+go to the web site https://www.google.com/
+open https://www.cnn.com/
+open page https://www.google.com/
+go https://www.google.com/
+goto https://www.google.com/
+open website https://www.google.com/
+enter atlanta
+refresh page
+enter atlanta
+refresh webpage
+enter atlanta
+refresh web page
+enter atlanta
+reload website
+enter atlanta
+reload web site
+enter atlanta
+reload site
+enter atlanta
+reload url
+enter atlanta
+refresh url
+enter atlanta
+wait 1 sec
+open website https://www.google.com/
+open web site https://www.google.com/
+Open Website https://www.google.com/
+Open Web site https://www.google.com/
+OPEN WEBSITE https://www.google.com/
+OPEN WEB SITE https://www.google.com/
+open website https://jsfiddle.net/gcaiq/uck1mdeL/show
+click on "Open link in New tab"
+Wait 1 secs
+Switch to new tab
+Wait 1 secs
+Close Browser Window
+Wait 1 secs
+open website https://jsfiddle.net/gcaiq/uck1mdeL/show
+Switch to first tab
+Wait 1 secs
+Click on "Open a Window"
+Wait 1 secs
+Switch to new tab
+Switch to new window
+Wait 1 secs
+Close Browser Tab
+Wait 1 secs
+open website https://jsfiddle.net/gcaiq/uck1mdeL/show
+Click on "Open a Window"
+Wait 1 secs
+Switch to new window
+Wait 1 secs
+Close Window
+open website https://jsfiddle.net/gcaiq/uck1mdeL/show
+Click on "Open a Window"
+Switch to new window
+Close  Tab
+open website https://jsfiddle.net/gcaiq/uck1mdeL/show
+Click on "Open a Window"
+Switch to new window
+Close Browser Tab
+open website https://jsfiddle.net/gcaiq/uck1mdeL/show
+Click on "Open a Window"
+Switch to new window
+Close Current Browser Tab
+open website https://jsfiddle.net/gcaiq/uck1mdeL/show
+Click on "Open a Window"
+Switch to new window
+Close This Browser Tab
+open website https://jsfiddle.net/gcaiq/uck1mdeL/show
+open website https://jsfiddle.net/gcaiq/uck1mdeL/show
+click on "Open link in New tab"
+Switch to new tab
+exec _js{window.close()}
+take screenshot
+open website https://bqalive-rtb2c.rezopiatest.net
+Click on "Sign In"
+save it as test true
+if variable ${Stomach} is "", save it as test false
+if variable ${test} is true, Enter username
+enter username user123@mycompan.com
+Enter password pass123
+open website http://google.com
+save it as var_city London
+Run ${Get_Wiki_Page_Time}
+open website http://google.com
+Enter text ${var_page_update}
+wait 5 sec
+Flow Name Instruction Data Expected Result
+Get_Wiki_Page_Time open website http://google.com
+_xl{${var_city} & " Wiki"} as var_city_wiki
+_xl{${var_city} & " - Wikipedia"} as var_city_wiki_link
+enter text ${var_city_wiki}
+hit enter
+wait 5 sec
+click on ${var_city_wiki_link} ${var_city_wiki_link}
+Wait 2 sec
+Save _css{"#footer-info-lastmod"} as var_page_update
+open website http://google.com
+Enter text ${var_page_update}
+open website http://google.com
+save it as var_city London
+open website http://google.com
+_xl{${var_city} & " Wiki"} as var_city_wiki
+_xl{${var_city} & " - Wikipedia"} as var_city_wiki_link
+enter text ${var_city_wiki}
+hit enter
+wait 5 sec
+click on ${var_city_wiki_link} ${var_city_wiki_link}
+Wait 2 sec
+Save _css{"#footer-info-lastmod"} as var_page_update
+open website http://google.com
+Enter text ${var_page_update}
+wait 5 sec
+open website https://support.autonomiq.ai/test/sanity/Test_Image/detect/
+click on 1st plus
+click on 2nd plus
+click on 3rd plus
+click on 4th plus
+click on 5th plus
+click on 6th plus
+click on 7th plus
+click on 6th plus
+click on 9th plus
+click on 10th plus
+click on 11th plus
+click on 12th plus
+click on 13th plus
+click on 1st minus
+click on 2nd minus
+click on 3rd minus
+click on 4th minus
+click on 5th minus
+click on 6th minus
+click on 7th minus
+click on 6th minus
+click on 9th minus
+click on 10th minus
+click on 11th minus
+click on 12th minus
+click on 13th minus
+open website https://google.com/search?q=usa+time
+if "USA" is on the page, Run ${my_if_part}
+Begin block my_if_part
+enter text the IF part
+wait 1 sec
+End block
+else Run ${my_else_part}
+Begin block my_else_part
+enter text the ELSE part
+wait 1 sec
+End block
+if "INDIA" is on the page Run ${my_if_part}
+Begin block my_if_part
+enter text the IF part
+wait 1 sec
+End block
+wait 1 sec
+open website http://ninja.autonomiq.ai
+ if variable ${username} is xyz , run ${block1} for all rows
+Begin block block1
+enter username user1
+enter password pass1
+end block
+ elif variable ${password} is pass2 , run ${block2} user1
+begin block block2
+enter username test1
+enter password pass1
+end block
+else if variable ${username} is test2, run ${block3} test1
+begin block block3
+enter username test1
+enter password pass1
+end block
+else, run ${else_part}
+begin block else_part
+enter username test1
+end block
+open website https://s1.demo.opensourcecms.com/wordpress/wp-login.php?loggedout=true
+enter username opensourcecms
+enter password opensourcecms
+click login
+if current url is "https://s1.demo.opensourcecms.com/wordpress/wp-admin/", run ${block1} 
+Begin block block1
+click users
+wait for 3 secs
+if  {xpath: "//a[@class='page-title-action']"} is visible, run ${users} for all rows
+Begin block users
+click "Add New"
+wait for 3 secs
+enter "username" user2
+enter "First Name" kumar
+enter "Last Name" kumar
+wait for 2 secs
+click on createusersub
+wait for 3 secs
+End block
+end block
+open website https://google.com/search?q=usa+time
+Begin block my_if_part
+enter text the IF part
+wait 1 sec
+End block
+Begin block my_else_part
+enter text the ELSE part
+wait 1 sec
+End block
+if "USA" is on the page, Run ${my_if_part}
+else, Run ${my_else_part}
+if "INDIA" is on the page, Run ${my_if_part}
+else, Run ${my_else_part}
+Run ${my_if_part}
+Run ${my_else_part}
+Wait 1 secs
+open website http://ninja.autonomiq.ai
+Run ${check} for 2 times
+Begin block check
+enter username
+enter password
+click on  "log in"
+open website https://support.autonomiq.ai/test/sanity/Test_Compare_Env/new/Hannas_Home_Made_Cakes.html
+if "Order number " exist on the screen, run ${Exit}
+Begin block Exit
+click on Exit
+end block
+elif verify "Place Order" is on the screen, run ${Place_order}. 
+begin block Place_order
+click on "Place order"
+enter Number of cakes needed 3
+enter Choose a flavor Chocolate
+enter firstname john
+enter lastname smit
+click on Submit
+end block
+else, run ${order_again}
+begin block order_again
+go to url https://support.autonomiq.ai/test/sanity/Test_Compare_Env/new/Hannas_Home_Made_Cakes.html
+click on "Place order"
+end block
+open website http://ninja.autonomiq.ai/
+save it as _username test
+save it as _password test1
+enter username ${_username}
+enter password ${_password}
+open website https://dev.internal.autonomiq.ai/details/
+connect to db "" with url "jdbc:mysql://ec2-13-57-212-143.us-west-1.compute.amazonaws.com:3306/" with user as "root" and password as "app123" with db_id "test"
+## execute query "INSERT INTO testDB.user values('${name1}', '${name2}')" against "test"
+execute query "select *from testDB.user limit 10" against "test" and save it as query_data
+save _js{return eval(${query_data})[6][0]} as username
+save _js{return eval(${query_data})[6][1]} as password
+enter username ${username}
+enter password ${password}
+click on login
+open website https://dev.internal.autonomiq.ai/details/
+connect to db "" with url "jdbc:oracle:thin:@oracle-db-test.cgck8ublk7h6.us-west-1.rds.amazonaws.com:1521:ORCL" with user as "testuser" and password as "test1234" with db_id "test" version "12.2.0.1"
+## execute query "INSERT INTO users VALUES ('${user1}','${user2}')" against "test"
+execute query "SELECT *  FROM users " against "test" and save it as query_data
+save _js{return eval(${query_data})[5][0]} as username
+save _js{return eval(${query_data})[5][1]} as password
+enter username ${username}
+enter password ${password}
+click on login
+open website https://dev.internal.autonomiq.ai/details/
+connect to db "" with url "jdbc:mysql://ec2-13-57-212-143.us-west-1.compute.amazonaws.com:3306/" with user as "root" and password as "app123" with db_id "test"
+execute query "select *from testDB.user limit 1" against "test" and save it as query_data
+save _js{return eval(${query_data})[0][0]} as username
+save _js{return eval(${query_data})[0][1]} as password
+enter username ${username}
+enter password ${password}
+click on login
+open website https://dev.internal.autonomiq.ai/details/
+connect to db "" with url "jdbc:oracle:thin:@oracle-db-test.cgck8ublk7h6.us-west-1.rds.amazonaws.com:1521:ORCL" with user as "testuser" and password as "test1234" with db_id "test"
+execute query "SELECT *  FROM users " against "test" and save it as query_data
+save _js{return eval(${query_data})[0][0]} as username
+save _js{return eval(${query_data})[0][1]} as password
+enter username ${username}
+enter password ${password}
+click on login
+open website https://dev.internal.autonomiq.ai/details/
+connect to db "" with url "jdbc:oracle:thin:@oracle-db-test.cgck8ublk7h6.us-west-1.rds.amazonaws.com:1521:ORCL" with user as "testuser" and password as "test1234" with db_id "test" version "12.2.0.1"
+execute query "SELECT *  FROM users " against "test" and save it as query_data
+save _js{return eval(${query_data})[0][0]} as username
+save _js{return eval(${query_data})[0][1]} as password
+enter username ${username}
+enter password ${password}
+click on login
+﻿Test Step Test Data
+open website https://login.salesforce.com/
+verify class {"xpath": "//*[@id='username']"} is "input r4 wide mb16 mt8 username"
+verify name {"xpath": "//*[@id='username']"} is username
+verify type {"xpath": "//*[@id='username']"} is email
+verify value {"xpath": "//*[@id='Login']"} is "Log In"
+verify {"for": "//*[@id='login_form']/div[3]/label"} is "rememberUn"
+﻿Test Steps Data
+open website https://www.travelers.com/
+verify {xpath:"//*[@id='promo-insurance-tailored']/ul/li[2]/h3"} contains "Insurance" or "business"
+verify {xpath:"//*[@id='promo-insurance-tailored']/ul/li[2]/h3"} starts with "Insurance" and ends with   "bottom line."
+verify {xpath:"//*[@id='promo-insurance-tailored']/ul/li[2]/h3"} starts with "Insurance" or ends with "test"
+save  {xpath:"//*[@id='promo-insurance-tailored']/ul/li[2]/h3"} as "text"
+verify {xpath:"//*[@id='promo-insurance-tailored']/ul/li[2]/h3"} contains ${text}
+verify {xpath:"//*[@id='promo-insurance-tailored']/ul/li[2]/h3"} is ${text}
+﻿Test Steps Data
+open website https://www.travelers.com/
+verify {xpath:"//*[@id='main-content']/div[2]/div/div[1]/button[1]"} background-color is #ffffff
+verify {xpath:"//*[@id='main-content']/div[2]/div/div[1]/button[1]"} color is #e01719
+verify {xpath:"//*[@id='main-content']/div[2]/div/div[1]/button[1]"} font-size 26px
+open website https://www.w3schools.com/code/tryit.asp?filename=GJP77S5O5CE2
+click on "Run »"
+verify _label(_rx(\d*)+product) is on the screen
+﻿Test Steps Data
+open website https://www.travelers.com/
+Verify {xpath: "//div[@class='hdr-logo']"} exists
+Verify {xpath: "//div[@class='hdr-logo']"} is enabled
+Verify {xpath: "//div[@class='hdr-logo']"} is visible
+﻿Test Steps Data
+open website https://login.salesforce.com
+enter username asd
+enter sername asd
+verify username
+verify sername
+verify {xpath:"//label[@for='username']"} is Username
+verify {xpath:"//label[@for='username']"} is ername
+assert username
+assert password after username
+assert {xpath:"//label[@for='username']"} is Username
+assert sername
+﻿Test Steps Data
+open website https://dev.autonomiq.ai/
+wait for two seconds
+wait for one second
+verify url is something
+verify image of dog is on the page
+verify alert exists
+verify variable ${test} is something
+assert url is something
+assert variable ${test} is some
+enter username dummy
+enter password dummy
+click on login
+click on plan
+﻿Test Steps Data
+open website  https://www.travelers.com/individuals
+verify {href:"//*[@id='tcom-fi-hdr-insurance-for-individuals']"} is "https://www.travelers.com/individuals"
+verify {src:"//*[@id='main-nav-0-group']/ul/li[4]/div/img"} is "https://www.travelers.com/iw-images/promos/meganav/nov2018_promo_pii.jpg"
+open website https://jsfiddle.net/vinaya_v/d0k6gnjy/60/show
+Click on "Select" Where Location ends with ore
+Wait for 3 Seconds
+open website http://chess.drshivaji.com/
+Click on "White" Where White Elo != undefined
+Wait for 5 seconds
+open website http://chess.drshivaji.com/
+Click on "Wins" Where Move starts with g
+Wait for 10 seconds
+open website http://chess.drshivaji.com/
+Click on "Move>" where Winning % > 55
+Wait for 5 seconds
+open website https://jsfiddle.net/vinaya_v/d0k6gnjy/60/show
+Choose  "Books" Where Name is SKM Dark Materials
+Wait for 3 seconds
+Choose "The Shinning" Where Name is Anki
+Select "Jane Eyre" Where Name is SKM
+Wait for 3 seconds
+select "Books" Where Name is Vib Anne Series
+open website https://jsfiddle.net/vinaya_v/d0k6gnjy/60/show
+Enter text in "Comment" Where row is 3 Need to review
+Take Screenshot
+open website https://jsfiddle.net/vinaya_v/d0k6gnjy/60/show
+Click on checkbox in "Choose" Where row is 4
+Take Screenshot
+open website http://chess.drshivaji.com/
+Click on "White" Where Date contains 1994
+Wait for 8 seconds
+open website http://chess.drshivaji.com/
+Click on "Wins" Where Move = c4
+open website https://jsfiddle.net/vinaya_v/d0k6gnjy/60/show
+Enter text in "Review" Where Location is Mysore Quantum Computing
+Wait for 5 seconds
+open website https://jsfiddle.net/vinaya_v/d0k6gnjy/60/show
+Click on checkbox in "Choose" Where Name is Anki
+Wait for 5 seconds
+open website http://chess.drshivaji.com/
+Click on "Black" Where Black Elo is not undefined
+Wait for 10 seconds
+open website https://jsfiddle.net/vinaya_v/d0k6gnjy/60/show
+Click on radio in "No" Where row is 2
+Take Screenshot
+open website http://chess.drshivaji.com/
+wait for 2 second
+Click on "Move>" Where Winning % lesser than 55
+Wait for 20 secs
+open website http://chess.drshivaji.com/
+Click on "Move>" Where Winning % < 55
+Wait for 5 seconds
+open website http://chess.drshivaji.com/
+Click on "Move>" Where Winning % is 55.71
+Wait for 5 seconds
+open website https://jsfiddle.net/vinaya_v/d0k6gnjy/60/show
+Click on radio in "No" Where Location is Mysore
+Wait for 5 seconds
+open website http://chess.drshivaji.com/
+Wait for 3 seconds
+Click on "White" Where White Elo greater than 2700
+Wait for 10 seconds
+open website http://chess.drshivaji.com/
+Click on "Move" Where Winning % <= 55
+Wait for 5 seconds
+open website http://chess.drshivaji.com/
+Click on "Move>" Where Wins >= 70060
+Wait for 5 seconds
+open website http://chess.drshivaji.com/
+Click on "Black" Where Date ends with ?
+Wait for 10 seconds
+open website https://jsfiddle.net/vinaya_v/d0k6gnjy/60/show
+Click on "Place" Where Name is SKM
+Wait for 10 secs
+open website http://chess.drshivaji.com/
+Click on "White" Where White Elobegins with I
+Wait for 10 seconds
+open website http://dev.internal.autonomiq.ai
+save it as approvel_date 06 Dec 2019
+Exec _js{return approvel_date = new Date(new Date(aiq_1).getTime() - (7 * 24 * 60 * 60 * 1000) ) < new Date();}  with ${approvel_date} returning ${approvel_date_lesser_from_today} 
+save it as bool True
+verify variable ${approvel_date_lesser_from_today} is ${bool}
+open website https://www.google.com/
+Save it as date_from_screen {Today - 1{mm}, yyyy/MM/dd}
+Enter text ${date_from_screen}
+_xl{IF(TEXT(TODAY(), "yyyy/mm/dd") > ${date_from_screen}, "before today", "today or future") } as var_when_date 
+Enter text ${var_when_date}
+## another test
+Save it as date_from_screen {Today + 1{dd}, yyyy/MM/dd}
+Enter text ${date_from_screen}
+_xl{IF(TEXT(TODAY(), "yyyy/mm/dd") > ${date_from_screen}, "before today", "today or future") } as var_when_date 
+Enter text ${var_when_date}
+## another test
+Save it as date_from_screen {Today - 1{yy}, yyyy/MM/dd}
+Enter text ${date_from_screen}
+_xl{IF(TEXT(TODAY(), "yyyy/mm/dd") > ${date_from_screen}, "before today", "today or future") } as var_when_date 
+Enter text ${var_when_date}
+## another test
+Save it as date_from_screen {Today, yyyy/MM/dd}
+Enter text ${date_from_screen}
+_xl{IF(TEXT(TODAY(), "yyyy/mm/dd") > ${date_from_screen}, "before today", "today or future") } as var_when_date 
+Enter text ${var_when_date}
+Open website -pdf firefox https://support.autonomiq.ai/test/pdf/check_for/test_01.html
+Click on Nupedia
+Wait 5 secs
+check for "Sanger" in "Nupedia.pdf"
+Wait 5 sec
+Open website -pdf firefox https://support.autonomiq.ai/test/pdf/check_for/test_01.html
+click on Wikipedia
+Wait 5 secs
+check for "Sanger" in "Wikipedia.pdf"
+check for "open collaboration" in "Wikipedia.pdf"
+Wait 30 sec
+Open website -pdf firefox https://support.autonomiq.ai/test/pdf/check_for/test_01.html
+click on "Nupedia"
+Wait 5 secs
+check for "Sanger" in "Nupedia.pdf"
+## next statement should fail
+check for "Obama" in "Nupedia.pdf"
+Wait 5 secs
+open website https://www.w3schools.com/
+click "LEARN HTML" --moveAndClick
+click "Home" --moveAndClick
+﻿my_email my_phone
+sales@autonomiq.io 901-652-5702
+﻿Test Steps Data
+open website https://www.facebook.com/
+Enter First name Young
+Enter Last name Choi
+exec _bash{curl -X GET -s "https://api.trumail.io/v2/lookups/json?email=$aiq_1" | python -c "import sys, json; result = json.load(sys.stdin)['deliverable']; sys.stdout.write(str(result)); assert result == True"} with ${my_email} returning ${is_email_valid}
+if variable ${is_email_valid} is "True", Enter "Mobile number or Email" ${my_email}
+exec _bash{curl -X GET -s "http://apilayer.net/api/validate?access_key=2546bc9aa8ac87c53be7551b0b21a9c4&number=$aiq_1&country_code=US&format=1" | python -c "import sys, json; result = json.load(sys.stdin)['valid']; sys.stdout.write(str(result)); assert result == True"} with ${my_phone} returning ${is_phone_valid}
+if variable ${is_phone_valid} is "True", Enter "Mobile number or Email" ${my_phone}
+Create random variable my_password #{TestingSignUp\d\d\d\d}
+Enter new password my_password
+Click on "Female"
+Hover over Sign Up
+open website https://test.salesforce.com
+save it as a_ip 100
+save it as a_op 0
+Exec _js{return aiq_1} with ${a_ip} returning ${a_op}
+Exec _py{a=2}
+Exec _py{print(aiq_1)} with ${a_ip} returning ${a_op}
+open website https://login.salesforce.com/
+save it as ip_1 500
+save it as op_1 0
+Exec "sample_python.py" with ${ip_1} returning ${op_1}
+open website http://example.com/
+save it as max_character 7
+Exec _js{return Math.random().toString(36).substring(aiq_1);} with ${max_character} returning ${var_name1}
+Open website http://ninja.autonomiq.ai/
+Exec _js{document.querySelector("#username").value="test"}
+open website https://www.google.com/
+save text as js_alert alert("Hello World");
+save text as js_statment1 return "Hello World 1";
+save text as js_statment2 return aiq_1 + ' ' + aiq_2
+save text as js_fname John
+save text as js_lname Smith
+save _js{return "Hello" + " " + "World";} as js_result01
+call _js{alert( "Hello" + " " + "World");}
+Switch to alert and click on ok
+Exec _js{alert( "Hello" + " " + "World");}
+Switch to alert and click on ok
+Exec _js{return Math.random().toString(36).substring(6);} returning ${js_result02}
+Exec _js{return aiq_1 + ' ' + aiq_2;} with ${js_fname}, ${js_lname} returning ${js_result03} 
+exec script _js ${js_alert}
+Switch to alert and click on ok
+exec script _js ${js_statment1} returning ${js_result11} 
+exec script _js ${js_statment2} with ${js_fname}, ${js_lname}
+exec script _js ${js_statment2} with ${js_fname}, ${js_lname} returning ${js_result21} 
+begin script  _js
+var msg1 = "Hello"
+var msg2 = "World"
+var msg = msg1 + " " + msg2
+return msg;
+End script save as ${js_result21}
+begin _js  with ${js_fname}, ${js_lname}
+return aiq_1 + ' ' + aiq_2;
+End script save as ${js_result22}
+exec "example1.js"
+exec "example1.js"  returning  ${js_result31}
+exec "example2.js"  with ${js_fname}, ${js_lname}
+exec "example2.js"  with ${js_fname}, ${js_lname}  returning  ${js_result32}
+wait 1 sec
+﻿Test Steps Data
+open website https://www.google.com/
+_var{${apiBase} & "?zip=" & ${zipCode} & "," & ${country} & "&APPID=" & ${appID}} as apiUrl
+exec _bash{curl -X GET -s "http://api.openweathermap.org/data/2.5/weather?zip=$aiq_1,$aiq_2&APPID=$aiq_3" | python -c "import sys, json; result = json.load(sys.stdin); sys.stdout.write(str(result['weather']));"} with ${zipCode}, ${country}, ${appID} returning ${weather}
+save _api{GET(CURL("GET", ${apiUrl}), "weather")} as weather2
+Enter Search ${weather}
+Enter Search ${weather2}
+open website https://www.google.com/
+save text as js_alert alert("Hello World");
+save text as js_statment1 return "Hello World 1";
+save text as js_statment2 return aiq_1 + ' ' + aiq_2
+save text as js_fname John
+save text as js_lname Smith
+save _js{return "Hello" + " " + "World";} as js_result01
+call _js{alert( "Hello" + " " + "World");}
+Switch to alert and click on ok
+exec script _js ${js_alert}
+Switch to alert and click on ok
+exec script _js ${js_statment1} returning ${js_result11} 
+exec script _js ${js_statment2} with ${js_fname}, ${js_lname}
+exec script _js ${js_statment2} with ${js_fname}, ${js_lname} returning ${js_result21} 
+begin script  _js
+var msg1 = "Hello"
+var msg2 = "World"
+var msg = msg1 + " " + msg2
+return msg;
+End script save as ${js_result21}
+begin _js  with ${js_fname}, ${js_lname}
+return aiq_1 + ' ' + aiq_2;
+End script save as ${js_result22}
+exec "example1.js"
+exec "example1.js"  returning  ${js_result31}
+exec "example2.js"  with ${js_fname}, ${js_lname}
+exec "example2.js"  with ${js_fname}, ${js_lname}  returning  ${js_result32}
+wait 1 sec
+open website https://www.google.com/
+save _api{CURL("POST", "https://reqbin.com/echo/post/json", "{'login':'login','password':'password'}")} as post_response
+Enter Search ${post_response}
+save _api{GET(CURL("POST", "https://reqbin.com/echo/post/json", "{'login':'login','password':'password'}"), "success")} as post_response_success
+Enter Search ${post_response_success}
+wait 5 sec
+﻿zipCode country appID apiBase
+95134 us c3f2b50dbdf485f37af368c487ffa3dd http://api.openweathermap.org/data/2.5/weather
+﻿Test Steps Data
+open website https://www.google.com/
+exec _bash{curl -X GET -s "http://api.openweathermap.org/data/2.5/weather?zip=$aiq_1,$aiq_2&APPID=$aiq_3" | python -c "import sys, json; result = json.load(sys.stdin); sys.stdout.write(str(result['weather']));"} with ${zipCode}, ${country}, ${appID} returning ${weather}
+Enter Search ${weather}
+Open Website http://ecc92.sapaccess.com:8000/sap/bc/gui/sap/its/webgui
+Enter User: E92800004
+Enter Password welcome01
+Click on Log On
+double click on logistics
+wait 1 secs
+double click on "Sales and Distribution"
+double click on sales 
+double click on order
+double click on create
+Enter Order Type OR
+Enter Sales Organization 0001
+Enter Distribution Channel 01
+Enter Division 01
+Hit Enter
+Enter Sold-To Party 1000
+Hit Enter
+wait 1 secs
+Click on Item Overview
+Wait 5 secs
+Enter _xpath{"//td[contains(@id, '[1,2]')]//input"} RIESLING_2011
+Hit Enter
+Hit tab
+Take screenshot
+Enter _xpath{"//td[contains(@id, '[1,3]')]//input"} 1
+wait 1 secs
+Click on Save
+take screenshot
+open website https://www.facebook.com
+get element details(enter email) and save as _123
+selenium_action(${_123}, action_chain).send_keys qwerty
+selenium_action(${_123}).clear
+selenium_action(${_123}).send_keys 456
+selenium_action(${_123}, use_js).clear
+selenium_action(${_123}, action_chain).send_keys 789
+selenium_action(${_123}).clear
+get element details(click on "Log In") and save as _xyz
+selenium_action(${_xyz}, action_chain).double_click
+open website https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit
+get element details(enter First name) and save as _567
+selenium_action(${_567}).clear
+selenium_action(${_567}, use_js).send_keys kaala
+selenium_action(${_567}, use_js).clear
+get element details(enter lastname) and save as _abc
+selenium_action(${_abc}).clear
+selenium_action(${_abc}, use_js).send_keys jameel
+get element details(click on "submit") and save as _xyz
+selenium_action(${_xyz}, use_js).click
+open website https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_type_checkbox
+click on {xpath: "/html/body/div[5]/div/button"}
+get element details(click on first "vehicle2" ) and save as var_2
+Verify variable ${var_2.checked} is "false"
+Verify variable ${var_2.checked} is "true"
+open website https://jsfiddle.net/gcaiq/rj17weqm/show
+Enter _css{"#input_textfield_1"} by css
+Enter _xpath{"//*[@id='input_textfield_1']"} by xpath
+Enter "input_textfield_1" by text field name
+Enter "input textfield 1" by text field label text
+get element details(Enter input_textfield_1) and save as xyz
+get element details(Enter input textfield 1) and save as xyz1
+get element details(Enter input textfield 1:) and save as xyz2
+get element details(Enter "input textfield 1:") and save as xyz3
+get element details(Enter _css{"#input_textfield_1"}) and save as xyz4
+get element details(Enter _xpath{"//*[@id='input_textfield_1']"}) and save as xyz5
+enter "tag name" ${xyz.tag_name}
+verify variable ${_3.before.tag_name} is "input" 
+get element details(enter input textfield p:) and save as _aaa
+enter "input textfield 2:" ${_aaa.tag_name}
+Verify variable ${xyz.tag_name} is "tfds"
+verify variable ${xyz.tag_name} is "input"
+enter out_size_height ${_aaa.location.x}
+enter out_size_height ${wq.e[1][0]}
+open website http://ec2-54-183-158-145.us-west-1.compute.amazonaws.com/details/25/188
+get element details(enter username) and save as xyz
+enter username ${xyz.tag_name}
+verify variable ${_3.before.tag_name} is "input" 
+get element details(enter password) and save as _aaa
+enter password ${_aaa.tag_name}
+enter username ${_aaa.location.x}
+open website ${URL}
+Enter Username appuser
+enter password app123
+click login
+wait 2 secs
+click plan
+Click on "Projects"
+click on ${ProjectName}
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div/div[4]/div/button[1]"}
+Wait 1 secs
+click on {xpath: "//*[@id="main"]/div[2]/button[1]"}
+open website ${url}
+enter username ${Username}
+enter password ${Password}
+click login
+click plan
+click projects
+click autonomiqtest
+click "create new test case"
+open website ${URL}
+Enter Username appuser
+enter password app123
+click login
+wait 2 secs
+click plan
+Click on "Projects"
+click on ${ProjectName}
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div/div[4]/div/button[1]"}
+Wait 1 secs
+click on {xpath: "//*[@id="main"]/div[2]/button[1]"}
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[1]/header/div/div/h3/div/div[1]"}
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div/div/div[1]/table/tbody/tr[1]/td[5]/div"}
+Click Script
+click DOWNLOAD JAVA
+wait 1 secs
+open website ${url}
+enter username ${Username}
+enter password ${Password}
+click login
+click plan
+click projects
+click autonomiqtest
+click variables
+click add
+Fill in text in Variable TestVariable
+Fill in text in value demoVar
+click OK
+wait 1 secs
+click variable
+Verify '"Test Variable"' is on the screen
+open website ${url}
+Enter username ${Username}
+Enter password ${Password}
+click login
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]/div/div/div/span[2]"}
+click dashboard
+open website ${url}
+Enter Username  ${Username}
+Enter password ${Password}
+click login
+open website ${url}
+enter username ${Username}
+enter password  ${Password}
+click login
+click plan
+click projects
+click autonomiqtest
+click suites
+Click {xpath: "//*[@id="myTbl"]/tbody/tr[1]/td[4]/div/button[1]"}
+click on execute
+click Select platform
+click linux
+click select browser
+click chrome
+click radio filter by tag
+click radio Complete suite
+click Execute Button
+open website ${url}
+Enter username ${Username}
+Enter password ${Password}
+click login
+click plan
+click projects 
+click autonomiqtest
+click scripts
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div[1]/table/tbody/tr[1]/td[4]/div/div[2]/div/button/span[1]"}
+click on preview
+wait 5 secs
+Click "Download Java"
+open website ${url}
+Enter username ${Username}
+Enter password  ${Password}
+click login
+Click fourth details 
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/table/tbody/tr[1]/td[5]/button"}
+Click goto
+open website ${url}
+enter username ${Username}
+enter password  ${Password}
+click login
+click plan
+click projects
+click autonomiqtest
+click suites
+Click {xpath: "//*[@id="myTbl"]/tbody/tr[1]/td[4]/div/button[2]"}
+Click {xpath: "//*[@id="myTbl"]/tbody/tr[2]/td[1]/span/aside/button/span[1]"}
+open website https://public.internal.autonomiq.ai
+Enter username appuser
+Enter password app123
+click login
+click plan
+click projects 
+click autonomiqtest
+click scripts
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div[1]/table/tbody/tr[1]/td[4]/div/div[1]"}
+Click Select Platform
+Click Linux
+Click select browser
+Click chrome
+click execute
+open website https://public.internal.autonomiq.ai
+enter username appuser
+enter password app123
+click login
+click plan
+click projects
+click AutonomiqTest
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div/div/div[1]/table/tbody/tr[1]/td[5]/div/div[3]/div"}
+click generate
+open website ${URL}
+wait for two seconds
+enter username ${Username}
+enter password ${Password}
+click login
+click plan
+click first projects
+click on ${ProjectName}
+click second "Show Test Case"
+Click {xpath: "//*[@id="main"]/div[2]/button[1]"}
+wait 5 secs
+Assert "--:--" is visible on the page
+open website ${url}
+Enter username ${Username}
+Enter password ${Password}
+click login
+click plan
+click projects
+click on AutonomiqTest
+click on Data
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div[1]/table/tbody/tr[1]/td[5]/div/div[1]"}
+Click {xpath: "/html/body/div[2]/div[2]/div[2]/div/ul/div[2]/li/div[2]"}
+open website ${URL}
+wait for two seconds
+enter username appuser
+enter password app123
+click login
+click plan
+click first projects
+click on ${ProjectName}
+click second "Show Test Case"
+Click {xpath: "//*[@id="main"]/div[2]/button[1]"}
+wait 3 secs
+Assert "--:--" is visible on the page
+open website https://public.internal.autonomiq.ai
+Enter username appuser
+Enter password app123
+click login
+click plan
+click projects
+click on AutonomiqTest
+click on Data
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div[1]/table/tbody/tr[1]/td[5]/div/div[2]"}
+Click {xpath: "//*[@id="simple-menu"]/div[2]/ul/li[2]"}
+Click Download
+open website ${url}
+Enter Username  ${Username}
+Enter password ${Password}
+click login
+open website ${URL}
+wait for two seconds
+enter username appuser
+enter password app123
+click login
+click plan
+click projects
+click on ${ProjectName}
+Click {xpath: "//tr[1]//td[5]//div[1]//div[3]//div[1]"}
+click 'generate'
+wait 2 secs
+Assert {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div/div/div[1]/table/tbody"} contains "In Progress"
+open website ${URL}
+wait for two seconds
+enter username appuser
+enter password app123
+click login
+click plan
+click projects
+click on ${ProjectName}
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div/div/div[1]/table/tbody/tr[1]/td[5]/div/div[3]"}
+click 'clone case'
+Assert {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div[2]"} contains "cloned"
+open website ${url}
+Enter username ${Username}
+Enter password ${Password}
+click login
+click plan
+click projects 
+click autonomiqtest
+click scripts
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div[1]/table/tbody/tr[1]/td[4]/div/div[2]/div/button/span[1]"}
+click delete
+wait 5 secs
+click Scripts
+open website ${url}
+Enter username ${Username}
+Enter password ${Password}
+click login
+click plan
+click projects
+click on AutonomiqTest
+click on Data
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div[1]/table/tbody/tr[1]/td[5]/div/div[2]"}
+Click Delete
+wait 2 secs
+open website ${URL}
+wait for two seconds
+enter username ${Username}
+enter password ${Password}
+click login
+click plan
+click projects
+click on ${ProjectName}
+Click Flows
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div/div[4]/button"}
+_var{"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"} as alphabet
+Exec _js{var random = "; for (var i = 0; i < 5; i++) random += aiq_1.charAt(Math.floor(Math.random() * aiq_1.length)); return random;} with ${alphabet} returning ${randomName}
+enter 'Flow Name' ${randomName}
+Click {xpath: "/html/body/div[2]/div[2]/div[2]/div[2]/button[2]"}
+assert {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div[1]/table"} contains ${randomName}
+open website ${url}
+Enter username ${Username}
+Enter password ${Password}
+click login
+Click tasks
+click dashboard
+open website ${url}
+Enter username ${Username}
+Enter password ${Password}
+click login
+click plan
+click projects
+click on AutonomiqTest
+Click {xpath: "//tr[1]//td[5]//div[1]//div[1]//div[3]//div[1]"}
+Click Clone case
+Click {xpath: "//tr[1]//td[5]//div[1]//div[1]//div[3]//div[1]"}
+Click delete
+Wait 5 secs
+open website ${url}
+enter username  ${Username}
+enter password  ${Password}
+click login
+click plan 
+click projects
+click autonomiqtest
+click test suites
+click radio suite
+click test cases
+click radio case
+click executions
+click reports
+click suites
+click analyze
+click alert details
+click warning alerts
+click smart maintenance 
+click radio name
+click Admin
+click Console
+click users
+click Profile
+click security 
+Click Users
+Click Groups
+Click Customers
+Click Preferences
+click dashboard
+Click APPUSER
+click Log Out
+wait 1 secs
+open website ${url}
+Enter username ${Username}
+Enter password ${Password}
+click login
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div[1]/div/div/div[1]/div/div/div/span[1]"}
+click dashboard
+open website ${url}
+Enter username ${Username}
+Enter password ${Password}
+click login
+click second details
+Click {xpath: "//*[@id="main"]/div[8]/button"}
+open website ${url}
+Enter username ${Username}
+Enter password ${Password}
+click login
+click plan
+click projects
+click on AutonomiqTest
+click first row
+click on Data
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div[1]/table/tbody/tr[1]/td[5]/div/div[2]"}
+Click {xpath: "//*[@id="simple-menu"]/div[2]/ul/li[2]"}
+Click Download
+open website ${URL}
+wait for two seconds
+enter username ${Username}
+enter password ${Password}
+click login
+click plan
+click projects
+click on ${ProjectName}
+Click Variables
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div/div[1]/div[1]/div/div[4]/button[1]"}
+_var{"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"} as alphabet
+Exec _js{var random = "; for (var i = 0; i < 5; i++) random += aiq_1.charAt(Math.floor(Math.random() * aiq_1.length)); return random;} with ${alphabet} returning ${randomName}
+enter Variable ${randomName}
+enter Value 0
+click ok
+assert {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div/div[2]/div/div/div/div/div[1]/table/tbody"} contains ${randomName}
+open website ${URL}
+wait for two seconds
+enter username appuser
+enter password app123
+click login
+click plan
+click projects
+click on ${ProjectName}
+Click {xpath: "//tr[1]//td[5]//div[1]//div[3]//div[1]"}
+click 'generate'
+wait 2 secs
+Assert {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div/div/div[1]/table/tbody"} contains "In Progress"
+open website ${url}
+Enter username ${Username}
+enter password ${Password}
+click login
+click plan
+Click first details
+Click menu
+open website ${URL}
+Enter Username appuser
+Enter Password app123
+Click "Log in"
+Click Plan
+Click first "Projects"
+Wait 2 secs
+click on ${ProjectName}
+wait 1 secs
+click Suites
+click Add
+enter "Test suite name" suite1
+click Add
+click Expand 
+click "Add to Suite"
+Click {xpath: "/html/body/div[2]/div[2]/div[2]/div/div[2]/button"}
+click add
+assert {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div[2]"} contains "Successfully"
+assert {xpath: "//*[@id="myTbl"]/tbody"} contains suite1
+click second more
+Assert "delete suite" is visible on the page
+click "delete suite"
+wait for 2 sec
+click Delete next to Cancel
+assert {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div[2]"} contains "Successfully"
+open website ${url}
+enter username ${Username}
+enter password  ${Password}
+click login
+click plan
+click projects
+click autonomiqtest
+click suites
+Click add
+Fill in text in test suite name Testing Test Suite
+Click on second add
+verify '"Testing Test Suite"' is on the screen
+Click {xpath: "//*[@id="myTbl"]/tbody/tr[6]/td[4]/div/button[2]/span[1]"}
+Click {xpath: "//*[@id="myTbl"]/tbody/tr[7]/td[1]/span/aside/button/span[1]"}
+Click Radio Create New Test Suite
+Click second Add
+click delete
+wait 1 secs
+click disable
+Click {xpath: "//*[@id="myTbl"]/tbody/tr[6]/td[4]/div/button[1]/span[1]"}
+Click Delete
+Click Delete
+wait 1 secs
+open website ${url}
+enter username ${Username}
+enter password ${Password}
+click login
+click plan
+click projects
+click autonomiqtest
+click variables
+click download all
+wait 1 secs
+click radio horizontal
+click radio vertical
+click Download xlsx
+click download csv
+click close
+open website ${url}
+enter username ${Username}
+enter password  ${Password}
+click login
+click plan
+click projects
+click autonomiqtest
+click flows
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[1]/div[1]/div/div[4]/button/span[1]"}
+Enter text in flow name testflow
+Enter text in action  Click 
+click create
+wait 2 secs
+verify 'testflow' is on the screen 
+Click {xpath: "//*[@id="myTbl"]/tbody/tr[3]/td[4]/div/div/div[2]"}
+click delete
+click yes
+wait 1 secs
+verify '"flow deleted successfully'" is on the screen 
+open website ${URL}
+Enter Username appuser
+enter password app123
+click login
+wait 2 secs
+click plan
+click projects
+click on ${ProjectName}
+Click on Suites
+Click second more
+Wait 1 secs
+click "clone suite"
+assert {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div[2]"} contains "cloned"
+open website ${url}
+Enter username ${Username}
+enter password ${Password}
+click login
+Click third details
+verify Smart maintenance is on screen
+open website ${URL}
+Enter Username appuser
+enter password app123
+click login
+wait 2 secs
+click plan
+Click "Test Cases"
+Click first more
+Wait 1 secs
+Click "Move Case"
+click on {xpath: "//*[@id="selected-project"]"}
+Wait 1 secs
+click on {xpath: "/html/body/div[3]/div[2]/div[2]/div[1]/div[2]/div"}
+Click Update
+assert {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div[2]"} contains "updated"
+open website ${url}
+Enter username ${Username}
+Enter password ${Password}
+click login
+open website ${URL}
+Enter Username ${Username}
+Enter Password ${Password}
+Click "Log in"
+Click Plan
+Click first "Projects"
+Wait 2 secs
+click on ${ProjectName}
+wait 1 secs
+click on "Data"
+Click {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div/div[2]/div/div/div[2]/div/div[2]/div/div/div/div/div/div[1]/table/tbody/tr/td[5]/div/div[1]"}
+click {xpath: "/html/body/div[2]/div[2]/div[2]/div/ul/div[2]/li/div[1]/span[1]/span/input"}
+click on ok
+assert {xpath: "//*[@id="root"]/div/div[1]/div/div/div/div[2]/div[2]/div/div/div[2]/div"} contains "Associated"
+open website https://login.salesforce.com/
+enter username kitta86@gmail.com
+enter password Autonomiq1!
+click "Log In"
+wait for 3 secs
+if {xpath:'//a[@id='tryLexDialogX']'} is visible, click on close
+wait for 2 secs
+click on "Account_Tab"
+click on "New"
+wait for 3 secs
+Run ${iterate} for all rows
+click cancel
+open website https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_iframe_scrolling
+click on Run
+Exec _js{document.getElementById("iframeResult").contentWindow.document.getElementsByTagName("iframe")[0].contentWindow.scrollTo(0,100)}
+Exec _js{document.getElementById("iframeResult").contentWindow.document.getElementsByTagName("iframe")[0].contentWindow.scrollTo(0,500)}
+Exec _js{document.getElementById("iframeResult").contentWindow.document.getElementsByTagName("iframe")[0].contentWindow.scrollTo(0,1000)}
+open website https://jsfiddle.net/gcaiq/cj5yqx4v/show
+Click on _xy{50, 50} of _xpath{"//img"}
+Enter Step Info img 50, 50
+Click on _xy{5, 5} of _xpath{"//img"}
+Enter Step Info img 5, 5
+Click on _xy{50, 50} of _xpath{"//canvas"}
+Enter Step Info Canvas 50, 50
+Click on _xy{5, 5} of _xpath{"//canvas"}
+Enter Step Info canvas 5, 5
+Click on _xy{50, 50} of _xpath{"//span"}
+Enter Step Info Span 50, 50
+Click on _xy{5, 5} of _xpath{"//span"}
+Enter Step Info span 5, 5
+Click on _xy{50, 50} of _xpath{"//textarea"}
+Enter Step Info textarea 50, 50
+Click on _xy{5, 5} of _xpath{"//textarea"}
+Enter Step Info textarea 5, 5
+Click on _xy{100, 5} of _xpath{"//h2"}
+Enter Step Info h2 100, 5
+Click on _xy{5, 5} of _xpath{"//h2"}
+Enter Step Info h2 5, 5
+open website https://www.w3schools.com/
+hover on _xy{-100, 0} of "HTML REFERENCE"
+wait for 5 secs
+open website https://dev.internal.autonomiq.ai/
+assert {"xpath":"//button"} is exist
+assert {"xpath":"//button"} is visible
+assert {"xpath":"//button"} is disabled
+Enter Username abc
+Enter Password 12344
+assert {"xpath":"//button"} is enabled
+assert {"xpath":"//buttonxyz"} is doesnt exist
+Take Screenshot
+open website https://www.travelers.com/
+wait for 3 seconds
+Hover over "FOR BUSINESS"
+Wait for 3 seconds
+Hover over "Claim"
+Wait for 3 seconds
+Verify {xpath: "//div[contains(text(),'Our Company')]"} is visible
+Allow Scrolling
+Wait for 3 secs
+Verify {xpath: "//div[contains(text(),'Our Company')]"} is visible
+open website https://www.travelers.com/
+wait for 3 seconds
+Hover over "FOR BUSINESS"
+Wait for 3 secs
+Click on Careers
+Wait for 3 secs
+open website https://jsfiddle.net/sriharikrishna/0sco3rd8/2/show
+switch to alert box and save message as abc
+switch to alert box and click on ok
+switch to alert box and save message as ${xyz}
+switch to alert and save message as ${xyz2}
+switch to alert box and click on cancel
+switch to alert box and enter text and click on ok srihari
+wait for 10 seconds
+open website https://www.airbnb.com/
+Enter where San Jose
+hit Enter
+Click on {xpath:"//*[@id='checkin_input']}
+_var{DAY(TODAY())} as check_in_day
+Click on ${check_in_day}
+_xl{DAY(TODAY())+2} as check_out_day
+Click on ${check_out_day}
+Click on Search
+Click on first Room
+switch to new window
+save {xpath: "//*[@id='book_it_form']/div[2]/div[1]/div[1]/div[2]/span/span"} as room_cost
+if "Service fee" is on the screen, save {xpath:"//*[@id='book_it_form']/div[2]/div[2]/div[1]/div[2]/span/span"} as service_fee
+if "Occupancy taxes and fees" is on the screen, save {xpath: "//*[@id='book_it_form']/div[2]/div[3]/div[1]/div[2]/span/span"} as tax
+_xl{SUM(${service_fee}, ${tax}, ${room_cost})} as actual_total_cost
+Verify {xpath:"//*[@id='book_it_form']/div[2]/div[4]/div/div[2]/span/span} is ${actual_total_cost}
+﻿Test Steps Data
+open website https://dev.autonomiq.ai/
+## excel with numbers
+_xl{"$" & SUM("$18", "$12")} as var_sum
+_xl{17/3} as var_float
+_xl{ROUND(${var_float}, 1)} as var_float_round
+_xl{CEILING(${var_float}, 1)} as var_float_ceil
+_xl{FLOOR(${var_float})} as var_float_floor
+_xl{MAXA("1", "2", "3", "4", "5")} as var_max
+_xl{SMALL(["1", "2", "3", "4", "5"], 3)} as var_small
+## excel with date
+_xl{TEXT(TODAY(), "mm/dd/yyyy")} as var_date
+_xl{TEXT(TODAY(), "mmm-ddd")} as var_date2
+_xl{TEXT(TODAY(), "mmmm dddd")} as var_date3
+## excel with string
+_xl{TRIM("      string with space       ")} as var_str_trim
+_xl{SUBSTITUTE("test test", "test", "testing")} as var_str_sub
+_xl{SPLIT("111-222-333", "-")} as var_str_split
+_xl{REGEXMATCH("https://test.com?params=testing", "https://test.com?")} as var_str_regex_match
+_xl{REGEXREPLACE("test1 test2 test test", "test[0-9]", "test_with_number")} as var_str_regex_replace
+open website https://www.google.com/search?q=usa+time
+_xl{ "9" } as var_1
+_xl{ "10" } as var_2
+_xl{ T( ${var_1} ) > T( ${var_2} ) } as var_3
+_xl{ 1 * T( ${var_1} ) > 1 * T( ${var_2} ) } as var_4
+Enter text ${var_1}
+Wait 1 secs
+Enter text ${var_2} 
+Wait 1 secs
+Enter text ${var_3} 
+Wait 1 secs
+Enter text ${var_4}
+Wait 1 secs
+open website https://www.google.com/
+Save it as date_from_screen {Today - 1{mm}, yyyy/MM/dd}
+Enter text ${date_from_screen}
+_xl{IF(TEXT(TODAY(), "yyyy/mm/dd") > ${date_from_screen}, "before today", "today or future") } as var_when_date 
+Enter text ${var_when_date}
+## another test
+Save it as date_from_screen {Today + 1{dd}, yyyy/MM/dd}
+Enter text ${date_from_screen}
+_xl{IF(TEXT(TODAY(), "yyyy/mm/dd") > ${date_from_screen}, "before today", "today or future") } as var_when_date 
+Enter text ${var_when_date}
+## another test
+Save it as date_from_screen {Today - 1{yy}, yyyy/MM/dd}
+Enter text ${date_from_screen}
+_xl{IF(TEXT(TODAY(), "yyyy/mm/dd") > ${date_from_screen}, "before today", "today or future") } as var_when_date 
+Enter text ${var_when_date}
+## another test
+Save it as date_from_screen {Today, yyyy/MM/dd}
+Enter text ${date_from_screen}
+_xl{IF(TEXT(TODAY(), "yyyy/mm/dd") > ${date_from_screen}, "before today", "today or future") } as var_when_date 
+Enter text ${var_when_date}
+﻿Test Steps Data
+open website https://dev.autonomiq.ai/
+_xl{SUM(1,2)} as num1 
+_xl{SUM(${num1}, 2)} as num2
+_xl{${num1}/${num2}} as float1
+_xl{ROUND(${float1}, 0)} as float2
+Double-click the file lib\cas
+conf\cas-compute.properties.
+Verify the default value for defaultjobcount is 5
+Verify the default value for minimumjobsize is 1
+Edit the below settings:
+1.defaultjobcount
+2.minimumjobsize
+Save the file
+Click Trades tab from the list of tabs in XVA Home page
+Click on to the right end of any column header on the dashboard and drag to left or right and drop
+Repeat step 2 for all desired columns on the dashboard
+Verify if width of column is resized on the dashboard as per user's drag and drop width
+Click Market data tab from the list of tabs in XVA Home page
+Verify if Markets window is opened by default
+Verify steps 2,3,4
+Click Fixings tab from the Market Data window
+Verify steps 2,3,4
+Click Static data tab from the list of tabs in XVA Home page
+Verify if Counterparties window is opened by default
+Verify steps 2,3,4
+Click Calculations tab from the list of tabs in XVA Home page
+Verify steps 2,3,4
+Click Trades tab from the list of tabs in XVA Home page
+Verify there are no Horizontal and Vertical scroll bars on the dashboard if there is no data on the dashboard
+Click Market data tab > Markets from the list of tabs in XVA Home page
+Verify there are no Horizontal and Vertical scroll bars on the dashboard if there is no data on the dashboard
+Click Fixings tab from the Markets window
+Verify there are no Horizontal and Vertical scroll bars on the dashboard if there is no data on the dashboard
+Click Static data tab from the list of tabs in XVA Home page
+Verify if Counterparties window is opened by default
+Verify there are no Horizontal and Vertical scroll bars on the dashboard if there is no data on the dashboard
+Click Calculations tab from the list of tabs in XVA Home page
+Verify there are no Horizontal and Vertical scroll bars on the dashboard if there is no data on the dashboard
+Click Trades tab from the list of tabs in XVA Home page
+Click the hemburger icon.
+Select one or more desired columns from the list of options available (Capital Asset Name, for example).
+Verify if the newly added column/columns is/are sortable
+Click Trades tab from the list of tabs in XVA Home page
+Click Add New Trade tab
+Verify below fields are displayed in Add NewTrades window
+i. Label Asset class 
+ii.Drop down option menu to select asset class
+iii.Label Deal type
+iv.Drop down option menu to select deal type
+Select a value from Asset Class & Deal Type drop down menus
+ex: select Asset Class as"CC" and select Deal Type as "TRADE.CC.BERMUDANPRDCSWAP"
+On selecting Asset Class & Deal Type values from drop down menus, Verify if trade data and pricing calculation sections appear
+Verify trade data section.It depends on the Asset Class and Deal Type you selected.
+Ex: Select CC/TRADE.CC.BERMUDANPRDCSWAP
+Verify tabs appear with first tab selected by default
+Enter the mandatory fileds in Trade details tab,and enter the fileds if necessary in other tabs
+Verify Save button above trade data
+Click Market Data tab
+Click Fixings tab
+Right Click on Add in Fixings window
+Enter the fixings name and click on Ok button
+Verify if below 2 buttons are available:
+i.Save
+ii.Cancel
+Verify if a lable "Name:*" is available and a textbox is available next to it
+Verify below fields in Add a Daily Price section:
+1.Label "Date:"Text box below to the date lable when right click on date column and Add
+2.Label "Value:*":ext box below to the date lable when right click on date column and Add
+Verify if above table shows No records found by default
+Click Market Data tab
+Click Fixings tab
+Right Click on Add in the Fixings window
+Enter a Name for fixing in the textbox next to Name lable
+RightClick on Add in Date column, Enter a date in dd-mm-yyyy format in the textbox
+Enter a price amount in textbox next to Value lable
+Click on save button
+Click on OK button
+Verify if data is addedd successfully to the fixings
+Verify newly addedd Fixing data. Go to Fixing data table. In Fixing data table, search with name of newly added Fixing
+Verify data of the above fixing by clicking on ID link
+Click Market Data tab
+Click Fixings tab
+Right Click on CSV Upload
+Browse the appropriate file and click Open.
+Ex: Browse to C:
+Click on Open button
+Browse to the appropriate file and click Open.
+Ex: Browse to C:
+Click Cancel button
+Click Market Data tab from XVA Home page
+Click Fixings tab
+Right-click on any Fixing and click Add
+Provide a Name and click OK.
+Click Cancel.
+Repeat steps 3-4.
+Provide Date and Value and click Save.
+Click Trades tab from the list of tabs in XVA Home page.
+Click Select all check box on the dashboard.
+Go to navigation bar and change the option in drop down box to display more trades per page. Choose 50.
+Uncheck Select All check box on dashboard.
+Repeat step 2.
+Click Trades tab from the list of tabs in XVA Home page
+Click check box on left side on any entry on the dashboard
+Click check box on left side on 1 or more entries on the dashboard
+Click Trades tab from the list of tabs in XVA Home page
+Verify if ID and Name columns are shown
+Click on any entry of any trade displayed on the Trades dashboard
+Click Close
+Login to XVA with valid user credentials
+Navigate to Static->Counterparties
+Right Click any counterparty and select 'Add'
+Enter name and click on OK button
+Enter values for the below fields:
+1.Name
+2.Recovery Rate
+3.Collateral Asset
+4.Credit Key
+5.Curves
+6.Basis
+7.Rating
+8.Funding Proportion
+9.Capital rate
+10.XVA Script
+11.Colateral Script
+12.Legal Entity
+13.Netting Set
+14.Marginal Set
+Click on 'Save' button
+Verify the newly created counterparty is now added to the list of counterparties
+Login to XVA with valid user credentials
+Navigate to Static->Counterparties
+Click the counterparty to be edited.
+Edit the values for the below fields:
+1.Name
+2.Recovery Rate
+3.Collateral Asset
+4.Credit Key
+5.Curves
+6.Basis
+7.Rating
+8.Funding Proportion
+9.Capital rate
+10.XVA Script
+11.Colateral Script
+12.Legal Entity
+13.Netting Set
+14.Marginal Set
+Click on 'Save' button
+Verify the existing counterparty is updated with the given data
+Click Trades tab from the list of tabs in XVA Home page
+Click on a trade in the table
+Click Trades tab from the list of tabs in XVA Home page
+Right click in the table of trades and click Manage Filters
+Click the filter to see its data
+Click OK to close the window
+Right click and click Apply Filter
+Click on the required filter and click OK
+Verify if dashboard displays filtered values
+Step
+Click Trades tab from the list of tabs in XVA Home page
+Right click in the table of Trades and click Manage Filters
+Click on required filter.
+Verify if View filter details window has below fields:
+- Field
+- Value
+Click close on the top right
+Step
+Click Trades tab from the list of tabs in XVA Home page
+Right Click in the table and click "Manage Filters"
+Expand All
+Click on the filter to be deleted and click "Delete"
+Step
+Login to XVA with valid user credentials
+Navigate to Static Data->Counterparties
+Select the counterparty to be cloned
+Right click on Counterparty and click "Clone " button
+Edit the values for the below fields as desired:
+1.Name
+2.Recovery Rate
+3.Credit Key
+4.Curves
+5.Basis
+6.Rating
+7.Funding Proportion
+8.Capital rate
+9.XVA Script
+10.Colateral Script
+11.Legal Entity
+12.Netting Set
+13.Marginal Set
+Click on 'Save' button
+Verify the new counterparty is updated with the given data
+Step
+Login to XVA with valid user credentials
+Navigate to Static Data->Counterparties
+Right click and click 'CSV Upload ' button
+Click on 'Choose' button
+Browse the csv file
+Click on 'Upload' button
+Step
+Login to XVA with valid user credentials
+Navigate to Scenarios->Market Reports
+Right click and click on Add button
+Enter Name of the Market report in Name field
+choose a template from template dropdown
+Enter values for the Template-specific options
+Click the Save button.
+Verify the newly created Market Report is now added to the list of Market Reports
+Step
+Login to XVA with valid user credentials
+Navigate to Scenarios->Market Reports
+Double Click on the market report to edit.
+Edit the details of the report
+Click the Save Market Report button.
+Verify the edited Market Report is available with the new values
+Step
+Login to XVA with valid user credentials
+Navigate to Scenarios->Market Reports
+Right click and click on CSV Upload button
+Click on Choose button
+Browse a market report .csv file and click Open.
+Click Upload button
+Verify the newly uploaded Market Report is now added to the list of Market Reports
+Step
+Login to XVA with valid user credentials
+Navigate to Scenarios->Market Reports
+Verify the list of market reports are displayed in the grid
+Select the market report to delete
+Click on Delete icon
+Click on Yes
+Verify the deleted Market Report is not available in the list of Market Reports
+Step
+Login to XVA with valid user credentials
+Navigate to Scenarios->Market Reports
+Click on the Name label
+verify the market reports are arranged in the order of the names
+Click on the Template label
+verify the templates are arranged in the order of the names
+Step
+Login to XVA with valid user credentials
+Navigate to Static->Calendars
+Click on the ID label
+verify the Calendars are arranged in the order of the ID
+Click on the Name label
+verify the Calendars are arranged in the order of the Name
+Click on the Version label
+verify the Calendars are arranged in the order of the Version
+Step
+Login to XVA with valid user credentials
+Navigate to Static->Calendars
+Double Click on a calendar from the list on the left side of the screen.
+Verify the Calendar is displayed with the below fields:
+1.Name
+2.Weekdays
+3.Holidays
+Step
+Login to XVA with valid user credentials
+Navigate to Static Data->Calendars
+Click on a calendar from the list on the left side of the screen.
+Right click in the holiday table and click Add
+Click Save Calendar.
+Step
+Login to XVA with valid user credentials
+Navigate to Static->Calendars
+Click on a calendar from the list on the left side of the screen
+Right-click on the selected holidys Calendar which didplays on the ride side of the screen
+Select Remove row to delete the holiday
+Click Save Calendar.
+Step
+Login to XVA with valid user credentials
+Navigate to Static->Calendars
+Click on the Add Calendar button located beneath the list of calendars.
+Enter the name in the Name filed
+Select the appropriate weekdays for the calendar.
+Right click on the holidays pane,click on the add button
+Edit the date cell with the desired date.
+Repeat this process until all dates on which the market is closed appear in the list.
+Click Save Calendar.
+Verify the new calendar appears in the list of calendars
+Step
+Login to XVA with valid user credentials
+Navigate to Static Data->Calendars
+verify the list of Calendars displayed in the screen
+Right click the Calendar to be deleted
+Click Delete
+Click on OK
+verify the deleted Calendar in not available in the grid
+Step
+Login to XVA with valid user credentials
+Navigate to Static->Conventions
+Click on the Asset Class label
+verify the Convention are arranged in the order of the Asset Class
+Click on the Name label
+verify the Convention are arranged in the order of the Name
+Click on the Version label
+verify the Convention are arranged in the order of the Version
+Step
+Login to XVA with valid user credentials
+Navigate to Static->Convention
+Double Click on a Convention from the list on the left side of the screen.
+Verify the Convention is displayed with the below fields:
+1.Name
+2.Value
+Step
+Login to XVA with valid user credentials
+Navigate to Static->Convention
+Click on a Convention from the list on the left side of the screen to edit
+Right click and click on Add button
+Name the detail and assign a value to it
+Click Save Convention.
+Step
+Login to XVA with valid user credentials
+Navigate to Static->Convention
+Click on a Convention from the list on the left side of the screen.
+right-click it on the selected Convention
+Select Remove row to delete the entire row
+Step
+Login to XVA with valid user credentials
+Navigate to Static->Currencies
+Right click on any of the currency and click on Add button
+Enter the name in the Name field
+Enter the IR Index in the IR Index field
+Enter the IR Index Tenor in IR Index Tenor field
+Enter the Discount in the Discount Curve field
+Click Save Currency.
+Verify the newly created Currency appears in the list of Currency
+Step
+Login to XVA with valid user credentials
+Navigate to Static->Currencies
+Verify the list of Currencies displayed in the screen
+Select the Currency to be deleted
+Click on delete icon of the corresponding Currency
+Verify whether the Currency is deleted from the grid
+Step
+Login to XVA with valid user credentials
+Navigate to Static Data->Currencies
+Click on the Name label
+verify the Currency are arranged in the order of the Name
+Click on the Rank label
+verify the Currency are arranged in the order of the Rank label
+Click on the IR Index label
+verify the Currency are arranged in the order of the IR Index label
+Click on the IR Index Tenor label
+verify the Currency are arranged in the order of the IR Index Tenor
+Click on the Discount Curve label
+verify the Currency are arranged in the order of the Discount Curve
+Step
+Login to XVA with valid user credentials
+Navigate to Static Data->Currencies
+Verify the Currency is displayed with the below fields:
+1.Name
+2.Rank
+3.IR Index
+4.IR Index Tenor
+5.Discount Curve
+Step
+Click Trades tab from XVA application Home page
+Naviagte to Trades tab
+Click "Add New Trade" button
+Select an asset class from available drop down options
+Ex: select asset class "CC"
+Select a deal type from available drop down options
+Ex: select deal type "Trade CC: BERMUDANPRDCSWAP"
+On selecting Asset Class & Deal Type values from drop down menus, Verify if trade data and pricing calculation sections appear
+Enter required data in all the fields avaliable in all the tabs
+Clcik on calculate button
+Step
+Click Trades tab from XVA Home page.
+Right click and click on "CSV Upload".
+Navigate to the desired folder and select a trade.
+Click Cancel button or the x button.
+Step
+Click Trades tab from the list of tabs in XVA Home page
+Click on/select a trade
+Ex: Select CC_BermudanPRDCSWAP
+Verify if Asset Class and Trade ID are displayed on the top
+Navigate to each of the below tabs and edit the parameters as desired 
+Trade details
+Additional Fields
+Click Save button
+check the edited trade in trades window
+Repeat steps 1 to 7
+Click calculate button
+Step
+Login to XVA with valid user credentials
+Navigate to Static Data->Counterparties
+Select multiple counterparties
+Right Click and select 'Delete Checked Items' button
+Verify whether the selected counterparties are deleted from the grid
+Step
+Login to XVA with valid admin credentials
+Navigate to Admin->Authorizations
+Click on Authorization functions and verify the actions are displayed in the screen
+Click on the name of the action for which a user can be mapped
+Verify adding existing role which is already added from the 'Role to Add' drop down to an existing action
+Step
+Login to XVA with valid user credentials
+Navigate to Static ->Convention
+Right click on a Convention and select 'Delete'
+Click on ok button
+Verify the deleted Convention is not avaliable in the grid
+Step
+Click Trades tab from the list of tabs in XVA Home page
+Click Add Trade
+Verify below fields on the top left of Add Trade screen
+Trades
+Terms
+Verify if below options are displayed for Trades drop down:
+i.CC
+ii.CMDTY
+iii.CR
+Iv.EQ
+V.FX
+vi.HY
+Vii.INFR
+Viii.IR
+Verify if below Deal Type options are displayed for Asset Class "CC"
+i.TRADE.CC.BERMUDANPRDCSWAP
+ii.TRADE.CC.CCBASISSWAP
+iii.TRADE.CC.CCBERMUDANSWAP
+iv.TRADE.CC.CCFIXFLOATSWAP
+Verify if below Deal Type options are displayed for Asset Class "CMDTY"
+i.TRADE.CMDTY.CMDTYAMERICAN
+ii.TRADE.CMDTY.CMDTYBULLETOPTION
+Iii.TRADE.CMDTY.CMDTYBULLETSWAP
+iv.TRADE.CMDTY.CMDTYEUROPEANONSPOT
+v.TRADE.CMDTY.CMDTYFORWARD
+vi.TRADE.CMDTY.CMDTYFUTURE
+Vii.TRADE.CMDTY.CMDTYSWAPTION
+Viii.TRADE.CMDTY.SWAP.CALENDAR
+Verify if below Deal Type options are displayed for Asset Class "CR"
+i.TRADE.CR.ASSETSWAP
+ii.TRADE.CR.SNACCDS
+Verify if below Deal Type options are displayed for Asset Class "EQ"
+i.TRADE.EQ.CONVERTIBLEBOND
+ii.TRADE.EQ.EQAMERICAN
+Iii.TRADE.EQ.EQASIAN
+iv.TRADE.EQ.EQBRAKIKO
+v.TRADE.EQ.EQEUROPEAN
+vi.TRADE.EQ.EQFUTURE
+Vii.TRADE.EQ.TOTALRETURNSWAP
+Viii.TRADE.EQ.VARIANCESWAP
+Verify if below Deal Type options are displayed for Asset Class "FX"
+i.TRADE.FX.FXAMERICAN
+ii.TRADE.FX.FXASIAN
+Iii.TRADE.FX.FXBARRIERSCRIPTED
+iv.TRADE.FX.FXBINARY
+v.TRADE.FX.FXDIGITAL
+vi.TRADE.FX.FXDIGITALSCRIPTED
+Vii.TRADE.FX.FXDUALTARGETFORWARD
+Viii.TRADE.FX.FXDUALTARGETPIVOT
+Ix.TRADE.FX.FXEUROPEAN
+x.TRADE.FX.FXFORWARD
+xi.TRADE.FX.FXPIVOT
+xii.TRADE.FX.FXVARIANCESWAP
+Verify if below Deal Type options are displayed for Asset Class "HY"
+i.TRADE.HY.DOCUMENTOBJECT
+Verify if below Deal Type options are displayed for Asset Class "INFL"
+i.TRADE.INFL.CPILINKEDSWAP
+ii.TRADE.INFL.ILBOND
+Iii.TRADE.INFL.YOYOPTION
+iv.TRADE.INFL.ZCIIS
+Verify if below Deal Type options are displayed for Asset Class "IR"
+i.TRADE.IR.AMORTIZINGBOND
+ii.TRADE.IR.AMORTIZINGFRN
+Iii.TRADE.IR.AMORTIZINGSWAP
+iv.TRADE.IR.BASISSWAP
+V.TRADE.IR.BERMUDANCALLABLESWAP
+vi.TRADE.IR.BONDOPTION
+Vii.TRADE.IR.BRAZILIANNTNB
+Viii.TRADE.IR.BRAZILIANTBILLLFT
+Ix.TRADE.IR.CALLABLEBOND
+X.TRADE.IR.CAPFLOOR
+xi.TRADE.IR.CASHDEPOSIT
+Xii.TRADE.IR.CDBCDI
+Xiii.TRADE.IR.CMS
+Xiv.TRADE.IR.COMPOUNDFIXFLOATSWAP
+Xv.TRADE.IR.DIOPTION
+Xvi.TRADE.IR.FLOATINGRATENOTE
+Xvii.TRADE.IR.FRA
+Xviii.TRADE.IR.GENERICSWAP
+Xix.TRADE.IR.IRSWAP
+Xx.TRADE.IR.RATCHETSWAP
+Xxi.TRADE.IR.RATEFUTURE
+Xxii.TRADE.IR.SOVEREIGNBOND
+Xxiii.TRADE.IR.SWAPTIONEU
+Xxiv.TRADE.IR.TBILL
+Step
+Login to XVA with valid user credentials
+Navigate to Static Data->Counterparties
+Right Click in the table
+Click on Export->Excel Export
+Right Click in the table
+Click on Export->CSV Export
+Step
+Click Trades tab from the list of tabs in XVA Home page
+Click Add NewTrade
+Verify the asset classes under Add New Trade dropdown
+Utility was removed
+Verify Deal types when Asset Class = CC
+Verify Trades tabs when Asset Class = CC and Deal Type = TRADE.CC.CCBASISSWAP
+Step
+Click Trades tab from the list of tabs in XVA Home page
+Click Add NewTrade
+Verify the asset classes under Add New Trade dropdown
+Utility removed
+Verify Deal types when Asset Class = CMDTY
+Verify Trades tabs when Asset Class = CMDTY select any Deal Type under CMDTY
+Login to "H20" Application with valid user name and password
+Mouser hover to "Loan" tab and click on "Create New Loan" Button
+Select  branch name as "Retail Branch", Rep Name as "Retail.lo"
+Select Lead Type 1 as "Self Generated" and Lead source 1 as "Purchase"
+Click on "Create Loan By" dropdown and select "Copy From Existing" Loan
+Click on "Matches" and Select any loan number to copy
+Click on "Search" button
+Click on "Copy"
+Select state from "Subject Property state" dropdown.
+Click on "Next" Button
+Login to "H20" Application with valid user name and password
+Mouser hover to "Loan" tab and click on "Create New Loan" Button
+Select  branch name as "Retail Branch", Rep Name as "Retail.lo"
+Select Lead Type 1 as "Self Generated" and Lead source 1 as "Purchase"
+Click on "Create Loan By" dropdown and select "Import DU 3.2 FILE".
+Click on Browse and Select document
+Select state from "Subject Property state" dropdown.
+Click on "Next" Button
+Login to "H20" Application with valid user name and password
+Open Any retail loan 
+Click on "Credit" in left "Status" tab
+Select Credit provide from "Credit provider" dropdown
+Select Radio button "Joint" Under Borrower Section.
+Check "Borrower acknowledges credit Request" Check box
+Deselect "Auto Copy Liabilities" check box
+Click on "Submit" button
+Click On "OK" in confirmation popup
+Click on "Refresh" button Till status in "Transaction History" tab becomes "Complete
+Click on "Loan Summary" under "1003"
+Validate FICO Details are reflecting in Borrower details Tab
+Login in Oracle Fusion ERP and SCM cloud login
+Navigate to Payables> Invoices
+Click on Task icon and click on Manage Invoices
+Enter the Invoice number and click on Search 
+Click on Invoice Number
+Go to 'Action' dropdown and select 'Pay in Full'
+Enter the Bank Account, Payment Process Profile and click on Submit
+Navigate to Payables> Payments and select Manage Payments
+Enter the payment date and click on search
+Login in Oracle Fusion ERP and SCM cloud login
+Navigate to Payables> Payments and select Manage Payments
+Enter the payment date and click on search
+Select the Payment Line with Payment Number 5738 and Click on the Payment number
+Login in Oracle Fusion ERP and SCM cloud login
+Navigate to Payables> Payments and select Manage Payments
+Enter the payment date and click on search
+Select the Payment Line with Payment Number and Click on the Payment number
+Click 'Actions'  dropdown and select 'Post to Ledger'
+Click on View Accounting Entries
+Login in Oracle Fusion ERP and SCM cloud login
+Navigate to Payables> Payments and select Manage Payments
+Enter the payment number and click on search
+Select the Payment Line with Payment Number and Click on the Payment number
+Login in Oracle Fusion ERP and SCM cloud login
+Navigate to Payables> Payments and select Manage Payments
+Enter the payment date and click on search
+Select the Payment Line with Payment Number and Click on the Payment number
+Click 'Actions'  dropdown and select 'View Accounting'
+Login in Oracle Fusion ERP and SCM cloud login
+Navigate to Payables> Payments and select Manage Payments
+Enter the payment date and click on search
+Select the Payment Line with Payment Number  and Click on the Payment number
+Click 'Actions'  dropdown and select 'Account in Draft'
+Click on View Accounting Entries
+Login in Oracle Fusion ERP and SCM cloud login
+Navigate to Payables> Payments and select Manage Payments
+Enter the payment date and click on search
+Select the Payment Line with Payment Number 5738 and Click on the Payment number
+Click 'Actions'  dropdown and select 'Void'
+Click on Ok to Void for No Reason
+Login in Oracle Fusion ERP and SCM cloud login
+Navigate to Payables> Payments and select Manage Payments
+Enter the payment date and click on search
+Select the Payment Line with Payment Number and Click on the Payment number
+Click 'Actions'  dropdown and select 'View Accounting'
+Login in Oracle Fusion ERP and SCM cloud login
+Navigate to Payables> Payments and select Manage Payments
+Enter the payment date and click on search
+Select the Payment Line with Payment Number 5599 and Click on the Payment number
+Click 'Actions'  dropdown and select 'Void' 
+Select the reason: Cancel Invoice and click on OK
+Login in Oracle Fusion ERP and SCM cloud login
+Navigate to Payables> Invoices
+Click on Task icon and click on Manage Invoices
+Enter the Invoice number and click on Search 
+Check the Validation Status
+Login in Oracle Fusion ERP and SCM cloud login
+Navigate to Payables> Invoices
+Click on Task icon and click on Create Invoices
+"Under Create Invoice Enter the below fields :
+Invoice Number: 
+Business Unit-
+Supplier:
+Supplier Site:
+Payment Terms:
+Amount:
+Invoice Type: "
+Click on Show more adcent to Invoice Header
+Disable the checkbox to apply prepayment immediately
+"Go to Lines to match the Line Item.
+Enter the Amount in Line 1"
+"Enter the Account Number in Distribution Combination field
+"
+"Click on Distributions Tab above to see the Distribution of Amount to allocated Account
+"
+Click on Save and Close
+Click on Save button to Save the Invoice
+Validate and make the Payment for the Invoice
+Login in Oracle Fusion Finance Instance with General Accounting Responsibility
+Navigate to General Accounting> Journals
+Click on Task icon and click on Create Journal
+"Under Journal Batch Enter below fields :
+Journal Batch-
+Description-
+Balance-
+Accounting Period-"
+"Under Journal Enter the below fields:
+Journal: 
+Description:
+Ledger:
+Accounting Date:
+Category:
+Currency : Euro"
+"Under Journal Lines Enter the below field:
+For Line 1: Search for Account combination and Click OK
+Enter Debit Amount
+"
+"Under Journal Lines Enter the below field:
+For Line 2: Search for Account combination and Click OK
+Enter Credit Amount
+"
+Click on Complete
+Logout from the system
+
+Login in Oracle Fusion Finance Instance with General Accounting Responsibility
+Navigate to General Accounting> Journals
+Click on Task icon and click on Create Journal
+"Under Journal Batch Enter below fields :
+Journal Batch-
+Description-
+Balance-
+Accounting Period-"
+"Under Journal Enter the below fields:
+Journal: 
+Description:
+Ledger:
+Accounting Date:
+Category:
+Currency : Euro"
+"Under Journal Lines Enter the below field:
+For Line 1: Search for Account combination and Click OK
+Enter Debit Amount
+"
+"Under Journal Lines Enter the below field:
+For Line 2: Search for Account combination and Click OK
+Enter Credit Amount
+"
+Click on Complete
+Logout from the system
+
+Login in Oracle Fusion Finance Instance with Approver Login
+Navigate to General Accounting> Journals
+Click on Task icon and click on Manage Journal
+Enter the Journal created in Test case no 1
+Click on Search
+Click on Journal batch 
+Click on Approve
+Validate theApproval Status
+Logout from the System
+
+Login in Oracle Fusion Finance Instance with Approver Login
+Navigate to General Accounting> Journals
+Click on Task icon and click on Manage Journal
+Enter the Journal created in Test case no 1
+Click on Search
+Click on Journal batch 
+Click on Reject
+Validate theApproval Status
+Logout from the System
+
+Login in Oracle Fusion Finance Instance with General Accounting Responsibility
+Navigate to General Accounting> Journals
+Click on Task icon and click on Manage Journal
+Enter the Journal created in Test case no 1
+Click on Search
+Click on Journal batch 
+Click on Post
+Validate the Posting Status
+Logout from the System
+
+Login in Oracle Fusion Finance Instance with General Accounting Responsibility
+Navigate to General Accounting> Journals
+Click on Task icon and click on Manage Journal
+Enter the Journal
+Click on Search
+Click on Journal batch 
+"Enter the below:
+Reversal Period
+Reversal Method"
+Click on OK
+Search for Journal by Entering Batch as Reverses (Original Journal Entry Name)
+Logout from the System
+
+Login in Oracle Fusion Finance Instance with General Accounting Responsibility
+Navigate to General Accounting> Journals
+Click on Task icon and click on Manage Journal
+Enter the Journal
+Click on Search
+Click on Journal batch 
+"Enter the below:
+Reversal Period
+Reversal Method"
+Click on OK
+Search for Journal by Entering Batch as Reverses (Original Journal Entry Name)
+Logout from the System
+
+Login in Oracle Fusion Finance Instance with General Accounting Responsibility
+Navigate to General Accounting> Journals
+Click on Task icon and click on Manage Journal
+Enter theReverse Journal created using Change sign
+Click on Search
+Click on Journal batch 
+Click on Post
+Validate the Posting Status
+Logout from the System
+
+Login in Oracle Fusion Finance Instance with General Accounting Responsibility
+Navigate to General Accounting> Journals
+Click on Task icon and click on Manage Journal
+Enter theReverse Journal created using Switch Dr and CR
+Click on Search
+Click on Journal batch 
+Click on Post
+Validate the Posting Status
+Logout from the System
+Login in Oracle Fusion Finance Instance with Approver Login
+Navigate to General Accounting> Journals
+Click on Task icon and click on Manage Journal
+Enter the Reverse Journal created using Change sign Method
+Click on Search
+Click on Journal batch 
+Click on Approve
+Validate theApproval Status
+Logout from the System
+
+Login in Oracle Fusion Finance Instance with Approver Login
+Navigate to General Accounting> Journals
+Click on Task icon and click on Manage Journal
+Enter the Reverse Journal created using Switch Dr and Cr method
+Click on Search
+Click on Journal batch 
+Click on Approve
+Validate theApproval Status
+Logout from the System
+Login in Oracle Fusion Finance Instance with Approver Login
+Navigate to General Accounting> Journals
+Click on Task icon and click on Manage Journal
+Enter the Reverse Journal created using Change sign Method
+Click on Search
+Click on Journal batch 
+Click onReject
+Validate theApproval Status
+Logout from the System
+
+Login in Oracle Fusion Finance Instance with Approver Login
+Navigate to General Accounting> Journals
+Click on Task icon and click on Manage Journal
+Enter the Reverse Journal created using Switch Dr and CR method
+Click on Search
+Click on Journal batch 
+Click onReject
+Validate theApproval Status
+Logout from the System
+Test Step Description
+Navigate to url https://www.spectrumbusiness.net/#/login
+Enter the Account Owner username and password and click on Sign In
+Navigate to Manager User Page [Overview->Manage Users] and click on Add User button
+Complete the Add New Standard User steps without assigning a line to the Standard User
+Logout of SpectrumBusiness.Net Account Owner User
+Login into the registered email address given during standard user creation and Activate the standard User
+On the account Summary page, verify that the Voice Tile is not displayed
+Log out of Spectrum Business.Net Standard user
+Login into SpectrumBusiness.Net using the Account holder User
+Navigate to Manage lines in Voice tile
+Click on a voice line and click on Edit and assign a Voice line to the Standard user and save the changes
+Logout of SpectrumBusiness.Net Account Owner User        
+Login into SpectrumBusiness.Net using the Standard User
+Click on the Voice Tile and verify whether user is redirected to the Voice Messages page of the newly assigned phone line.
+Navigate to Manage Users Page by clicking on the Users link
+Click on the Standard user from the user list
+Click on 'Edit' link on the user details page
+Click on 'Delete User' link on the Edit user page
+Click on 'Confirm' button on the 'Delete User' popup
+Description (Design Steps)
+Using Test Prerequisite 1, Login to Batch system as a Approver. Record the User Id and User Name
+"Create a Batch Request by providing the Project and Department values in New Request window.
+
+Capture and attach screen print: New Request Window prior to Submit, Request page"
+"Verify Equipment tab displays the sectional links and buttons as:
+Sectional links:
+- Equipment Information (Highlighted)
+- Book Equipment in Calendar
+- Approver
+Buttons:
+- Cancel Request
+- Save
+- Submit"
+"Verify the following is displayed for the Equipment Information section:
+- Label: Equipment Information, Required*
+- Site*: Single-select dropdown list
+- Legal Product Category*: Single-select: Drug, Cosmetic; Medical Device - disabled
+- Batch Type*: Single-select: Lab, Pilot, Other
+- GxP (checked), Non GxP: Radio buttons
+"
+"Select the following for the Equipment Information section:
+- Site <any>
+- Legal Product Category - <any>
+- Batch Type - Lab
+- Non GxP Radio button
+- GxP Radio button"
+"Verify for Lab Batch Type selection, the following are displayed:
+- Reason for this Batch*: displays: Select Reason for this Batch
+- Optional Equipment: displays: Select Optional Equipment
+
+Capture and attach screen print: Equipment Information section"
+"Select the Batch Type as Pilot and verify the following are displayed:
+- Equipment*: displays: Select Equipment
+- Optional Equipment: displays: Select Optional Equipment
+- Reason for this Batch: displays: Reason
+Capture and attach screen print: Equipment Information section"
+"Select the Batch Type as Other and verify the following are displayed:
+- Equipment*: displays: Select Equipment
+- Reason for this Batch*: displays: Reason
+Capture and attach screen print: Equipment Information section"
+"Select Site/Legal Product Category/Batch Type as VDR/Cosmetic/Lab, verify the following:
+- Reason for this Batch: Multi-select dropdown with alphabetical order of values, select more than one value
+- Optional Equipment: Dropdown list, select any value.
+Capture and attach screen print: Equipment Information section"
+"Save the request.
+Click the Ok button.
+Navigate to Book Equipment in Calendar section and verify the following is displayed:
+- Label: Calendar for Lab
+- <Optional Equipment selected in step 9>
+- Calendar display for the current date <Month DD, YYYY> with Bench lisiting for VRD/Cosmetic/Lab per Test Prerequisite 3
+- Date field: populated with the current date and enabled to choose dates later than current date
+Capture and attach screen print: Message, Calendar for Lab section, Test Prerequisite 3"
+"Verify previous dates to current date and future dates can be navigated to using the < and > icons for the displayed current date
+
+Using the Date field, select any future date. Make multiple bench selections for the selected date. Save the Request.
+
+Capture and attach screen print: Calendar for Lab section with the bench selections"
+"Using the Test Prerequisite 2, navigate to the Manufacturing Date for the Lab Batch Type request (Test Setup 1a) with status Reserved. 
+Verify per Test Prerequisite 2 the following is displayed for the request 
+- Requested By
+- Batch Request #
+- Formula #
+- Department
+- Project Name
+- Description
+- Word Order #
+- Reason
+- Filling quantities (Tubes, Bottles, Jars)
+Capture and attach screen print: Calendar for Lab section
+"
+"Using the Test Prerequisite 2, navigate to the Manufacturing Date for the Lab Batch Type request with status Confirmed 
+Verify per (Test Setup 1a)  Test Prerequisite 2 the following is displayed for the request 
+- Requested By
+- Batch Request #
+- Formula #
+- Department
+- Project Name
+- Description
+- Word Order #
+- Reason
+- Filling quantities (Tubes, Bottles, Jars)
+Capture and attach screen print: Calendar for Lab section
+"
+"Using the Test Prerequisite 2, navigate to the Manufacturing Date for the Lab Batch Type request (Test Setup 1a) with status Submitted
+
+Verify per Test Prerequisite 2 the following is displayed for the request 
+- BR prefixed to <last four digits of the Request Number> 
+
+Hover over the link and verify the <Submitter's User Name> and Request Status is displayed
+
+Capture and attach screen print: Calendar for Lab section with hover over the request link
+"
+"Using the Test Prerequisite 2, navigate to the Manufacturing Date for the Lab Batch Type request with status Pending
+
+Verify per Test Prerequisite 2 the following is displayed for the request 
+- BR prefixed to <last four digits of the Request Number> 
+
+Hover over the link and verify the <Submitter's User Name> and Request Status is displayed
+
+Capture and attach screen print: Calendar for Lab section with hover over the request link
+"
+"Using the Test Prerequisite 2, navigate to the Manufacturing Date for the Lab Batch Type request (Test Setup 1a) with status Cancelled
+
+Verify per Test Prerequisite 2 the following is displayed for the request 
+- BR prefixed to <last four digits of the Request Number> 
+
+Hover over the link and verify the <Submitter's User Name> and Request Status is displayed
+
+Capture and attach screen print: Calendar for Lab section with hover over the request link
+"
+"Navigate to the Overview tab. Verify the tab displays the following:
+Label: Review Request
+- Batch Size: blank
+- Equiment: <Benches selected in step 11>
+- Optional Equipment: <Selected in step 9>
+- Formula ID: blank
+- Manufacturing Date:<Date selected in step 11>
+- Filling blank
+- Packaging: blank
+- Batch RM Order: blank
+Capture and attach screen print: Overview tab"
+"Navigate to Equipment Information section. Select Site/Legal Product Category/Batch Type as VDR/Cosmetic/Pilot, verify the following:
+- Equipment: Single-select dropdown list with values per Test Prerequisite 3, select a value
+- Optional Equipment:Multi-select dropdown list with values per Test Prerequisite 3, select more than one value
+- Reason for this Batch: Text field, enter any text
+Capture and attach screen print: Equipment Information section"
+"Save the request.
+Click the Ok button.
+Navigate to Book Equipment in Calendar section
+- Label: Calendar for Pilot
+- <Equipment selected in step 19>
+- <Optional Equipment selected in step 19>
+- Calendar display for the week of the current date <MMM DD - DD, YYYY> 
+- Date field: populated with the current date and enabled to choose dates later than current date
+Capture and attach screen print: Calendar for Pilot section"
+"Verify previous weeks to current week and future weeks can be navigated to using the < and > icons for the displayed current week
+
+Using the Date field, select the Manufacturing Date for the Pilot Batch Request (Test Setup 1b) of status Confirmed. 
+
+Verify only one day can be selected (attempt to select more than one). Select the Manufacturing Date for the Pilot Batch Request of status Confirmed.Save the Request.
+Capture and attach screen print: Calendar for Pilot section"
+"Navigate to the Overview tab. Verify the tab displays the following:
+Label: Review Request
+- Batch Size: blank
+- Equiment: <Benches selected in step 19>
+- Optional Equipment: <Selected in step 19>
+- Formula ID: blank
+- Manufacturing Date:<Date selected in step 20>
+- Filling: blank
+- Packaging: blank
+- Batch RM Order: blank
+Capture and attach screen print: Overview tab"
+"Navigate to Book Equipment in Calendar section. Using the Test Prerequisite 2, navigate to the Manufacturing Date for the Pilot Batch Type request (Test Setup 1b) with status Reserved. 
+Verify per Test Prerequisite 2 the following is displayed for the request 
+- Requested By
+- Batch Request #
+- Formula #
+- Department
+- Project Name
+- Description
+- Word Order #
+- Reason
+- Filling quantities (Tubes, Bottles, Jars)
+Capture and attach screen print: Calendar for Pilot section"
+"Verify per Test Prerequisite 2 the following is displayed for the Pilot Batch Type Request (Test Setup 1b) of status Confirmed
+- Requested By
+- Batch Request #
+- Formula #
+- Department
+- Project Name
+- Description
+- Word Order #
+- Reason
+- Filling quantities (Tubes, Bottles, Jars)"
+"Verify per Test Prerequisite 2 the following is displayed for the Pilot Batch Type Request (Test Setup 1b) of status Submitted
+- BR with (last 4 digits of the Request Number) link
+Hover over the link and verify the <Submitter's User name> and request status is displayed
+Capture and attach: <Submitter's User name> and status"
+"Verify per Test Prerequisite 2 the following is displayed for the Pilot Batch Type Request (Test Setup 1b) of status Pending
+- BR with (last 4 digits of the Request Number) link
+Hover over the link and verify the <Submitter's User name> and request status is displayed
+Capture and attach: <Submitter's User name> and status"
+"Verify per Test Prerequisite 2 the following is displayed for the Pilot Batch Type Request (Test Setup 1b) of status Cancelled
+- BR with (last 4 digits of the Request Number) link
+Hover over the link and verify the <Submitter's User name> and request status is displayed
+Capture and attach: <Submitter's User name> and status"
+"Click the View all pilots for this week link. Verify the following is displayed for the window:
+- <Selected week>, <year>
+- Max Capacity: 5
+- Total: <Sum of all pilots for the week with status Reserved,Confirmed>
+- X icon:
+Tabular representation of the following per Test Prerequisite 2(Test Setup 1b)  :
+- Simatic
+- Project Name
+- FML
+- Packaging Type
+- Total Quantity
+- Equip
+- Optional Equip
+- Size
+- Date
+- Submitter
+- Status
+Capture and attach screen print: Window, Test Prerequisite 2"
+Click the x icon
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as VDR/Drug/Lab. 
+
+Select any value for Reason for this Batch and Optional Equipment fields. Save the request
+
+Navigate to the Book Equipment in Calendar section.
+Capture and attach screen print: Equipment Information and Calendar for Lab sections
+"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as VDR/Drug/Pilot. 
+
+Select any value for Equipment and Optional Equipment fields. Enter any text for Reason for this Batch field. Save the request
+
+Navigate to the Book Equipment in Calendar section.
+Capture and attach screen print: Equipment Information and Book Equipment in Calendar sections"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as VDR/Drug or Cosmetic /Other. Verify the following are displayed:
+
+- Reason for this Batch*:Free text field, displays: Reason
+- Equipment*:Single-select dropdown, displays: Select Equipment
+
+Enter any text for the Reason for this Batch field and verify the dropdown values for Equipment are per Test Prerequisite 3. Select any equipment for Equipment. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to Book Equipment in Calendar section
+- Label: Calendar for Pilot
+- <Equipment selected in step 31>
+- Calendar display for the week of the current date <MMM DD - DD, YYYY>
+- Date field: populated with the current date and enabled to choose dates later than current date
+Capture and attach screen print: Calendar for Pilot section"
+"Using the Date field, select the Manufacturing Date for the Other Batch Type Request of status Confirmed. 
+
+Verify more than one day can be selected (selecting and de-selecting). Select the Manufacturing Date for the Other Batch Type Request of status Confirmed and any additional date.  Save the Request.
+Capture and attach screen print: Calendar for Pilot section with  selected Maufacturing dates"
+"Navigate to the Overview tab. Verify the tab displays the following:
+Label: Review Request
+- Batch Size: blank
+- Equiment: <Equipment selected in step 31>
+- Optional Equipment: NA
+- Formula ID: blank
+- Manufacturing Date:<Dates selected in step 33>
+- Filling: blank
+- Packaging: blank
+- Batch RM Order: blank
+Capture and attach screen print: Overview tab"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as VDR/Drug or Cosmetic /Other. Verify the following are displayed:
+
+- Reason for this Batch*:Free text field, displays: Reason
+- Equipment*:Single-select dropdown, displays: Select Equipment
+
+Enter any text for the Reason for this Batch field and verify the dropdown values for Equipment are per Test Prerequisite 3. Select bench for Equipment. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to Book Equipment in Calendar section and verify the following is displayed:
+- Label: Calendar for Lab
+- Calendar display for the current date <Month DD, YYYY> with Bench lisiting for VRD/Drug or Cosmetic/Other per Test Prerequisite 3 (bench 1 through 7)
+- Date field: populated with the current date and enabled to choose dates later than current date
+Capture and attach screen print: Calendar for Lab section"
+"Move within the calendar days and select multiple benches (selecting and de-selecting). Save the request
+Capture and attach screen print: Calendar for Lab section"
+"Navigate to the Overview tab. Verify the tab displays the following:
+Label: Review Request
+- Batch Size: blank
+- Equiment: <Benches selected in step 37>
+- Optional Equipment: NA
+- Formula ID: blank
+- Manufacturing Date:<Date selected in step 37>
+- Filling: blank
+- Packaging: blank
+- Batch RM Order: blank
+Capture and attach screen print: Overview tab"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as SJC/ Cosmetic /Lab. 
+
+Select any value for Reason for this Batch field. Verify the Optional Equipment displays the value per Test Prerequisite 3. Select the value for Optional Equipment field. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to Book Equipment in Calendar section and verify the following is displayed:
+- Label: Calendar for Lab
+- <Optional Equipment selected in step 39>
+- Calendar display for the current date <Month DD, YYYY> with Bench lisiting for SJC/Cosmetic/Lab per Test Prerequisite 3
+- Date field: populated with the current date and enabled to choose dates later than current date
+Capture and attach screen print: Calendar for Lab section"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as SJC/ Cosmetic /Pilot. 
+
+Enter any text for Reason for Batch field.
+Verify the values for Equipment and Optional Equipment are displayed per Test Prerequisite 3. Select any value for Equipment and Optional Equipment fields. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to Book Equipment in Calendar section and verify the following is displayed:
+- Label: Calendar for Pilot
+- <Equipment selected in step 41>
+- <Optional Equipment selected in step 41>
+- Calendar display for the week of the current date <MMM DD - DD, YYYY> Month DD, YYYY> 
+- Date field: populated with the current date and enabled to choose dates later than current date
+Capture and attach screen print: Calendar for Pilot section"
+"Using Test Prerequisite 2, navigate to the Manufacturing Date for the Pilot Batch Type Request (Test Setup 1c) with the status Reserved.
+Click the View all pilots for this week link and verify the following is displayed for the window:
+- <Selected week>, <year>
+- Max Capacity: 10
+- Total: <Sum of all pilots for the week with status Reserved,Confirmed>
+- X icon:
+Tabular representation of the following per Test Prerequisite 2:
+- Simatic
+- Project Name
+- FML
+- Packaging Type
+- Total Quantity
+- Equip
+- Optional Equip
+- Size
+- Date
+- Submitter
+- Status
+Capture and attach screen print: Window"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as SJC/ Drug /Lab. 
+
+Select the values for Reason for this Batch and Optional Equipment fields. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to Book Equipment in Calendar section and verify No Benches are avaialble is displayed
+Capture and attach screen print: Book Equipment in Calendar section"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as SJC/ Drug /Pilot.  Verify the following are displayed:
+
+Enter any text for Reason for this Batch field. Verify the values for Equipment and Optional Equipment are displayed per Test Prerequisite 3. Select the values for Equipment and Optional Equipment fields. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to Book Equipment in Calendar section and verify No Benches are avaialble is displayed
+Capture and attach screen print: Book Equipment in Calendar section"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as SJC/ Drug or Cosmetic /Other. 
+
+Enter any text for Reason for this Batch field. Verify the values for Equipment field are displayed per Test Prerequisite 3. Select the value bench. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to Book Equipment in Calendar section and verify Bench listing is displayed per Test Prerequisite 3 (Bench 1, Bench 2)
+Capture and attach screen print: Book Equipment in Calendar section"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as Pomezia/ Cosmetic /Lab. 
+
+Select any value for Reason for this Batch field and Optional Equipment field. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to Book Equipment in Calendar section and verify the bench listing(s) are displayed per Test Prerequisite 3. 
+Capture and attach screen print: Calendar for Lab section"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as Pomezia/ Cosmetic /Pilot. 
+
+Enter any text for Reason for Batch field.
+Verify the values for Equipment and Optional Equipment are displayed per Test Prerequisite 3. Select any value for Equipment and Optional Equipment fields. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as Pomezia/ Drug /Lab. 
+
+Select the values for Reason for this Batch and Optional Equipment fields. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to Book Equipment in Calendar section and verify No Benches are avaialble is displayed
+Capture and attach screen print: Book Equipment in Calendar section"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as Pomezia/ Drug /Pilot.  Verify the following are displayed:
+
+Enter any text for Reason for this Batch field. Verify the values for Equipment and Optional Equipment are displayed per Test Prerequisite 3. Select the values for Equipment and Optional Equipment fields. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to Book Equipment in Calendar section and verify No Benches are avaialble is displayed
+Capture and attach screen print: Book Equipment in Calendar section"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as Pomezia/ Drug or Cosmetic /Other. 
+
+Enter any text for Reason for this Batch field. Verify the values for Equipment field are displayed per Test Prerequisite 3. Select the value bench. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to Book Equipment in Calendar section and verify Bench listing is displayed per Test Prerequisite 3 (Bench 1)
+Capture and attach screen print: Book Equipment in Calendar section"
+"Using the Test Prerequisite 2, navigate to the Manufacturing Date for the Other Batch Type request (Test Setup 1d) with status Reserved. 
+Verify per Test Prerequisite 2 the following is displayed for the request 
+- Requested By
+- Batch Request #
+- Formula #
+- Department
+- Project Name
+- Description
+- Word Order #
+- Reason
+- Filling quantities (Tubes, Bottles, Jars)
+Capture and attach screen print: Book Equipment in Calendar section
+"
+"Using the Test Prerequisite 2, navigate to the Manufacturing Date for the Other Batch Type request (Test Setup 1d) with status Confirmed 
+Verify per Test Prerequisite 2 the following is displayed for the request 
+- Requested By
+- Batch Request #
+- Formula #
+- Department
+- Project Name
+- Description
+- Word Order #
+- Reason
+- Filling quantities (Tubes, Bottles, Jars)
+Capture and attach screen print: Book Equipment in Calendar section
+"
+"Using the Test Prerequisite 2, navigate to the Manufacturing Date for the Other Batch Type request with status Submitted
+
+Verify per Test Prerequisite 2 the following is displayed for the request 
+- BR prefixed to <last four digits of the Request Number> 
+
+Hover over the link and verify the <Submitter's User Name> and Request Status is displayed
+
+Capture and attach screen print: Book Equipment in Calendar section with hover over the request link
+"
+"Using the Test Prerequisite 2, navigate to the Manufacturing Date for the Other Batch Type request (Test Setup 1d) with status Cancelled
+Verify per Test Prerequisite 2 the following is displayed for the request 
+- BR prefixed to <last four digits of the Request Number> 
+
+Hover over the link and verify the <Submitter's User Name> and Request Status is displayed
+
+Capture and attach screen print: Book Equipment in Calendar section with hover over the request link
+"
+"Using the Test Prerequisite 2, navigate to the Manufacturing Date for the Other Batch Type request (Test Setup 1d) with status Pending
+Verify per Test Prerequisite 2 the following is displayed for the request 
+- BR prefixed to <last four digits of the Request Number> 
+
+Hover over the link and verify the <Submitter's User Name> and Request Status is displayed
+
+Capture and attach screen print: Book Equipment in Calendar section with hover over the request link
+"
+"Navigate to the Equipment Information section. Select Site/Legal Product Category/Batch Type as Pomezia/ Drug or Cosmetic /Other. 
+
+Enter any text for Reason for this Batch field. Verify the values for Equipment field are displayed per Test Prerequisite 3. Select any equipment. Save the request
+
+Capture and attach screen print: Equipment Information section
+
+
+
+"
+"Navigate to Book Equipment in Calendar section. Using the Test Prerequisite 2, navigate to the Manufacturing Date week for Test Setup 1e requests. Select all the days for that week. Save the request
+
+Capture and attach screen print: Book Equipment in Calendar section "
+"Click the View all pilots for this week link and verify the following is displayed for the window:
+- <Selected week>, <year>
+- Max Capacity: 6
+- Total: <Sum of all pilots for the week with status Reserved,Confirmed>
+- X icon:
+Tabular representation of the following per Test Prerequisite 2:
+- Simatic
+- Project Name
+- FML
+- Packaging Type
+- Total Quantity
+- Equip
+- Optional Equip
+- Size
+- Date
+- Submitter
+- Status
+Capture and attach screen print: Window"
+"Sumbit the request. Click the Ok button
