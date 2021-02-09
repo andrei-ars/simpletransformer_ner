@@ -16,7 +16,7 @@ train_args = {
     "max_seq_length": 509,
     # "save_model_every_epoch": False,
     "learning_rate": 1e-4,
-    "train_batch_size": 16,
+    "train_batch_size": 8, #16,
     "gradient_accumulation_steps": 4,
     "mlm": False,
     "dataset_type": "simple",
