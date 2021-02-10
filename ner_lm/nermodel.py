@@ -25,7 +25,7 @@ class NerModel:
             'save_steps': -1,
             'save_model_every_epoch': False,
             
-            'num_train_epochs': 5,   # 5
+            'num_train_epochs': 3,   # 5
             'train_batch_size': 10, # 10
             'eval_batch_size' : 10,
             'evaluate_during_training' : True,
