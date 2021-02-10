@@ -7,7 +7,7 @@ from simpletransformers.ner import NERModel
 class NerModel:
     def __init__(self, modelname="", dataset=None, use_saved_model=False):
         
-        pretrained_model_name = f"../outputs/from_scratch/best_model"
+        pretrained_model_name = f"../lm_outputs/from_scratch/best_model"
 
         self.dataset = dataset
         #labels_list = ["O", "B-ACT",  "I-ACT", "B-OBJ", "I-OBJ", "B-VAL", "I-VAL", "B-VAR", "I-VAR"]
@@ -26,7 +26,7 @@ class NerModel:
             'save_model_every_epoch': False,
             
             'train_batch_size': 10, # 10
-            'num_train_epochs': 8,   # 5
+            'num_train_epochs': 5,   # 5
             'max_seq_length': 256,
             'gradient_accumulation_steps': 8,
 
