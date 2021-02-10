@@ -12,7 +12,8 @@ if __name__ == "__main__":
     #mode = "infer"
 
     modelname = "nlp_complex"
-    complex_dataset_names = ["table", "table_nq", "nlp_ext", "nlp_ext_nq"]
+    #complex_dataset_names = ["table", "table_nq", "nlp_ext", "nlp_ext_nq"]
+    complex_dataset_names = ["nlp_ext", "nlp_ext_nq"]
 
     test_sentences = [
         "Double Click on a BOQ calendar EOQ from the list on the left side of the screen.",
