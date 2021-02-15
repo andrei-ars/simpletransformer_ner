@@ -15,6 +15,7 @@ if __name__ == "__main__":
     #complex_dataset_names = ["table", "table_nq", "nlp_ext", "nlp_ext_nq"]
     complex_dataset_names = ["nlp_ext", "nlp_ext_nq"]
 
+    """
     test_sentences = [
         "Double Click on a BOQ calendar EOQ from the list on the left side of the screen.",
         "Enter text into the BOQ password EOQ on the bottom left of the screen",
@@ -36,6 +37,19 @@ if __name__ == "__main__":
         "Navigate to leads page by clicking on Next step",
         "Change the page by clicking on Next button",
         "Extract information by clicking on Next button",
+        ]
+    """
+
+    test_sentences = [
+        "Double Click on a calendar from the list on the left side of the screen.",
+        "Enter text into the password on the bottom left of the screen",
+        "Enter text into the second name box on the bottom left of the screen",
+        "Log out from the website by clicking on Log out from website",
+        "Click on Basket in home window",
+        "Double Click on a calendar from the list on the left side of the screen",
+        "Click on calendar from the list on the left side of the screen",
+        "Click on YYY from the list on the left side of the screen",
+        "Double click on YYY aaa from the list on the left side of the screen",
         ]
 
     if mode == "train":
