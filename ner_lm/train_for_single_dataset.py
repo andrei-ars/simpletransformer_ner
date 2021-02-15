@@ -26,7 +26,11 @@ if __name__ == "__main__":
             "Enter text into the password on the bottom left of the screen",
             "Enter text into the second name box on the bottom left of the screen",
             "Log out from the website by clicking on Log out from website",
-            "Click on Basket in home window"
+            "Click on Basket in home window",
+            "Double Click on a calendar from the list on the left side of the screen",
+            "Click on calendar from the list on the left side of the screen",
+            "Click on YYY from the list on the left side of the screen",
+            "Double press on YYY aaa from the list on the left side of the screen",
             ]
     elif modelname == "table_nq":
         test_sentences = [
