@@ -63,6 +63,8 @@ if __name__ == "__main__":
 
     if mode == "train":
         model = NerModel(modelname=modelname, dataset=dataset)
+        model.test()
+        
         model.train()
         model.eval()
 
