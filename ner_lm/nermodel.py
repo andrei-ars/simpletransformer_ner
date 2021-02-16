@@ -72,6 +72,9 @@ class NerModel:
         prev_id = 0
         s_words = []
         s_labels = []
+
+        samples = []
+
         for i in range(len(sentence_id)):
             s_id = sentence_id[i]
             word = words[i]
@@ -80,6 +83,7 @@ class NerModel:
             if s_id != prev_id:
                 sentence = " ".join(s_words)
                 print("sentence id={}: {}".format(prev_id, sentence))
+                samples.append({'text': sentence, 'tokens': s_words, 'labels': s_labels})
                 #print("s_labels: {}".format(s_labels))
                 s_words = []
                 s_labels = []
@@ -87,23 +91,24 @@ class NerModel:
 
             s_words.append(words[i])
             s_labels.append(labels[i])
-            print("i={}, word={}, label={}".format(s_id, word, label))
+            #print("i={}, word={}, label={}".format(s_id, word, label))
 
+        print("sentence id={}: {}".format(prev_id, sentence))
+        samples.append({'text': sentence, 'tokens': s_words, 'labels': s_labels})
         sys.exit()
 
-        #sentences = ["Some arbitary sentence", "Simple Transformers sentence"]
-        #predictions, raw_outputs = self.model.predict(sentences)
+        texts = [sample['text'] for sample in samples]
+        predictions, raw_outputs = self.model.predict(texts)
         #print(predictions)
 
         # More detailed preditctions
-        #for n, (preds, outs) in enumerate(zip(predictions, raw_outputs)):
-        #    print("\n___________________________")
-        #    print("Sentence: ", sentences[n])
-        #    for pred, out in zip(preds, outs):
-        #        key = list(pred.keys())[0]
-        #        new_out = out[key]
-        #        preds = list(softmax(np.mean(new_out, axis=0)))
-        #        print(key, pred[key], preds[np.argmax(preds)], preds)
+        for n, (preds, outs) in enumerate(zip(predictions, raw_outputs)):
+            print("\ntext: ", texts[i])
+            for pred, out in zip(preds, outs):
+                #key = list(pred.keys())[0]
+                #new_out = out[key]
+                #preds = list(softmax(np.mean(new_out, axis=0)))
+                #print(key, pred[key], preds[np.argmax(preds)], preds)
 
 
     def simple_test(self):

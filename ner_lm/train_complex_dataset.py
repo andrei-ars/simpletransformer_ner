@@ -8,8 +8,8 @@ from nerdataset import get_labels_list
 
 if __name__ == "__main__":
 
-    mode = "train"
-    #mode = "infer"
+    #mode = "train"
+    mode = "infer"
 
     modelname = "nlp_complex"
     #complex_dataset_names = ["table", "table_nq", "nlp_ext", "nlp_ext_nq"]
@@ -58,13 +58,12 @@ if __name__ == "__main__":
     if mode == "train":
         dataset = NerDataset(complex_dataset_names).as_dict()
     else:
-        dataset = NerDataset(complex_dataset_names, labels_only=True).as_dict()
+        dataset = NerDataset(complex_dataset_names).as_dict()
+        #dataset = NerDataset(complex_dataset_names, labels_only=True).as_dict()
         #dataset['labels_list'] = get_labels_list("dataset/{}/tag.dict".format(modelname))
 
     if mode == "train":
         model = NerModel(modelname=modelname, dataset=dataset)
-        model.test()
-        
         model.train()
         model.eval()
 
@@ -76,6 +75,9 @@ if __name__ == "__main__":
         for i in range(len(predictions)):
             text = test_sentences[i]
             print("text: {}\noutput: {}\n".format(text, predictions[i]))
+
+        print("\nMODEL.TEST:")
+        model.test()
 
     print("\nManually input")
     while True:
