@@ -36,11 +36,9 @@ class NerModel:
             'labels_list': labels_list
         }
 
-        #self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
+        self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
         #self.model = NERModel("electra", 'google/electra-small-generator', use_cuda=False, args=model_args)
-        self.model = NERModel("layoutlm", 'microsoft/layoutlm-base-uncased', use_cuda=False, args=model_args)
-
-
+        #self.model = NERModel("layoutlm", 'microsoft/layoutlm-base-uncased', use_cuda=False, args=model_args)
 
         """
         if use_saved_model:
@@ -66,11 +64,24 @@ class NerModel:
             raise Exception("dataset is None")
 
     def test(self):
-        test_data = list(self.dataset['test'])
-        print("test_data:", test_data)
-        #for s_id, word, label in test_data:
-        #    print(s_id, word, label)
-
+        sentence_id = self.dataset['test']['sentence_id']
+        words = self.dataset['test']['words']
+        labels = self.dataset['test']['labels']
+        
+        prev_id = 0
+        s_words = []
+        s_labels = []
+        for i in range(len(sentence_id)):
+            s_id = sentence_id[i]
+            if s_id != prev_id:
+                sentence = " ".join(words)
+                print("id={}: {}".format(prev_id, sentence))
+                print("s_labels: {}".format(s_labels))
+                s_words = []
+                s_labels = []
+            else:
+                s_word.append(words[i])
+                s_labels.append(labels[i])
 
         #sentences = ["Some arbitary sentence", "Simple Transformers sentence"]
         #predictions, raw_outputs = self.model.predict(sentences)
