@@ -101,7 +101,7 @@ class NerModel:
         #print(predictions)
 
         # More detailed preditctions
-        for n, (preds, outs) in enumerate(zip(predictions, raw_outputs)):
+        for i, (preds, outs) in enumerate(zip(predictions, raw_outputs)):
             print("\ntext: ", texts[i])
             for pred, out in zip(preds, outs):
                 print("pred:", pred)
