@@ -105,6 +105,8 @@ class NerModel:
         for n, (preds, outs) in enumerate(zip(predictions, raw_outputs)):
             print("\ntext: ", texts[i])
             for pred, out in zip(preds, outs):
+                print("pred:", pred)
+                print("out:", out)
                 #key = list(pred.keys())[0]
                 #new_out = out[key]
                 #preds = list(softmax(np.mean(new_out, axis=0)))
