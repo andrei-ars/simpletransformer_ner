@@ -67,8 +67,9 @@ class NerModel:
 
     def test(self):
         test_data = list(self.dataset['test'])
-        for s_id, word, label in test_data:
-            print(s_id, word, label)
+        print("test_data:", test_data)
+        #for s_id, word, label in test_data:
+        #    print(s_id, word, label)
 
 
         #sentences = ["Some arbitary sentence", "Simple Transformers sentence"]
