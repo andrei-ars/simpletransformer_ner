@@ -37,7 +37,10 @@ class NerModel:
         }
 
         #self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
-        self.model = NERModel("electra", 'google/electra-small-generator', use_cuda=False, args=model_args)
+        #self.model = NERModel("electra", 'google/electra-small-generator', use_cuda=False, args=model_args)
+        self.model = NERModel("xlnet", 'xlnet-base-cased', use_cuda=False, args=model_args)
+
+
 
         """
         if use_saved_model:
@@ -61,6 +64,26 @@ class NerModel:
             print("Evaluation result:", result)
         else:
             raise Exception("dataset is None")
+
+    def test(self):
+        test_data = list(self.dataset['test'])
+        #for s_id, word, label in test_data:
+
+
+        sentences = ["Some arbitary sentence", "Simple Transformers sentence"]
+        predictions, raw_outputs = self.model.predict(sentences)
+        print(predictions)
+
+        # More detailed preditctions
+        for n, (preds, outs) in enumerate(zip(predictions, raw_outputs)):
+            print("\n___________________________")
+            print("Sentence: ", sentences[n])
+            for pred, out in zip(preds, outs):
+                key = list(pred.keys())[0]
+                new_out = out[key]
+                preds = list(softmax(np.mean(new_out, axis=0)))
+                print(key, pred[key], preds[np.argmax(preds)], preds)
+
 
     def simple_test(self):
         # Predictions on arbitary text strings

@@ -72,6 +72,7 @@ class NerDataset:
         self.dataset['train'] = pd.DataFrame(train_data, columns=["sentence_id", "words", "labels"])
         self.dataset['val'] = pd.DataFrame(val_data, columns=["sentence_id", "words", "labels"])
         self.dataset['test'] = pd.DataFrame(test_data, columns=["sentence_id", "words", "labels"])
+        print("test dataset:", self.dataset['test'])
 
     def as_dict(self):
         return self.dataset
