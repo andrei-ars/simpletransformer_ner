@@ -95,7 +95,6 @@ class NerModel:
 
         print("sentence id={}: {}".format(prev_id, sentence))
         samples.append({'text': sentence, 'tokens': s_words, 'labels': s_labels})
-        sys.exit()
 
         texts = [sample['text'] for sample in samples]
         predictions, raw_outputs = self.model.predict(texts)
