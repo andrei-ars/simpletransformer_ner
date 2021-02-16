@@ -103,7 +103,10 @@ class NerModel:
         # More detailed preditctions
         for i, (preds, outs) in enumerate(zip(predictions, raw_outputs)):
             print("\ntext: ", texts[i])
-            print("\npreds: ", preds)
+            #print("\npreds: ", preds)
+            pred_labels = [list(t.values())[0] for t in preds]
+            print("\npred_labels: ", pred_labels)
+
             #for pred, out in zip(preds, outs):
                 #print("pred:", pred)
                 #print("out:", out)
