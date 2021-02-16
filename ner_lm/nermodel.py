@@ -38,7 +38,7 @@ class NerModel:
 
         #self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
         #self.model = NERModel("electra", 'google/electra-small-generator', use_cuda=False, args=model_args)
-        self.model = NERModel("mobilebert", 'google/mobilebert-uncased', use_cuda=False, args=model_args)
+        self.model = NERModel("layoutlm", 'microsoft/layoutlm-base-uncased', use_cuda=False, args=model_args)
 
 
 
