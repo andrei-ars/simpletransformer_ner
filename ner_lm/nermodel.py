@@ -80,7 +80,7 @@ class NerModel:
                 s_words = []
                 s_labels = []
             else:
-                s_word.append(words[i])
+                s_words.append(words[i])
                 s_labels.append(labels[i])
 
         #sentences = ["Some arbitary sentence", "Simple Transformers sentence"]
