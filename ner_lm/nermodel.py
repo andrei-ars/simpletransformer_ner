@@ -79,9 +79,12 @@ class NerModel:
                 print("s_labels: {}".format(s_labels))
                 s_words = []
                 s_labels = []
+                prev_id = s_id
             else:
                 s_words.append(words[i])
                 s_labels.append(labels[i])
+
+        sys.exit()
 
         #sentences = ["Some arbitary sentence", "Simple Transformers sentence"]
         #predictions, raw_outputs = self.model.predict(sentences)
