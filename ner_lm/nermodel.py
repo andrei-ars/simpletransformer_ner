@@ -38,7 +38,7 @@ class NerModel:
 
         #self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
         #self.model = NERModel("electra", 'google/electra-small-generator', use_cuda=False, args=model_args)
-        self.model = NERModel("squeezebert", 'squeezebert/squeezebert-mnli', use_cuda=False, args=model_args)
+        self.model = NERModel("mpnet", 'microsoft/mpnet-base', use_cuda=False, args=model_args)
 
 
 
