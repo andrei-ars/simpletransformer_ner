@@ -46,6 +46,9 @@ if __name__ == "__main__":
         "Enter text into the second name box on the bottom left of the screen",
         "Log out from the website by clicking on Log out from website",
         "Click on Basket in home window",
+        "Click on Basket button in the left side of the screen",
+        "Click on BOQ Basket EOQ button in the left side of the screen",
+
         "Double Click on a calendar from the list on the left side of the screen",
         "Click on calendar from the list on the left side of the screen",
         "Click on YYY from the list on the left side of the screen",
@@ -67,8 +70,10 @@ if __name__ == "__main__":
         model = NerModel(modelname=modelname, dataset=dataset, use_saved_model=True)
 
     if mode in {"train", "infer"}:
-        result = model.predict(test_sentences)
-        print("result:", result)
+        predictions = model.predict(test_sentences)
+        for i in range(len(predictions)):
+            text = test_sentences[i]
+            print("text: {}\noutput: {}\n".format(text, predictions[i]))
 
     print("\nManually input")
     while True:
