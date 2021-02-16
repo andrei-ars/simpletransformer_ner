@@ -74,16 +74,19 @@ class NerModel:
         s_labels = []
         for i in range(len(sentence_id)):
             s_id = sentence_id[i]
+            word = words[i]
+            label = labels[i]
+            print("i={}, word={}, label={}".format(s_id, word, label))
             if s_id != prev_id:
                 sentence = " ".join(words)
-                print("id={}: {}".format(prev_id, sentence))
-                print("s_labels: {}".format(s_labels))
+                #print("id={}: {}".format(prev_id, sentence))
+                #print("s_labels: {}".format(s_labels))
                 s_words = []
                 s_labels = []
                 prev_id = s_id
-            else:
-                s_words.append(words[i])
-                s_labels.append(labels[i])
+            
+            s_words.append(words[i])
+            s_labels.append(labels[i])
 
         sys.exit()
 
