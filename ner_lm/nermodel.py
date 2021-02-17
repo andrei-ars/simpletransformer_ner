@@ -66,7 +66,7 @@ class NerModel:
         # # Evaluate the model
         if self.dataset:
             result, model_outputs, predictions = self.model.eval_model(
-                                                    self.dataset['val'], acc=accuracy_score)
+                                                    self.dataset['val'])
             print("Evaluation result:", result)
         else:
             raise Exception("dataset is None")
