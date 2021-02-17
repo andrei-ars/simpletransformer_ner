@@ -109,6 +109,7 @@ class NerModel:
         #print(predictions)
 
         acc_list = []
+        success_list = []
 
         # More detailed preditctions
         for i, (preds, outs) in enumerate(zip(predictions, raw_outputs)):
@@ -125,8 +126,13 @@ class NerModel:
             acc1sentence = np.mean(comp)
             print("acc={:.3f}".format(acc1sentence))
             acc_list.append(acc1sentence)
+            success = 1 if acc1sentence == 1.0 else 0
+            success_list.append(success)
+
         avg_acc = np.mean(acc_list)
         print("avg acc={:.3f}".format(avg_acc))
+        avg_success = np.mean(success_list)
+        print("avg success={:.3f}".format(avg_success))
 
             #for pred, out in zip(preds, outs):
                 #print("pred:", pred)
