@@ -117,7 +117,7 @@ class NerModel:
             print("pred_labels: ", pred_labels)
             true_labels = samples[i]['labels']
             print("true_labels: ", true_labels)
-            if len(true_labels) != len(pred_labels)
+            if len(true_labels) != len(pred_labels):
                 raise Exception("len(true_labels) != len(pred_labels)")
             comp = [true_labels[i] == pred_labels[i] for i in range(len(pred_labels))]
             acc = np.mean(comp)
