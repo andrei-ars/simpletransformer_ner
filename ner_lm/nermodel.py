@@ -100,6 +100,7 @@ class NerModel:
             s_labels.append(labels[i])
             #print("i={}, word={}, label={}".format(s_id, word, label))
 
+        sentence = " ".join(s_words)
         print("sentence id={}: {}".format(prev_id, sentence))
         samples.append({'text': sentence, 'tokens': s_words, 'labels': s_labels})
 
@@ -116,7 +117,8 @@ class NerModel:
             print("pred_labels: ", pred_labels)
             true_labels = samples[i]['labels']
             print("true_labels: ", true_labels)
-            assert len(true_labels) == len(pred_labels)
+            if len(true_labels) != len(pred_labels)
+                raise Exception("len(true_labels) != len(pred_labels)")
             comp = [true_labels[i] == pred_labels[i] for i in range(len(pred_labels))]
             acc = np.mean(comp)
             print("acc={:.3f}".format(acc))
