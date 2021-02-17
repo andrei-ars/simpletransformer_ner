@@ -47,6 +47,8 @@ class NerModel:
         #self.model = NERModel("electra", 'google/electra-small-generator', use_cuda=False, args=model_args)
         #self.model = NERModel("layoutlm", 'microsoft/layoutlm-base-uncased', use_cuda=False, args=model_args)
 
+        self.model = NERModel("distilbert", "distilbert-base-cased-distilled-squa", use_cuda=False, args=model_args)
+
         """
         if use_saved_model:
             self.model = NERModel("bert", output_dir, use_cuda=False, args=model_args)
