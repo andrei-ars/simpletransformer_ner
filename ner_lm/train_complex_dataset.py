@@ -75,9 +75,8 @@ if __name__ == "__main__":
         #for i in range(len(predictions)):
         #    text = test_sentences[i]
         #    print("text: {}\noutput: {}\n".format(text, predictions[i]))
-
-        model.eval()
-        print("\nMODEL.TEST:")
+        #model.eval()
+        #print("\nMODEL.TEST:")
         model.test()
 
     print("\nManually input")
