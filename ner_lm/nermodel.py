@@ -3,6 +3,12 @@ import numpy as np
 import pandas as pd
 from scipy.special import softmax
 from simpletransformers.ner import NERModel
+from sklearn.metrics import f1_score, accuracy_score
+
+
+
+def f1_multiclass(labels, preds):
+    return f1_score(labels, preds, average='micro')
 
 
 class NerModel:
@@ -59,7 +65,8 @@ class NerModel:
     def eval(self):
         # # Evaluate the model
         if self.dataset:
-            result, model_outputs, predictions = self.model.eval_model(self.dataset['val'])
+            result, model_outputs, predictions = self.model.eval_model(
+                                                    self.dataset['val'], f1=f1_multiclass, acc=accuracy_score)
             print("Evaluation result:", result)
         else:
             raise Exception("dataset is None")
@@ -108,7 +115,7 @@ class NerModel:
             pred_labels = [list(t.values())[0] for t in preds]
             print("pred_labels: ", pred_labels)
             true_labels = samples[i]['labels']
-            print("pred_labels: ", true_labels)
+            print("true_labels: ", true_labels)
             assert len(true_labels) == len(pred_labels)
             comp = [true_labels[i] == pred_labels[i] for i in range(len(pred_labels))]
             acc = np.mean(comp)
