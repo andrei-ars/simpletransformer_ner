@@ -102,14 +102,15 @@ class NerModel:
 
         # More detailed preditctions
         for i, (preds, outs) in enumerate(zip(predictions, raw_outputs)):
-            print("\ntext: ", texts[i])
+            print()
+            print("text: ", texts[i])
             #print("\npreds: ", preds)
             pred_labels = [list(t.values())[0] for t in preds]
-            print("\npred_labels: ", pred_labels)
+            print("pred_labels: ", pred_labels)
             true_labels = samples[i]['labels']
-            print("\npred_labels: ", true_labels)
+            print("pred_labels: ", true_labels)
             assert len(true_labels) == len(pred_labels)
-            comp = [true_labels[i] == pred_labels[i] for in range(len(pred_labels))]
+            comp = [true_labels[i] == pred_labels[i] for i in range(len(pred_labels))]
             acc = np.mean(comp)
             print("acc={:.3f}".format(acc))
 
