@@ -106,6 +106,12 @@ class NerModel:
             #print("\npreds: ", preds)
             pred_labels = [list(t.values())[0] for t in preds]
             print("\npred_labels: ", pred_labels)
+            true_labels = samples[i]['labels']
+            print("\npred_labels: ", true_labels)
+            assert len(true_labels) == len(pred_labels)
+            comp = [true_labels[i] == pred_labels[i] for in range(len(pred_labels))]
+            acc = np.mean(comp)
+            print("acc={:.3f}".format(acc))
 
             #for pred, out in zip(preds, outs):
                 #print("pred:", pred)
