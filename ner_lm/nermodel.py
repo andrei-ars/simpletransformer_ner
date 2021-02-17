@@ -108,6 +108,8 @@ class NerModel:
         predictions, raw_outputs = self.model.predict(texts)
         #print(predictions)
 
+        acc_list = []
+
         # More detailed preditctions
         for i, (preds, outs) in enumerate(zip(predictions, raw_outputs)):
             print()
@@ -120,8 +122,11 @@ class NerModel:
             if len(true_labels) != len(pred_labels):
                 raise Exception("len(true_labels) != len(pred_labels)")
             comp = [true_labels[i] == pred_labels[i] for i in range(len(pred_labels))]
-            acc = np.mean(comp)
-            print("acc={:.3f}".format(acc))
+            acc1sentence = np.mean(comp)
+            print("acc={:.3f}".format(acc1sentence))
+            acc_list.append(acc1sentence)
+        avg_acc = np.mean(acc_list)
+        print("avg acc={:.3f}".format(avg_acc))
 
             #for pred, out in zip(preds, outs):
                 #print("pred:", pred)
