@@ -1,0 +1,12 @@
+INFO:simpletransformers.language_modeling.language_modeling_model: Training language model from scratch
+INFO:simpletransformers.language_modeling.language_modeling_utils: Creating features from dataset file a
+t cache_dir/
+INFO:simpletransformers.language_modeling.language_modeling_utils: Saving features into cached file cach
+e_dir/bert_cached_lm_507_train.txt
+INFO:simpletransformers.language_modeling.language_modeling_model: Training started
+Epoch 1 of 3:   0%|                                                        | 0/3 [00:00<?, ?it/sKilleds 
+0/3. Running Loss:    0.9655:  11%|██                 | 18/161 [31:21<4:02:31, 101.76s/it]
+(trans) autonomiq@li638-183:~/venv/work/simpletransformer_ner/lm_train$ 
+
+--
+ if it runs out of GPU memory, the OOM message will be very verbose (and logged from tensorflow) in the process. It won't die silently. If it's RAM exhaustion, it's the kernel killing the process and that will be silent (you'll have logs in dmesg to confirm that it was a RAM OOM)

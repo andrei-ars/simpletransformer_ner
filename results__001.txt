@@ -1,0 +1,44 @@
+
+
+English pretrained:
+Epochs 9/10. Running Loss:    0.0431
+Evaluation result: {'eval_loss': 0.614951702952385, 'precision': 0.6883116883116883, 'rec
+all': 0.828125, 'f1_score': 0.7517730496453902}
+
+result: [[{'Double': 'B-ACT'}, {'Click': 'O'}, {'on': 'O'}, {'a': 'O'}, {'calendar': 'B-OBJ'}, {'from': 'O'}, {'the': 'O'}, {'list': 'O'}, {'on': 'O'}, {'the': 'O'}, {'left': 'O'}, {'side': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen.': 'O'}], [{'Enter': 'B-ACT'}, {'text': 'O'}, {'into': 'O'}, {'the': 'O'}, {'password': 'B-OBJ'}, {'on': 'O'}, {'the': 'O'}, {'bottom': 'O'}, {'left': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen': 'O'}], [
+{'Enter': 'B-ACT'}, {'text': 'O'}, {'into': 'O'}, {'the': 'O'}, {'second': 'O'}, {'name': 'I-OBJ'}, {'box': 'O'}, {'on': 'O'}, {'the': 'O'}, {'bottom': 'O'}, {'left': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen': 'O'}]]
+
+
+=======
+
+from stratch:
+1)
+ [[{'Double': 'B-ACT'}, {'Click': 'O'}, {'on': 'O'}, {'a': 'O'}, {'calendar': 'O'}, {'from': 'O'}, {'the': 'O'}, {'list': 'O'}, {'on': 'O'}, {'the': 'O'}, {'left': 'O'}, {'side': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen.': 'O'}], [{'Enter': 'B-ACT'}, {'text': 'O'}, {'into': 'O'}, {'the': 'O'}, {'password': 'B-OBJ'}, {'on': 'O'}, {'the': 'O'}, {'bottom': 'O'}, {'left': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen': 'O'}], [{'Enter': 'B-ACT'}, {'text': 'O'}, {'into': 'O'}, {'the': 'O'}, {'second': 'O'}, {'name': 'I-OBJ'}, {'box': 'O'}, {'on': 'O'}, {'the': 'O'}, {'bottom': 'O'}, {'left': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen': 'O'}]]
+
+2) 8 epochs
+
+Evaluation result: {'eval_loss': 1.1277520775794982, 'precision': 0.449438202247191, 'recall': 0.625, 'f1_score': 0.5228758169934641}
+
+[{'Double': 'B-ACT'}, {'Click': 'O'}, {'on': 'O'}, {'a': 'O'}, {'calendar': 'O'}, {'from': 'O'} , {'the': 'O'}, {'list': 'O'}, {'on': 'O'}, {'the': 'O'}, {'left': 'O'}, {'side': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen.': 'O'}], [{'Enter': 'B-ACT'}, {'text': 'O'}, {'into': 'O'}, {'the': 'O'}, {'password': 'B-OBJ'}, {'on': 'O'}, {'the': 'O'}, {'bottom': 'O'}, {'left': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen': 'O'}], [{'Enter': 'B-ACT'}, {'text': 'O'}, {'into': 'O'}, {'the': 'O'}, {'second': 'O'}, {'name': 'I-OBJ'}, {'box': 'O'}, {'on': 'O'}, {'the': 'O'}, {'bottom': 'O'}, {'left': 'O'}, {'of': 'O'}, {'the':
+ 'O'}, {'screen': 'O'}]]
+ 
+ 
+ =======
+ 
+ Epochs 2/3. Running Loss:    0.0050:  70%|████████████████████▍        | 226/321 [
+Epochs 2/3. Running Loss:    0.0323: 100%|███████████████████████████████| 321/321 [4:44:18<00:00, 53.14s
+/it]
+INFO:simpletransformers.language_modeling.language_modeling_utils: Loading features from cached file cach
+e_dir/bert_cached_lm_507_test.txt
+INFO:simpletransformers.language_modeling.language_modeling_model:{'eval_loss': 0.01844868700330456, 'per
+plexity': tensor(1.0186)}
+Epoch 3 of 3: 100%|██████████████████████████████████████████████████| 3/3 [14:21:45<00:00, 17235.08s/it]
+INFO:simpletransformers.language_modeling.language_modeling_model: Training of bert model complete. Saved
+ to ../lm_outputs/from_scratch_.
+INFO:simpletransformers.language_modeling.language_modeling_utils: Loading features from cached file cach
+e_dir/bert_cached_lm_507_test.txt
+Running Evaluation: 100%|██████████████████████████████████████████████████████| 6/6 [01:21<00:00, 13.55s
+/it]
+INFO:simpletransformers.language_modeling.language_modeling_model:{'eval_loss': 0.01844868700330456, 'per
+plexity': tensor(1.0186)}
+INFO:wandb.sdk.internal.internal:Internal process exited

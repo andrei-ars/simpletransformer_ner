@@ -1,0 +1,22 @@
+
+
+English pretrained:
+Epochs 9/10. Running Loss:    0.0431
+Evaluation result: {'eval_loss': 0.614951702952385, 'precision': 0.6883116883116883, 'rec
+all': 0.828125, 'f1_score': 0.7517730496453902}
+
+result: [[{'Double': 'B-ACT'}, {'Click': 'O'}, {'on': 'O'}, {'a': 'O'}, {'calendar': 'B-OBJ'}, {'from': 'O'}, {'the': 'O'}, {'list': 'O'}, {'on': 'O'}, {'the': 'O'}, {'left': 'O'}, {'side': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen.': 'O'}], [{'Enter': 'B-ACT'}, {'text': 'O'}, {'into': 'O'}, {'the': 'O'}, {'password': 'B-OBJ'}, {'on': 'O'}, {'the': 'O'}, {'bottom': 'O'}, {'left': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen': 'O'}], [
+{'Enter': 'B-ACT'}, {'text': 'O'}, {'into': 'O'}, {'the': 'O'}, {'second': 'O'}, {'name': 'I-OBJ'}, {'box': 'O'}, {'on': 'O'}, {'the': 'O'}, {'bottom': 'O'}, {'left': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen': 'O'}]]
+
+
+=======
+
+from LM (stratch):
+1)
+
+2) 5 epochs
+Evaluation result: {'eval_loss': 2.083561873435974, 'precision': 0.28, 'recall': 0.328125, 'f1_score': 0.302158273381295}
+[[{'Double': 'B-ACT'}, {'Click': 'B-OBJ'}, {'on': 'O'}, {'a': 'O'}, {'calendar': 'O'},  {'from': 'O'}, {'the': 'O'}, {'list': 'O'}, {'on': 'O'}, {'the': 'O'}, {'left': 'O'}, {'side': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen.': 'O'}], [{'Enter': 'B-ACT'}, {'text': 'O'}, {'into': 'O'}, {'the': 'O'}, {'password': 'B-OBJ'}, {'on': 'O'}, {'the': 'O'}, {'bottom': 'O'}, {'left': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen': 'O'}], [{'Enter': 'B-ACT'}, {'text': 'O'}, {'into': 'O'}, {'the': 'O'}, {'second': 'O'}, {'name': 'I-OBJ'}, {'box': 'O'}, {'on': 'O'}, {'the': 'O'}, {'bottom': 'O'}, {'left': 'O'}, {'of': 'O'}, {'the': 'O'}, {'screen': 'O'}]]
+
+3) 5 epochs,'max_seq_length': 128
+{'eval_loss': 1.325030766427517, 'precision': 0.6266666666666667, 'recall': 0.734375, 'f1_score': 0.6762589928057554}
