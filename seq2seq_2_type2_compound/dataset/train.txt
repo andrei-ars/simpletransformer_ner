@@ -16,11 +16,17 @@ Right click in the holiday table. Click Add.
 Left click in the right table, and the click Menue.
 Left click in the right table. Click Menue.
 
-Enter username, password.
-Enter username. Enter password.
+Enter in username, password.
+Enter in username. Enter in password.
 
-Enter username,password.
-Enter username. Enter password.
+Enter text in username,password.
+Enter text in username. Enter text in password.
+
+Enter text in username and password.
+Enter text in username. Enter text in password.
+
+Enter text in \"username and password\".
+Enter text in username. Enter text in password.
 
 Click name, login.
 Click name. Click login.

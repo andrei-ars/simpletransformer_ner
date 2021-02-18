@@ -103,6 +103,8 @@ results = model.predict(
             "click name after userlogin and click password",
             "Enter name, password",
             "Enter userlogin and click submit",
+            "Enter in userlogin and submit",
+            "Enter text in \"userlogin and submit\"",
             "Enter userlogin, click submit",
         ]
     )
