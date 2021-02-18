@@ -41,12 +41,12 @@ print(train_df)
 
 eval_data = [
     [
-        "click house after name",
-        "{'label': 'house', 'action': 'clickables', 'element_type': None}",
+        "Click on Task icon and click on Create Journal",
+        "Click on Task icon. Click on Create Journal",
     ],
     [
-        "hover the user photo next to sim",
-        "{'label': 'the user photo', 'action': 'hoverables', 'element_type': None}",
+        "Enter userlogin and click submit",
+        "Enter userlogin. Click submit",
     ],
 ]
 
@@ -61,7 +61,7 @@ from simpletransformers.seq2seq import (
 )
 
 model_args = Seq2SeqArgs()
-model_args.num_train_epochs = 3 #20
+model_args.num_train_epochs = 10 #20
 model_args.no_save = True
 model_args.evaluate_generated_text = True
 model_args.evaluate_during_training = True
