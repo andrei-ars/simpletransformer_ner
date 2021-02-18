@@ -61,7 +61,7 @@ from simpletransformers.seq2seq import (
 )
 
 model_args = Seq2SeqArgs()
-model_args.num_train_epochs = 20
+model_args.num_train_epochs = 3 #20
 model_args.no_save = True
 model_args.evaluate_generated_text = True
 model_args.evaluate_during_training = True
