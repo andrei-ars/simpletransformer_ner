@@ -31,6 +31,8 @@ class NerModel:
             'save_eval_checkpoints': False,
             'save_steps': -1,
             'save_model_every_epoch': False,
+            #'no_save' : True,
+            #'no_cache': True,
             
             'num_train_epochs': 5,   # 5
             'train_batch_size': 10, # 10

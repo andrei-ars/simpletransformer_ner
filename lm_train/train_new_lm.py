@@ -2,10 +2,13 @@ import argparse
 import logging
 
 from simpletransformers.language_modeling import LanguageModelingModel
+from simpletransformers.language_modeling import LanguageModelingArgs
 
 logging.basicConfig(level=logging.INFO)
 transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.WARNING)
+
+output_dir_name = "lm_outputs_test"
 
 train_args = {
     "reprocess_input_data": True,
@@ -28,8 +31,8 @@ train_args = {
     "sliding_window": True,
     "use_multiprocessing": False,
     "vocab_size": 10000,
-    "output_dir": f"../lm_outputs/from_scratch_",
-    "best_model_dir": f"../lm_outputs/from_scratch/best_model",
+    "output_dir": "../{}/from_scratch_".format(output_dir_name),
+    "best_model_dir": "../{}/from_scratch/best_model".format(output_dir_name),
     "fp16": False,
     "local_rank": -1,
 }
@@ -44,9 +47,15 @@ train_args["local_rank"] = args.local_rank
 
 train_file = f"data/train.txt"
 test_file = f"data/test.txt"
-
 #model = LanguageModelingModel("gpt2", None, args=train_args, train_files=train_file,)
-model = LanguageModelingModel("bert", None, args=train_args, train_files=train_file, use_cuda=False)
+#model = LanguageModelingModel("bert", None, args=train_args, train_files=train_file, use_cuda=False)
+
+model_args = LanguageModelingArgs()
+model_args.config = {
+    "num_hidden_layers": 2
+}
+model_args.vocab_size = 10000
+model = LanguageModelingModel("bert", None, args=model_args, train_files=train_file, use_cuda=False)
 
 model.train_model(
     train_file, eval_file=test_file,
