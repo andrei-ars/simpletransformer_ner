@@ -114,7 +114,7 @@ class NerModel:
         success_list = []
 
         # More detailed preditctions
-        for i, (preds, outs) in enumerate(zip(predictions, raw_outputs)):
+        for i, (preds, raw_outs) in enumerate(zip(predictions, raw_outputs)):
             print()
             print("text: ", texts[i])
             #print("\npreds: ", preds)
@@ -122,6 +122,8 @@ class NerModel:
             print("pred_labels: ", pred_labels)
             true_labels = samples[i]['labels']
             print("true_labels: ", true_labels)
+            print("raw_outs: ", raw_outs)
+            
             if len(true_labels) != len(pred_labels):
                 raise Exception("len(true_labels) != len(pred_labels)")
             comp = [true_labels[i] == pred_labels[i] for i in range(len(pred_labels))]
