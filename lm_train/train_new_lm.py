@@ -14,7 +14,7 @@ train_args = {
     "reprocess_input_data": True,
     "overwrite_output_dir": True,
     "num_train_epochs": 3,
-    "save_eval_checkpoints": True,
+    "save_eval_checkpoints": False,
     "block_size": 509,
     "max_seq_length": 509,
     # "save_model_every_epoch": False,
@@ -55,6 +55,11 @@ model_args.config = {
     "num_hidden_layers": 2
 }
 model_args.vocab_size = 10000
+model_args.output_dir = "../{}/from_scratch_".format(output_dir_name)
+model_args.best_model_dir = "../{}/from_scratch/best_model".format(output_dir_name)
+model_args.num_train_epochs = 3
+model_args.save_eval_checkpoints = False
+
 model = LanguageModelingModel("bert", None, args=model_args, train_files=train_file, use_cuda=False)
 
 model.train_model(
