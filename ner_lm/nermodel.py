@@ -46,8 +46,8 @@ class NerModel:
             'labels_list': labels_list
         }
 
-        #self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
-        self.model = NERModel("bert", "bert-base-uncased", use_cuda=False, args=model_args)
+        self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
+        #self.model = NERModel("bert", "bert-base-uncased", use_cuda=False, args=model_args)
         #self.model = NERModel("electra", 'google/electra-small-generator', use_cuda=False, args=model_args)
         #self.model = NERModel("layoutlm", 'microsoft/layoutlm-base-uncased', use_cuda=False, args=model_args)
 
