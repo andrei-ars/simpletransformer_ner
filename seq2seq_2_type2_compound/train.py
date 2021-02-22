@@ -112,6 +112,11 @@ print(results)
 for i, result in enumerate(results):
     print("{}: {}".format(i, result))
 """
-["{'label': 'anything is', 'action': 'clickables', 'element_type", 
-"{'label': 'action': 'clickables', 'element_type': None}"]
+0: Click on Create Journal. Click on Create icon.                                                           
+1: click name. Click password.                                                                              
+2: Enter name.                                                                                              
+3: Enter userlogin. Click submit                                                                            
+4: Enter in userlogin.                                                                                      
+5: Enter text in "userlogin". Enter text in password.                                                       
+6: Enter userlogin. Click submit 
 """
