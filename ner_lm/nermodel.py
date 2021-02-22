@@ -122,7 +122,7 @@ class NerModel:
             print("pred_labels: ", pred_labels)
             true_labels = samples[i]['labels']
             print("true_labels: ", true_labels)
-            print("raw_outs: ", raw_outs)
+            #print("raw_outs: ", raw_outs)
             
             if len(true_labels) != len(pred_labels):
                 raise Exception("len(true_labels) != len(pred_labels)")
@@ -163,7 +163,9 @@ class NerModel:
                 preds = list(softmax(np.mean(new_out, axis=0)))
                 print(key, pred[key], preds[np.argmax(preds)], preds)
 
+    
     def predict(self, sentences):
         predictions, raw_outputs = self.model.predict(sentences)
+        print("raw_outputs:", raw_outputs)
         return predictions
 
