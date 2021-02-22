@@ -16,6 +16,7 @@ class NerModel:
         
         pretrained_model_name = f"../lm_outputs/from_scratch/best_model"
         pretrained_model_name = f"../lm_outputs_test/from_scratch/best_model"
+        pretrained_model_name = f"../lm_outputs_test/from_scratch_"
 
         self.dataset = dataset
         #labels_list = ["O", "B-ACT",  "I-ACT", "B-OBJ", "I-OBJ", "B-VAL", "I-VAL", "B-VAR", "I-VAR"]
