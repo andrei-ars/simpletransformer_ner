@@ -53,8 +53,8 @@ test_file = f"data/test.txt"
 model_args = LanguageModelingArgs()
 model_args.config = {
     "hidden_size": 768,
-    "num_hidden_layers": 6,  # 12
-    "num_attention_heads": 6,
+    "num_hidden_layers": 4,  # 12
+    "num_attention_heads": 4,
 }
 model_args.vocab_size = 10000
 model_args.output_dir = "../{}/from_scratch_".format(output_dir_name)
