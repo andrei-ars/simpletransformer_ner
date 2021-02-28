@@ -46,7 +46,7 @@ class NerPartDataset:
 class NerDataset:
     def __init__(self, names, labels_only=False):
 
-        path = "dataset"
+        path = "ner_lm/dataset"
 
         labels = set()
         train_data = []
@@ -54,7 +54,7 @@ class NerDataset:
         test_data = []
             
         for name in names:
-            labels |= set(get_labels_list("dataset/{}/tag.dict".format(name)))
+            labels |= set(get_labels_list("{}/{}/tag.dict".format(path, name)))
             if not labels_only:
                 train_data += NerPartDataset("{}/{}/train.txt".format(path, name)).as_list()
                 val_data += NerPartDataset("{}/{}/valid.txt".format(path, name)).as_list()

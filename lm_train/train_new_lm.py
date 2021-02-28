@@ -1,12 +1,12 @@
 import argparse
 import logging
-
 from simpletransformers.language_modeling import LanguageModelingModel
 from simpletransformers.language_modeling import LanguageModelingArgs
-
 logging.basicConfig(level=logging.INFO)
 transformers_logger = logging.getLogger("transformers")
 transformers_logger.setLevel(logging.WARNING)
+
+this_folder = "lm_train"
 
 output_dir_name = "lm_outputs_test"
 
@@ -31,8 +31,10 @@ train_args = {
     "sliding_window": True,
     "use_multiprocessing": False,
     "vocab_size": 10000,
-    "output_dir": "../{}/from_scratch_".format(output_dir_name),
-    "best_model_dir": "../{}/from_scratch/best_model".format(output_dir_name),
+    "output_dir": "{}/from_scratch_".format(output_dir_name),
+    "best_model_dir": "{}/from_scratch/best_model".format(output_dir_name),
+    #"output_dir": "../{}/from_scratch_".format(output_dir_name),
+    #"best_model_dir": "../{}/from_scratch/best_model".format(output_dir_name),
     "fp16": False,
     "local_rank": -1,
 }
@@ -45,8 +47,8 @@ args = parser.parse_args()
 
 train_args["local_rank"] = args.local_rank
 
-train_file = f"data/train.txt"
-test_file = f"data/test.txt"
+train_file = "{}/data/train.txt".format(this_folder)
+test_file = "{}/data/test.txt".format(this_folder)
 #model = LanguageModelingModel("gpt2", None, args=train_args, train_files=train_file,)
 #model = LanguageModelingModel("bert", None, args=train_args, train_files=train_file, use_cuda=False)
 
