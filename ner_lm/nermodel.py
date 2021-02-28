@@ -14,8 +14,10 @@ def f1_multiclass(labels, preds):
 class NerModel:
     def __init__(self, modelname="", dataset=None, use_saved_model=False):
         
-        pretrained_model_name = f"../lm_outputs/from_scratch/best_model"
-        pretrained_model_name = f"../lm_outputs_test/from_scratch/best_model"
+        pretrained_model_name = "lm_outputs/from_scratch/best_model"
+        pretrained_model_name = "lm_outputs_test/from_scratch/best_model"
+        #pretrained_model_name = f"../lm_outputs/from_scratch/best_model"
+        #pretrained_model_name = f"../lm_outputs_test/from_scratch/best_model"
         #pretrained_model_name = f"../lm_outputs_test/from_scratch_"
 
         self.dataset = dataset

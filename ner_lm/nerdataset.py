@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 
+DATASET_PATH = "ner_lm/dataset"
+
 
 def get_labels_list(filepath):
     labels_list = []
@@ -46,7 +48,7 @@ class NerPartDataset:
 class NerDataset:
     def __init__(self, names, labels_only=False):
 
-        path = "ner_lm/dataset"
+        path = DATASET_PATH
 
         labels = set()
         train_data = []
