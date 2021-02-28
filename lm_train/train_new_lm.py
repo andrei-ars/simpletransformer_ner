@@ -64,7 +64,7 @@ model_args.config = {
 model_args.vocab_size = 10000
 model_args.output_dir = "../{}/from_scratch_".format(output_dir_name)
 model_args.best_model_dir = "../{}/from_scratch/best_model".format(output_dir_name)
-model_args.num_train_epochs = 3
+model_args.num_train_epochs = 1
 model_args.save_eval_checkpoints = True
 model_args.overwrite_output_dir = True
 
