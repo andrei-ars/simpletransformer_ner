@@ -70,8 +70,14 @@ model_args.overwrite_output_dir = True
 
 model = LanguageModelingModel("bert", None, args=model_args, train_files=train_file, use_cuda=False)
 
+logging.info("Train model")
+
 model.train_model(
     train_file, eval_file=test_file,
 )
 
+logging.info("Eval model")
+
 model.eval_model(test_file)
+
+logging.info("Finish")
