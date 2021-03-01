@@ -38,7 +38,7 @@ class NerModel:
             #'no_save' : True,
             #'no_cache': True,
             
-            'num_train_epochs': 10,   # 5
+            'num_train_epochs': 15,   # 5
             'train_batch_size': 10, # 10
             'eval_batch_size' : 10,
             'evaluate_during_training' : True,
