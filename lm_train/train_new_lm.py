@@ -58,10 +58,10 @@ test_file = "{}/data/test.txt".format(this_folder)
 model_args = LanguageModelingArgs()
 model_args.config = {
     "hidden_size": 768,
-    "num_hidden_layers": 2,  # 12
-    "num_attention_heads": 2,
+    "num_hidden_layers": 6,  # 12
+    "num_attention_heads": 6,
 }
-model_args.vocab_size = 10000
+model_args.vocab_size = 20000
 model_args.output_dir = "{}/from_scratch_".format(output_dir_name)
 model_args.best_model_dir = "{}/from_scratch/best_model".format(output_dir_name)
 model_args.num_train_epochs = 3
