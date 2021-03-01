@@ -71,13 +71,13 @@ if __name__ == "__main__":
         model = NerModel(modelname=modelname, dataset=dataset, use_saved_model=True)
 
     if mode in {"train", "infer"}:
-        predictions = model.predict(test_sentences)
-        for i in range(len(predictions)):
-            text = test_sentences[i]
-            print("text: {}\noutput: {}\n".format(text, predictions[i]))
-        model.eval()
-        #print("\nMODEL.TEST:")
-        #model.test()
+        #predictions = model.predict(test_sentences)
+        #for i in range(len(predictions)):
+        #    text = test_sentences[i]
+        #    print("text: {}\noutput: {}\n".format(text, predictions[i]))
+        #model.eval()
+        print("\nMODEL.TEST:")
+        model.test()
 
     print("\nManually input")
     while True:
