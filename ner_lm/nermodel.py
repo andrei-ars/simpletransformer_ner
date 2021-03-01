@@ -38,7 +38,7 @@ class NerModel:
             #'no_save' : True,
             #'no_cache': True,
             
-            'num_train_epochs': 5,   # 5
+            'num_train_epochs': 10,   # 5
             'train_batch_size': 10, # 10
             'eval_batch_size' : 10,
             'evaluate_during_training' : True,
@@ -141,6 +141,7 @@ class NerModel:
             success_list.append(success)
 
         avg_acc = np.mean(acc_list)
+        print()
         print("avg acc={:.3f}".format(avg_acc))
         avg_success = np.mean(success_list)
         print("avg success={:.3f}".format(avg_success))
