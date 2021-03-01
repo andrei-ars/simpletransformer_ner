@@ -64,13 +64,13 @@ model_args.config = {
 model_args.vocab_size = 10000
 model_args.output_dir = "{}/from_scratch_".format(output_dir_name)
 model_args.best_model_dir = "{}/from_scratch/best_model".format(output_dir_name)
-model_args.num_train_epochs = 1
+model_args.num_train_epochs = 3
 model_args.save_eval_checkpoints = True
 model_args.overwrite_output_dir = True
 
-model_args.evaluate_during_training = True,
-#model_args.evaluate_during_training_steps = 3000,
+model_args.evaluate_during_training = True, # needed to save the best model!
 model_args.evaluate_during_training_verbose = True,
+#model_args.evaluate_during_training_steps = 3000,
 
 model = LanguageModelingModel("bert", None, args=model_args, train_files=train_file, use_cuda=False)
 
