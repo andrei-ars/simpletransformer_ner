@@ -69,7 +69,7 @@ model_args.save_eval_checkpoints = True
 model_args.overwrite_output_dir = True
 
 model_args.evaluate_during_training = True,
-model_args.evaluate_during_training_steps = 3000,
+#model_args.evaluate_during_training_steps = 3000,
 model_args.evaluate_during_training_verbose = True,
 
 model = LanguageModelingModel("bert", None, args=model_args, train_files=train_file, use_cuda=False)
