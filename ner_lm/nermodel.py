@@ -38,8 +38,8 @@ class NerModel:
             #'no_save' : True,
             #'no_cache': True,
             
-            'num_train_epochs': 10,   # 5
-            'train_batch_size': 5, # 10   (<=10 for bert, <=5 for longformer)
+            'num_train_epochs': 5,   # 5
+            'train_batch_size': 10, # 10   (<=10 for bert, <=5 for longformer)
             'eval_batch_size' : 10,
             'evaluate_during_training' : True,
 
@@ -52,8 +52,10 @@ class NerModel:
         #self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
         #self.model = NERModel("bert", "bert-base-uncased", use_cuda=False, args=model_args)
         #self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
-        self.model = NERModel("longformer", pretrained_model_name, use_cuda=False, args=model_args)
+        #self.model = NERModel("longformer", pretrained_model_name, use_cuda=False, args=model_args)
         
+        self.model = NERModel("roberta", "distilroberta-base", use_cuda=False, args=model_args)        
+
         #self.model = NERModel("electra", 'google/electra-small-generator', use_cuda=False, args=model_args)
         #self.model = NERModel("layoutlm", 'microsoft/layoutlm-base-uncased', use_cuda=False, args=model_args)
 
