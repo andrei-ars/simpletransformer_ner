@@ -48,14 +48,14 @@ class NerModel:
 
             'labels_list': labels_list,
 
-            'max_position_embeddings': 64,
+            #'max_position_embeddings': 64,
         }
 
         #self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
         #self.model = NERModel("bert", "bert-base-uncased", use_cuda=False, args=model_args)
         #self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
         #self.model = NERModel("longformer", pretrained_model_name, use_cuda=False, args=model_args)
-        self.model = NERModel("xlnet", "xlm-mlm-enro-1024", use_cuda=False, args=model_args)
+        self.model = NERModel("xlm", "xlm-roberta-base", use_cuda=False, args=model_args)
         
         #self.model = NERModel("albert", "albert-base-v2", use_cuda=False, args=model_args)
 
