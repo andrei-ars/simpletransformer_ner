@@ -53,8 +53,9 @@ class NerModel:
         #self.model = NERModel("bert", "bert-base-uncased", use_cuda=False, args=model_args)
         #self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
         #self.model = NERModel("longformer", pretrained_model_name, use_cuda=False, args=model_args)
+        self.model = NERModel("xlnet", "xlnet-base-cased", use_cuda=False, args=model_args)
         
-        self.model = NERModel("albert", "albert-base-v2", use_cuda=False, args=model_args)        
+        #self.model = NERModel("albert", "albert-base-v2", use_cuda=False, args=model_args)
 
         #self.model = NERModel("electra", 'google/electra-small-generator', use_cuda=False, args=model_args)
         #self.model = NERModel("layoutlm", 'microsoft/layoutlm-base-uncased', use_cuda=False, args=model_args)
