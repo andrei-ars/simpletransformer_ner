@@ -46,7 +46,9 @@ class NerModel:
             'max_seq_length': 128, #256,
             'gradient_accumulation_steps': 8,
 
-            'labels_list': labels_list
+            'labels_list': labels_list,
+
+            'max_position_embeddings': 64,
         }
 
         #self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
