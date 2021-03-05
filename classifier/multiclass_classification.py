@@ -216,8 +216,10 @@ if __name__ == "__main__":
     #  model_name is set to None to train a Language Model from scratch.
     if mode == "train":
         model = ClassificationModel(
-            model_type="bert", #"roberta", #"bert", 
-            model_name=None, # "bert-base-cased"; "xlnet-base-cased"
+            #model_type="bert", #"roberta", #"bert", 
+            #model_name=None, # "bert-base-cased"; "xlnet-base-cased"
+            model_type="longformer", #"roberta", #"bert", 
+            model_name="allenai/longformer-base-4096", # "bert-base-cased"; "xlnet-base-cased"
             num_labels=num_labels,
             args={"reprocess_input_data": True, 
                     "overwrite_output_dir": True,
