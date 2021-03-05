@@ -224,7 +224,7 @@ if __name__ == "__main__":
             args={"reprocess_input_data": True, 
                     "overwrite_output_dir": True,
                     'num_train_epochs': 5,   # 5
-                    'train_batch_size': 32,
+                    'train_batch_size': 10,
                  },
             use_cuda=False
         )        
