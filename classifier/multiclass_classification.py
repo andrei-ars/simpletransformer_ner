@@ -223,8 +223,8 @@ if __name__ == "__main__":
             num_labels=num_labels,
             args={"reprocess_input_data": True, 
                     "overwrite_output_dir": True,
-                    'num_train_epochs': 5,   # 5
-                    'train_batch_size': 10,
+                    'num_train_epochs': 2,   # 5
+                    'train_batch_size': 12,  # 32 for bert (but 32 gives an error for longfomer)
                  },
             use_cuda=False
         )        
