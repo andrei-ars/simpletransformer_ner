@@ -54,7 +54,7 @@ class NerModel:
         #self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
         #self.model = NERModel("bert", "bert-base-uncased", use_cuda=False, args=model_args)
         #self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
-        self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
+        #self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
         #self.model = NERModel("longformer", pretrained_model_name, use_cuda=False, args=model_args)
         #self.model = NERModel("xlmroberta", "xlm-roberta-base", use_cuda=False, args=model_args)
         
@@ -64,6 +64,12 @@ class NerModel:
         #self.model = NERModel("layoutlm", 'microsoft/layoutlm-base-uncased', use_cuda=False, args=model_args)
 
         #self.model = NERModel("distilbert", "distilbert-base-cased-distilled-squad", use_cuda=False, args=model_args)
+
+        if use_saved_model:
+            self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
+        else:
+            self.model = NERModel("longformer", pretrained_model_name, use_cuda=False, args=model_args)
+
 
         """
         if use_saved_model:
