@@ -4,12 +4,14 @@ import pandas as pd
 from nermodel import NerModel
 from nerdataset import NerPartDataset, NerDataset
 from nerdataset import get_labels_list
+from ner_slot_filling import ner_slot_filling
 
 
 if __name__ == "__main__":
 
-    mode = "train"
-    #mode = "infer"
+    #mode = "train"
+    #mode = "test"
+    mode = "infer"
 
     modelname = "nlp_complex"
     #complex_dataset_names = ["table", "table_nq", "nlp_ext", "nlp_ext_nq"]
@@ -66,18 +68,27 @@ if __name__ == "__main__":
         model = NerModel(modelname=modelname, dataset=dataset)
         model.train()
         model.eval()
-
-    if mode in {"infer"}:
+    else:
         model = NerModel(modelname=modelname, dataset=dataset, use_saved_model=True)
 
-    if mode in {"train", "infer"}:
+    if mode in {"train", "test"}:
+        print("\nMODEL.TEST:")
+        model.test()
+        #model.eval()
         #predictions = model.predict(test_sentences)
         #for i in range(len(predictions)):
         #    text = test_sentences[i]
         #    print("text: {}\noutput: {}\n".format(text, predictions[i]))
-        #model.eval()
-        print("\nMODEL.TEST:")
-        model.test()
+
+    if mode in {"infer"}:
+        result = model.raw_predict(test_sentences)
+        predictions = result['predictions']
+        raw_outputs = result['raw_outputs']
+        for i in range(len(predictions)):
+            text = test_sentences[i]
+            print("text: {}\noutput: {}".format(text, predictions[i]))
+            slots = ner_slot_filling(text, predictions[i])
+            print("slots: {}\n".format(slots))
 
     print("\nManually input")
     while True:
