@@ -4,7 +4,7 @@ import pandas as pd
 from nermodel import NerModel
 from nerdataset import NerPartDataset, NerDataset
 from nerdataset import get_labels_list
-from ner_slot_filling import ner_slot_filling
+from ner_slot_filling import split_token_tag, ner_slot_filling
 
 
 if __name__ == "__main__":
@@ -87,7 +87,8 @@ if __name__ == "__main__":
         for i in range(len(predictions)):
             text = test_sentences[i]
             print("text: {}\noutput: {}".format(text, predictions[i]))
-            slots = ner_slot_filling(text, predictions[i])
+            tokens, tags = split_token_tag(predictions[i])
+            slots = ner_slot_filling(tokens, tags)
             print("slots: {}\n".format(slots))
 
     print("\nManually input")

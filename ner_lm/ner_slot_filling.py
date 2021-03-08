@@ -14,6 +14,18 @@ obj_tag = 'OBJ'
 val_tag = 'VAL'
 
 
+def split_token_tag(token_tag_list):
+    """ Input is like
+    [{'Double': 'B-OBJ'}, {'Click': 'B-OBJ'}, {'on': 'B-OBJ'},
+    Output is like
+    tokens = ['Double', 'Click', 'on', 'a', 'calendar',...
+    tags = ['B-OBJ', 'B-OBJ', 'B-OBJ', 'B-OBJ', ...
+    """
+    tokens = [list(item.keys())[0] for item in  token_tag_list]
+    tags = [list(item.values())[0] for item in  token_tag_list]
+    return tokens, tags
+
+
 def ner_slot_filling(tokens, ner_tags, raw_outs=None, correct_with_quotes=True):
     """
     Parameters
@@ -28,10 +40,10 @@ def ner_slot_filling(tokens, ner_tags, raw_outs=None, correct_with_quotes=True):
     Returns
     slots : dict. An example is {'cmd_name': 'VERIFY_XPATH', 'ACT': 'verify'}
     """
-    tags = ner_tags
+    #tags = ner_tags
 
     logging.info('tokens: {}'.format(tokens))
-    logging.info('tags: {}'.format(tags))
+    logging.info('tags: {}'.format(ner_tags))
 
     tags_set = filter(lambda tag: tag != 'O', ner_tags)
     tags_set = filter(lambda tag: tag[0] == 'B', tags_set)
@@ -188,3 +200,14 @@ if __name__ == '__main__':
     test = Test_ner_slot_filling()
     test.test_HOVER()
     test.test_HOVER_missing_EOQ()
+
+    token_tag_list = [{'Double': 'B-OBJ'}, {'Click': 'B-OBJ'}, 
+        {'on': 'B-OBJ'}, {'a': 'B-OBJ'}, {'calendar': 'B-ACT'}, 
+        {'from': 'B-OBJ'}, {'the': 'B-OBJ'}, {'list': 'B-OBJ'}, 
+        {'on': 'B-OBJ'}, {'the': 'B-OBJ'}, {'left': 'B-OBJ'}, 
+        {'side': 'B-OBJ'}, {'of': 'B-OBJ'}, {'the': 'B-OBJ'}, 
+        {'screen.': 'B-OBJ'}]
+
+    tokens, tags = split_token_tag(token_tag_list)
+    print("tokens:", tokens)
+    print("tags:", tags)
