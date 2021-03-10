@@ -99,5 +99,8 @@ if __name__ == "__main__":
         if "|" in input_text:
             input_text, input_data = input_text.split("|")
 
-        result = model.predict([input_text])
-        print("result:", result)
+        predictions = model.predict([input_text])
+        tokens, tags = split_token_tag(predictions[0])
+        slots = ner_slot_filling(tokens, tags)
+        print("text: {}\noutput: {}".format(input_text, predictions[0]))
+        print("slots: {}\n".format(slots))
