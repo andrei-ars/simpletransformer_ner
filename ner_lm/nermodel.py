@@ -66,9 +66,10 @@ class NerModel:
         #self.model = NERModel("distilbert", "distilbert-base-cased-distilled-squad", use_cuda=False, args=model_args)
 
         if use_saved_model:
-            self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
+            self.model = NERModel("longformer", output_dir, use_cuda=False, args=model_args)
         else:
-            self.model = NERModel("longformer", pretrained_model_name, use_cuda=False, args=model_args)
+            self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
+            
 
 
         """
