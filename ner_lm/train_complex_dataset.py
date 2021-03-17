@@ -16,7 +16,7 @@ if __name__ == "__main__":
     modelname = "nlp_complex"
     #complex_dataset_names = ["table", "table_nq", "nlp_ext", "nlp_ext_nq"]
     #complex_dataset_names = ["nlp_ext", "nlp_ext_nq"]
-    complex_dataset_names = ["nlp_ext"]
+    complex_dataset_names = ["nlp_ext_nq"]
 
     """
     test_sentences = [
