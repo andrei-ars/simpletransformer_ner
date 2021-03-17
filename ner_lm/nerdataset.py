@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-DATASET_PATH = "ner_lm/dataset"
+DATASET_PATH = "ner_lm/dataset_ner"
 
 
 def get_labels_list(filepath):

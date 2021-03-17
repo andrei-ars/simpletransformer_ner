@@ -10,12 +10,13 @@ from ner_slot_filling import split_token_tag, ner_slot_filling
 if __name__ == "__main__":
 
     #mode = "train"
-    #mode = "test"
-    mode = "infer"
+    mode = "test"
+    #mode = "infer"
 
     modelname = "nlp_complex"
     #complex_dataset_names = ["table", "table_nq", "nlp_ext", "nlp_ext_nq"]
-    complex_dataset_names = ["nlp_ext", "nlp_ext_nq"]
+    #complex_dataset_names = ["nlp_ext", "nlp_ext_nq"]
+    complex_dataset_names = ["nlp_ext"]
 
     """
     test_sentences = [
@@ -46,7 +47,7 @@ if __name__ == "__main__":
         "Double Click on a calendar from the list on the left side of the screen.",
         "Enter text into the password on the bottom left of the screen",
         "Enter text into the second name box on the bottom left of the screen",
-        "Log out from the website by clicking on Log out from website",
+        "Go out from the website by clicking on Log out from website",
         "Click on Basket in home window",
         "Click on Basket button in the left side of the screen",
         "Click on BOQ Basket EOQ button in the left side of the screen",

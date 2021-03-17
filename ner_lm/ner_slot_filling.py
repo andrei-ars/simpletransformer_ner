@@ -89,10 +89,8 @@ def ner_slot_filling(tokens, ner_tags, raw_outs=None, correct_with_quotes=True):
     return slots
 
 
-def correct_ner_slot_filling(slots, tokens, ner_tags):
-
-
-    return slots
+#def correct_ner_slot_filling(slots, tokens, ner_tags):
+#    return slots
 
 
 

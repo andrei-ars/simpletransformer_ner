@@ -12,7 +12,7 @@ def f1_multiclass(labels, preds):
 
 
 class NerModel:
-    def __init__(self, modelname="", dataset=None, use_saved_model=False):
+    def __init__(self, path=None, modelname="", dataset=None, use_saved_model=False):
         
         pretrained_model_name = "lm_outputs/from_scratch/best_model"
         pretrained_model_name = "lm_outputs_test/from_scratch/best_model"
@@ -66,8 +66,14 @@ class NerModel:
         #self.model = NERModel("distilbert", "distilbert-base-cased-distilled-squad", use_cuda=False, args=model_args)
 
         if use_saved_model:
-            self.model = NERModel("longformer", output_dir, use_cuda=False, args=model_args)
+            if path:
+                # Use a model located in a given folder
+                self.model = NERModel("longformer", path, use_cuda=False, args=model_args)
+            else:
+                # Use a previously trained model
+                self.model = NERModel("longformer", output_dir, use_cuda=False, args=model_args)
         else:
+            # Use a pre-trained (English) model
             self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
             
 
@@ -104,7 +110,6 @@ class NerModel:
         prev_id = 0
         s_words = []
         s_labels = []
-
         samples = []
 
         for i in range(len(sentence_id)):
