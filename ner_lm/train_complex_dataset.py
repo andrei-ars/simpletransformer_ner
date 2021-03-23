@@ -88,9 +88,9 @@ if __name__ == "__main__":
         for i in range(len(predictions)):
             text = test_sentences[i]
             print("text: {}\noutput: {}".format(text, predictions[i]))
-            tokens, tags = split_token_tag(predictions[i])
-            slots = ner_slot_filling(tokens, tags)
-            print("slots: {}\n".format(slots))
+            t#okens, tags = split_token_tag(predictions[i])
+            #slots = ner_slot_filling(tokens, tags)
+            #print("slots: {}\n".format(slots))
 
     print("\nManually input")
     while True:
