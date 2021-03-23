@@ -47,8 +47,8 @@ if __name__ == "__main__":
     test_sentences = [
         "Double Click on a calendar from the list on the left side of the screen.",
         "Enter text into the password on the bottom left of the screen",
-        #"Enter text into the second name box on the bottom left of the screen",
-        #"Go out from the website by clicking on Log out from website",
+        "Enter text into the second name box on the bottom left of the screen",
+        "Go out from the website by clicking on Log out from website",
         #"Click on Basket in home window",
         #"Click on Basket button in the left side of the screen",
         #"Click on BOQ Basket EOQ button in the left side of the screen",
