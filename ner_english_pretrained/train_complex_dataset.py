@@ -52,6 +52,7 @@ if __name__ == "__main__":
         model = NerModel(modelname=modelname, dataset=dataset, use_saved_model=True)
 
     if mode in {"train", "infer"}:
+        print("Number of test_sentences:", len(test_sentences))
         result = model.predict(test_sentences)
         print("result:", result)
 
