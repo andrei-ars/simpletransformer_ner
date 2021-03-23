@@ -10,8 +10,8 @@ from ner_slot_filling import split_token_tag, ner_slot_filling
 if __name__ == "__main__":
 
     #mode = "train"
-    mode = "test"
-    #mode = "infer"
+    #mode = "test"
+    mode = "infer"
 
     modelname = "nlp_complex"
     #complex_dataset_names = ["table", "table_nq", "nlp_ext", "nlp_ext_nq"]
@@ -51,11 +51,10 @@ if __name__ == "__main__":
         "Click on Basket in home window",
         "Click on Basket button in the left side of the screen",
         "Click on BOQ Basket EOQ button in the left side of the screen",
-
         "Double Click on a calendar from the list on the left side of the screen",
         "Click on calendar from the list on the left side of the screen",
         "Click on YYY from the list on the left side of the screen",
-        "Double click on YYY aaa from the list on the left side of the screen",
+        #"Double click on YYY aaa from the list on the left side of the screen",
         ]
 
     if mode == "train":
@@ -82,6 +81,7 @@ if __name__ == "__main__":
         #    print("text: {}\noutput: {}\n".format(text, predictions[i]))
 
     if mode in {"infer"}:
+        print("Number of test_sentences:", len(test_sentences))
         result = model.raw_predict(test_sentences)
         predictions = result['predictions']
         raw_outputs = result['raw_outputs']
