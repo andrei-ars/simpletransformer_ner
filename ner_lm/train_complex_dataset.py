@@ -55,6 +55,17 @@ if __name__ == "__main__":
         "Click on calendar from the list on the left side of the screen",
         "Click on YYY from the list on the left side of the screen",
         #"Double click on YYY aaa from the list on the left side of the screen",
+
+        "Double Click on a calendar from the list on the left side of the screen.",
+        "Enter text into the password on the bottom left of the screen",
+        "Enter text into the second name box on the bottom left of the screen",
+        "Go out from the website by clicking on Log out from website",
+        "Click on Basket in home window",
+        "Click on Basket button in the left side of the screen",
+        "Click on BOQ Basket EOQ button in the left side of the screen",
+        "Double Click on a calendar from the list on the left side of the screen",
+        "Click on calendar from the list on the left side of the screen",
+        "Click on YYY from the list on the left side of the screen",        
         ]
 
     if mode == "train":
@@ -88,7 +99,7 @@ if __name__ == "__main__":
         for i in range(len(predictions)):
             text = test_sentences[i]
             print("text: {}\noutput: {}".format(text, predictions[i]))
-            t#okens, tags = split_token_tag(predictions[i])
+            #tokens, tags = split_token_tag(predictions[i])
             #slots = ner_slot_filling(tokens, tags)
             #print("slots: {}\n".format(slots))
 
