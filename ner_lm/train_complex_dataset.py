@@ -1,3 +1,4 @@
+import time
 import numpy as np
 import pandas as pd
 
@@ -45,10 +46,10 @@ if __name__ == "__main__":
 
     test_sentences = [
         "Double Click on a calendar from the list on the left side of the screen.",
-        "Enter text into the password on the bottom left of the screen",
-        "Enter text into the second name box on the bottom left of the screen",
-        "Go out from the website by clicking on Log out from website",
-        "Click on Basket in home window",
+        #"Enter text into the password on the bottom left of the screen",
+        #"Enter text into the second name box on the bottom left of the screen",
+        #"Go out from the website by clicking on Log out from website",
+        #"Click on Basket in home window",
         #"Click on Basket button in the left side of the screen",
         #"Click on BOQ Basket EOQ button in the left side of the screen",
         #"Double Click on a calendar from the list on the left side of the screen",
@@ -85,6 +86,7 @@ if __name__ == "__main__":
     if mode in {"infer"}:
         print("Number of test_sentences:", len(test_sentences))
         result = model.raw_predict(test_sentences)
+        time.sleep(5)
         predictions = result['predictions']
         raw_outputs = result['raw_outputs']
         for i in range(len(predictions)):
