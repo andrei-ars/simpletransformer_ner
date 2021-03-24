@@ -59,12 +59,15 @@ class NerModel:
         #self.model = NERModel("layoutlm", 'microsoft/layoutlm-base-uncased', use_cuda=False, args=model_args)
         #self.model = NERModel("distilbert", "distilbert-base-cased-distilled-squad", use_cuda=False, args=model_args)
 
+        #model_type, english_model_name  = "longformer", "allenai/longformer-base-4096"
+        model_type, english_model_name  = "mpnet", None
+
         if input_dir:
             # Use a previously trained model (on NER or LM tasks)
-            self.model = NERModel("longformer", input_dir, use_cuda=False, args=model_args)
+            self.model = NERModel(model_type, input_dir, use_cuda=False, args=model_args)
         else:
             # Use a pre-trained (English) model
-            self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
+            self.model = NERModel(model_type, english_model_name, use_cuda=False, args=model_args)
 
         """
         if use_saved_model:
