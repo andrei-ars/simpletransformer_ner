@@ -71,7 +71,7 @@ model_args.evaluate_during_training = True, # needed to save the best model!
 model_args.evaluate_during_training_verbose = True,
 #model_args.evaluate_during_training_steps = 3000,
 #model = LanguageModelingModel("bert", None, args=model_args, train_files=train_file, use_cuda=False)
-model = LanguageModelingModel("mpnet", None, args=model_args, train_files=train_file, use_cuda=False)
+model = LanguageModelingModel("electra", None, args=model_args, train_files=train_file, use_cuda=False)
 
 #---------------------------------
 """
