@@ -75,6 +75,11 @@ model = LanguageModelingModel("bert", None, args=model_args, train_files=train_f
 
 #---------------------------------
 model_args = LanguageModelingArgs()
+model_args.config = {
+    "hidden_size": 768, # 768
+    "num_hidden_layers": 3,  # 12
+    "num_attention_heads": 3,
+}
 model_args.vocab_size = 20000
 model_args.output_dir = "{}/from_scratch_".format(output_dir_name)
 model_args.best_model_dir = "{}/from_scratch/best_model".format(output_dir_name)
