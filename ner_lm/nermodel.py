@@ -12,20 +12,17 @@ def f1_multiclass(labels, preds):
 
 
 class NerModel:
-    def __init__(self, path=None, modelname="", dataset=None, use_saved_model=False):
+    def __init__(self, modelname="", dataset=None, use_saved_model=False, 
+                    input_dir=None, output_dir=None):
         
-        pretrained_model_name = "lm_outputs/from_scratch/best_model"
-        pretrained_model_name = "lm_outputs_test/from_scratch/best_model"
-        #pretrained_model_name = f"../lm_outputs/from_scratch/best_model"
-        #pretrained_model_name = f"../lm_outputs_test/from_scratch/best_model"
-        #pretrained_model_name = f"../lm_outputs_test/from_scratch_"
-
+        #pretrained_model_name = "lm_outputs_test/from_scratch/best_model"
+        
         self.dataset = dataset
         #labels_list = ["O", "B-ACT",  "I-ACT", "B-OBJ", "I-OBJ", "B-VAL", "I-VAL", "B-VAR", "I-VAR"]
         #labels_list = dataset.get_labels_list()
         labels_list = dataset['labels_list']
 
-        output_dir = "outputs_{}".format(modelname)
+        #output_dir = "outputs_{}".format(modelname)
         # Create a NERModel
         model_args = {
             'output_dir': output_dir,
@@ -62,17 +59,25 @@ class NerModel:
         #self.model = NERModel("layoutlm", 'microsoft/layoutlm-base-uncased', use_cuda=False, args=model_args)
         #self.model = NERModel("distilbert", "distilbert-base-cased-distilled-squad", use_cuda=False, args=model_args)
 
+        if input_dir:
+            # Use a previously trained model (on NER or LM tasks)
+            self.model = NERModel("longformer", input_dir, use_cuda=False, args=model_args)
+        else:
+            # Use a pre-trained (English) model
+            self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
+
+        """
         if use_saved_model:
             if path:
                 # Use a model located in a given folder
                 self.model = NERModel("longformer", path, use_cuda=False, args=model_args)
             else:
-                # Use a previously trained model
+                # Use a previously trained model (on NER or LM tasks)
                 self.model = NERModel("longformer", output_dir, use_cuda=False, args=model_args)
         else:
             # Use a pre-trained (English) model
             self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
-            
+        """
 
 
         """

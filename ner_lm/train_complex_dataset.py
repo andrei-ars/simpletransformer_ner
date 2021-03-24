@@ -10,14 +10,18 @@ from ner_slot_filling import split_token_tag, ner_slot_filling
 
 if __name__ == "__main__":
 
-    #mode = "train"
+    mode = "train"
     #mode = "test"
-    mode = "infer"
+    #mode = "infer"
+    #pretrained_type = "English"
+    pretrained_type = "LM"
 
     modelname = "nlp_complex"
     #complex_dataset_names = ["table", "table_nq", "nlp_ext", "nlp_ext_nq"]
     complex_dataset_names = ["nlp_ext", "nlp_ext_nq"]
     #complex_dataset_names = ["nlp_ext_nq"]
+
+    output_dir = "outputs_{}".format(modelname)
 
     """
     test_sentences = [
@@ -57,7 +61,6 @@ if __name__ == "__main__":
         "Click on YYY from the list on the left side of the screen",
         "Double click on YYY aaa from the list on the left side of the screen",
 
-
         ]
 
     if mode == "train":
@@ -68,11 +71,23 @@ if __name__ == "__main__":
         #dataset['labels_list'] = get_labels_list("dataset/{}/tag.dict".format(modelname))
 
     if mode == "train":
-        model = NerModel(modelname=modelname, dataset=dataset)
+        if pretrained_type == "LM":
+            model = NerModel(modelname=modelname, dataset=dataset,
+                            input_dir="lm_outputs_test/from_scratch/best_model",
+                            output_dir=output_dir)
+        elif pretrained_type == "continue":
+            model = NerModel(modelname=modelname, dataset=dataset,
+                            input_dir=output_dir,
+                            output_dir=output_dir)
+        elif pretrained_type == "English":
+            model = NerModel(modelname=modelname, dataset=dataset,
+                            output_dir=output_dir)
+
         model.train()
         model.eval()
     else:
-        model = NerModel(modelname=modelname, dataset=dataset, use_saved_model=True)
+        model = NerModel(modelname=modelname, dataset=dataset, use_saved_model=True,
+                            path="outputs_{}".format(modelname))
 
     if mode in {"train", "test"}:
         print("\nMODEL.TEST:")
