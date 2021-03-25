@@ -106,15 +106,25 @@ class NerModel:
     def eval(self):
         # # Evaluate the model
         if self.dataset:
-            result, model_outputs, predictions = self.model.eval_model(
+            train_result, model_outputs, predictions = self.model.eval_model(
+                                                    self.dataset['train'])
+            val_result, model_outputs, predictions = self.model.eval_model(
                                                     self.dataset['val'])
-            print("Evaluation result:", result)
+            print("Evaluation")
+            result = train_result
+            print("On train data:", result)
             #{'eval_loss': 0.8920716047286987, 
             #'precision': 0.08333333333333333, 
             #'recall': 0.027777777777777776, 
             #'f1_score': 0.041666666666666664}
-            print("loss: {:.3f}; prec/recall/f1: {:.3f}/{:.3f}/{:.3f}".format(
+            print("train loss: {:.3f}; prec/recall/f1: {:.3f}/{:.3f}/{:.3f}".format(
                 result['eval_loss'], result['precision'], result['recall'], result['f1_score']))
+
+            result = val_result
+            print("On validation data:", result)
+            print("valid loss: {:.3f}; prec/recall/f1: {:.3f}/{:.3f}/{:.3f}".format(
+                result['eval_loss'], result['precision'], result['recall'], result['f1_score']))
+
         else:
             raise Exception("dataset is None")
         return result
