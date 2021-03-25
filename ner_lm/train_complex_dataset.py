@@ -10,11 +10,11 @@ from ner_slot_filling import split_token_tag, ner_slot_filling
 
 if __name__ == "__main__":
 
-    mode = "train"
-    #mode = "test"
+    #mode = "train"
+    mode = "test"
     #mode = "infer"
-    #pretrained_type = "English"
-    pretrained_type = "LM"
+    pretrained_type = "English"
+    #pretrained_type = "LM"
 
     modelname = "nlp_complex"
     #complex_dataset_names = ["table", "table_nq", "nlp_ext", "nlp_ext_nq"]
@@ -22,6 +22,8 @@ if __name__ == "__main__":
     #complex_dataset_names = ["nlp_ext_nq"]
 
     output_dir = "outputs_{}".format(modelname)
+
+    eval_result = None
 
     """
     test_sentences = [
@@ -84,14 +86,17 @@ if __name__ == "__main__":
                             output_dir=output_dir)
 
         model.train()
-        model.eval()
-    else:
-        model = NerModel(modelname=modelname, dataset=dataset, use_saved_model=True,
-                            path="outputs_{}".format(modelname))
+    elif mode in {"test", "infer"}:
+        model = NerModel(modelname=modelname, dataset=dataset,
+                            input_dir=output_dir,
+                            output_dir=output_dir)
+        #model = NerModel(modelname=modelname, dataset=dataset, use_saved_model=True,
+        #                    path="outputs_{}".format(modelname))
 
     if mode in {"train", "test"}:
         print("\nMODEL.TEST:")
         model.test()
+        model.eval()
         #model.eval()
         #predictions = model.predict(test_sentences)
         #for i in range(len(predictions)):
