@@ -23,8 +23,6 @@ if __name__ == "__main__":
 
     output_dir = "outputs_{}".format(modelname)
 
-    eval_result = None
-
     """
     test_sentences = [
         "Double Click on a BOQ calendar EOQ from the list on the left side of the screen.",
