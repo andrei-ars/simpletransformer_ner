@@ -1,3 +1,4 @@
+import os
 import argparse
 import logging
 from simpletransformers.language_modeling import LanguageModelingModel
@@ -8,6 +9,7 @@ transformers_logger.setLevel(logging.WARNING)
 
 this_folder = "lm_train"
 output_dir_name = "lm_outputs_test"
+os.system("rm {}/* -rf".format(output_dir_name))
 
 train_file = "{}/data/train.txt".format(this_folder)
 test_file = "{}/data/test.txt".format(this_folder)
@@ -71,7 +73,8 @@ model_args.evaluate_during_training = True, # needed to save the best model!
 model_args.evaluate_during_training_verbose = True,
 #model_args.evaluate_during_training_steps = 3000,
 #model = LanguageModelingModel("bert", None, args=model_args, train_files=train_file, use_cuda=False)
-model = LanguageModelingModel("electra", None, args=model_args, train_files=train_file, use_cuda=False)
+#model = LanguageModelingModel("electra", None, args=model_args, train_files=train_file, use_cuda=False)
+model = LanguageModelingModel("albert", None, args=model_args, train_files=train_file, use_cuda=False)
 
 #---------------------------------
 """
