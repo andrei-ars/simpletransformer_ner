@@ -1,4 +1,5 @@
 import os
+import time
 import argparse
 import logging
 from simpletransformers.language_modeling import LanguageModelingModel
@@ -9,7 +10,10 @@ transformers_logger.setLevel(logging.WARNING)
 
 this_folder = "lm_train"
 output_dir_name = "lm_outputs_test"
-os.system("rm {}/* -rf".format(output_dir_name))
+cmd = "rm {}/* -rf".format(output_dir_name)
+os.system(cmd)
+print(cmd)
+time.sleep(1)
 
 train_file = "{}/data/train.txt".format(this_folder)
 test_file = "{}/data/test.txt".format(this_folder)
