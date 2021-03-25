@@ -61,7 +61,7 @@ class NerModel:
 
         #model_type, english_model_name  = "longformer", "allenai/longformer-base-4096"
         #model_type, english_model_name  = "mpnet", "microsoft/mpnet-base"
-        model_type, english_model_name  = "electra", None
+        model_type, english_model_name  = "electra", "google/electra-small-discriminator"
 
         if input_dir:
             # Use a previously trained model (on NER or LM tasks)
