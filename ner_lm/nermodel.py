@@ -63,7 +63,8 @@ class NerModel:
         #model_type, english_model_name  = "mpnet", "microsoft/mpnet-base"
         #model_type, english_model_name  = "electra", "google/electra-small-discriminator"
         #model_type, english_model_name  = "squeezebert", "squeezebert/squeezebert-uncased"
-        model_type, english_model_name  = "bert", "bert-base-uncased"
+        #model_type, english_model_name  = "bert", "bert-base-uncased"
+        model_type, english_model_name  = "albert", "albert-large-v1"
         
 
         if input_dir:
