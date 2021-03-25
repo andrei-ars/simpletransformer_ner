@@ -64,8 +64,7 @@ class NerModel:
         #model_type, english_model_name  = "electra", "google/electra-small-discriminator"
         #model_type, english_model_name  = "squeezebert", "squeezebert/squeezebert-uncased"
         #model_type, english_model_name  = "bert", "bert-base-uncased"
-        model_type, english_model_name  = "albert", "albert-large-v1"
-        
+        model_type, english_model_name  = "albert", "albert-base-v2"
 
         if input_dir:
             # Use a previously trained model (on NER or LM tasks)
@@ -112,16 +111,12 @@ class NerModel:
                                                     self.dataset['val'])
             print("Evaluation")
             result = train_result
-            print("On train data:", result)
-            #{'eval_loss': 0.8920716047286987, 
-            #'precision': 0.08333333333333333, 
-            #'recall': 0.027777777777777776, 
-            #'f1_score': 0.041666666666666664}
+            #print("On train data:", result)
+            #{'eval_loss': 0.8920, 'precision': 0.0833, 'recall': 0.027, 'f1_score': 0.0416}
             print("train loss: {:.3f}; prec/recall/f1: {:.3f}/{:.3f}/{:.3f}".format(
                 result['eval_loss'], result['precision'], result['recall'], result['f1_score']))
-
             result = val_result
-            print("On validation data:", result)
+            #print("On validation data:", result)
             print("valid loss: {:.3f}; prec/recall/f1: {:.3f}/{:.3f}/{:.3f}".format(
                 result['eval_loss'], result['precision'], result['recall'], result['f1_score']))
 
