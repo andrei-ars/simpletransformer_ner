@@ -95,6 +95,8 @@ class NerModel:
             # args={"overwrite_output_dir": True, "reprocess_input_data": True}
         """
 
+        self.model_info = {'model_type':model_type, 'english_model_name':english_model_name, 'input_dir':input_dir}
+
     def train(self):
         # # Train the model
         if self.dataset:
@@ -119,9 +121,11 @@ class NerModel:
             #print("On validation data:", result)
             print("valid loss: {:.3f}; prec/recall/f1: {:.3f}/{:.3f}/{:.3f}".format(
                 result['eval_loss'], result['precision'], result['recall'], result['f1_score']))
-
         else:
             raise Exception("dataset is None")
+
+        print("model_info:", self.model_info)
+
         return result
 
     def test(self):
