@@ -35,7 +35,7 @@ class NerModel:
             #'no_save' : True,
             #'no_cache': True,
             
-            'num_train_epochs': 5, # 5
+            'num_train_epochs': 1, # 5
             'train_batch_size': 10, # 10   (<=10 for bert, <=5 for longformer)
             'eval_batch_size' : 10,
             'evaluate_during_training' : True,
@@ -45,7 +45,7 @@ class NerModel:
 
             'labels_list': labels_list,
 
-            'learning_rate': 0.0005, # default 4e-5
+            'learning_rate': 0.0001, # default 4e-5; the best value is 0.0001
 
             #'max_position_embeddings': 64,
         }
@@ -63,10 +63,10 @@ class NerModel:
 
         #model_type, english_model_name  = "longformer", "allenai/longformer-base-4096"
         #model_type, english_model_name  = "mpnet", "microsoft/mpnet-base"
-        model_type, english_model_name  = "electra", "google/electra-small-discriminator"
+        #model_type, english_model_name  = "electra", "google/electra-small-discriminator"
         #model_type, english_model_name  = "squeezebert", "squeezebert/squeezebert-uncased"
         #model_type, english_model_name  = "bert", "bert-base-uncased"
-        #model_type, english_model_name  = "albert", "albert-base-v2"
+        model_type, english_model_name  = "albert", "albert-base-v2"
 
         if input_dir:
             # Use a previously trained model (on NER or LM tasks)
@@ -102,9 +102,12 @@ class NerModel:
     def train(self):
         # # Train the model
         if self.dataset:
-            self.model.train_model(self.dataset['train'], eval_data=self.dataset['val'])
+            global_step, training_details = self.model.train_model(self.dataset['train'], eval_data=self.dataset['val'])
         else:
             raise Exception("dataset is None")
+
+        print("global_step:", global_step)
+        print("training_details:", training_details)
 
     def eval(self):
         # # Evaluate the model
