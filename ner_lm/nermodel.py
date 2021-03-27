@@ -35,7 +35,7 @@ class NerModel:
             #'no_save' : True,
             #'no_cache': True,
             
-            'num_train_epochs': 10, # 5
+            'num_train_epochs': 5, # 5
             'train_batch_size': 10, # 10   (<=10 for bert, <=5 for longformer)
             'eval_batch_size' : 10,
             'evaluate_during_training' : True,
@@ -147,7 +147,7 @@ class NerModel:
 
             if s_id != prev_id:
                 sentence = " ".join(s_words)
-                print("sentence id={}: {}".format(prev_id, sentence))
+                #print("sentence id={}: {}".format(prev_id, sentence))
                 samples.append({'text': sentence, 'tokens': s_words, 'labels': s_labels})
                 #print("s_labels: {}".format(s_labels))
                 s_words = []
@@ -159,7 +159,7 @@ class NerModel:
             #print("i={}, word={}, label={}".format(s_id, word, label))
 
         sentence = " ".join(s_words)
-        print("sentence id={}: {}".format(prev_id, sentence))
+        #print("sentence id={}: {}".format(prev_id, sentence))
         samples.append({'text': sentence, 'tokens': s_words, 'labels': s_labels})
 
         texts = [sample['text'] for sample in samples]
