@@ -35,12 +35,12 @@ class NerModel:
             #'no_save' : True,
             #'no_cache': True,
             
-            'num_train_epochs': 15, # 5
-            'train_batch_size': 20, # 10   (<=10 for bert, <=5 for longformer)
+            'num_train_epochs': 5, # 5
+            'train_batch_size': 10, # 10   (<=10 for bert, <=5 for longformer)
             'eval_batch_size' : 10,
             'evaluate_during_training' : True,
 
-            'max_seq_length': 128, #256,
+            'max_seq_length': 256, #256,
             'gradient_accumulation_steps': 8,
 
             'labels_list': labels_list,
