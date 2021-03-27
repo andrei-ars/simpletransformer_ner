@@ -40,10 +40,12 @@ class NerModel:
             'eval_batch_size' : 10,
             'evaluate_during_training' : True,
 
-            'max_seq_length': 256, #256,
+            'max_seq_length': 128,  # default 128
             'gradient_accumulation_steps': 8,
 
             'labels_list': labels_list,
+
+            'learning_rate': 0.001, # default 4e-5
 
             #'max_position_embeddings': 64,
         }
