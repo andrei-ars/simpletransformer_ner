@@ -35,7 +35,7 @@ class NerModel:
             #'no_save' : True,
             #'no_cache': True,
             
-            'num_train_epochs': 1, # 5
+            'num_train_epochs': 2, # 5
             'train_batch_size': 10, # 10   (<=10 for bert, <=5 for longformer)
             'eval_batch_size' : 10,
             'evaluate_during_training' : True,
@@ -108,6 +108,11 @@ class NerModel:
 
         print("global_step:", global_step)
         print("training_details:", training_details)
+        #training_details: {'global_step': [4], 'precision': [0.6987951807228916], 'recall': [0.402777777777777
+        #8], 'f1_score': [0.5110132158590308], 'train_loss': [0.41127926111221313], 'eval_loss': [0.63655577600
+        #00229]}
+        # it contains f1_score only for the validation dataset
+        return training_details
 
     def eval(self):
         # # Evaluate the model

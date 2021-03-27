@@ -84,7 +84,8 @@ if __name__ == "__main__":
             model = NerModel(modelname=modelname, dataset=dataset,
                             output_dir=output_dir)
 
-        model.train()
+        training_details = model.train()
+    
     elif mode in {"test", "infer"}:
         model = NerModel(modelname=modelname, dataset=dataset,
                             input_dir=output_dir,
@@ -101,6 +102,18 @@ if __name__ == "__main__":
         #for i in range(len(predictions)):
         #    text = test_sentences[i]
         #    print("text: {}\noutput: {}\n".format(text, predictions[i]))
+
+    if mode == "train":
+        print("\ntraining_details:")
+        print("global_step:", training_details['global_step'])
+        train_loss = training_details['train_loss']
+        val_loss = training_details['eval_loss']
+        f1_score = training_details['f1_score']
+        print("epoch | t_loss  v_loss | f1(val)")
+        for i in range(len(train_loss)):
+            print("{:2d} | {:.4f} {:.4f} | {:.3f}".\
+                format(i, train_loss[i], val_loss[i], f1_score[i]))
+
 
     if mode in {"infer"}:
         print("Number of test_sentences:", len(test_sentences))
