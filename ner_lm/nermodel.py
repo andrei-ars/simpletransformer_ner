@@ -62,10 +62,11 @@ class NerModel:
         #model_type, english_model_name  = "mpnet", "microsoft/mpnet-base"
         #model_type, english_model_name  = "electra", "google/electra-small-discriminator"
         #model_type, english_model_name  = "squeezebert", "squeezebert/squeezebert-uncased"
-        #model_type, english_model_name  = "bert", "bert-base-uncased"
         #model_type, english_model_name  = "albert", "albert-base-v2"
         #model_type, english_model_name  = "xlmroberta", "xlm-roberta-base"
-        model_type, english_model_name  = "roberta", "distilroberta-base"
+        #model_type, english_model_name  = "roberta", "distilroberta-base"
+        model_type, english_model_name  = "bert", "bert-base-uncased"
+
 
         if input_dir:
             # Use a previously trained model (on NER or LM tasks)

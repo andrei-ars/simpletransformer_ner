@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     #mode = "train"
     #mode = "test"
-    mode = "infer"
+    #mode = "infer"
     pretrained_type = "English"
     #pretrained_type = "LM"
     #pretrained_type = "continue"
