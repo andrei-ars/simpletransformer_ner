@@ -95,13 +95,15 @@ if __name__ == "__main__":
 
     if mode in {"train", "test"}:
         print("\nMODEL.TEST:")
-        model.test()
+        test_results = model.test()
         model.eval()
         #model.eval()
         #predictions = model.predict(test_sentences)
         #for i in range(len(predictions)):
         #    text = test_sentences[i]
         #    print("text: {}\noutput: {}\n".format(text, predictions[i]))
+        print("\navg acc={:.3f}".format(test_results['avg_acc']))
+        print("avg success={:.3f}".format(test_results['avg_success']))
 
     if mode == "train":
         print("\ntraining_details:")

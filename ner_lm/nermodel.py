@@ -45,7 +45,7 @@ class NerModel:
 
             'labels_list': labels_list,
 
-            'learning_rate': 0.00005, # default 4e-5; a good value is 0.0001 for albert
+            'learning_rate': 0.0001, # default 4e-5; a good value is 0.0001 for albert
 
             #'max_position_embeddings': 64,
         }
@@ -66,7 +66,8 @@ class NerModel:
         #model_type, english_model_name  = "electra", "google/electra-small-discriminator"
         #model_type, english_model_name  = "squeezebert", "squeezebert/squeezebert-uncased"
         #model_type, english_model_name  = "bert", "bert-base-uncased"
-        model_type, english_model_name  = "albert", "albert-base-v2"
+        #model_type, english_model_name  = "albert", "albert-base-v2"
+        model_type, english_model_name  = "xlmroberta", "xlm-roberta-base"
 
         if input_dir:
             # Use a previously trained model (on NER or LM tasks)
@@ -117,26 +118,26 @@ class NerModel:
     def eval(self):
         # # Evaluate the model
         if self.dataset:
-            result1, model_outputs, predictions = self.model.eval_model(
+            res_train, model_outputs, predictions = self.model.eval_model(
                                                     self.dataset['train'])
-            result2, model_outputs, predictions = self.model.eval_model(
+            res_val, model_outputs, predictions = self.model.eval_model(
                                                     self.dataset['val'])
             print("Evaluation")
             #print("On train data:", result)
             #{'eval_loss': 0.8920, 'precision': 0.0833, 'recall': 0.027, 'f1_score': 0.0416}
             print("train loss: {:.3f}; prec/recall/f1: {:.3f}/{:.3f}/{:.3f}".format(
-                result1['eval_loss'], result1['precision'], result1['recall'], result1['f1_score']))
+                res_train['eval_loss'], res_train['precision'], res_train['recall'], res_train['f1_score']))
             #print("On validation data:", result)
             print("valid loss: {:.3f}; prec/recall/f1: {:.3f}/{:.3f}/{:.3f}".format(
-                result2['eval_loss'], result2['precision'], result2['recall'], result2['f1_score']))
+                res_val['eval_loss'], res_val['precision'], res_val['recall'], res_val['f1_score']))
             print("Summary. Loss (train/val): {:.3f}/{:.3f}, F1: {:.3f}/{:.3f}".format(
-                result1['eval_loss'], result2['eval_loss'], result1['f1_score'], result2['f1_score']))
+                res_train['eval_loss'], res_val['eval_loss'], res_train['f1_score'], res_val['f1_score']))
         else:
             raise Exception("dataset is None")
 
         print("model_info:", self.model_info)
 
-        return result2
+        return res_val
 
     def test(self):
         sentence_id = self.dataset['test']['sentence_id']
@@ -198,10 +199,9 @@ class NerModel:
             success_list.append(success)
 
         avg_acc = np.mean(acc_list)
-        print()
-        print("avg acc={:.3f}".format(avg_acc))
         avg_success = np.mean(success_list)
-        print("avg success={:.3f}".format(avg_success))
+
+        return {'avg_acc': avg_acc, 'avg_success': avg_success}
 
             #for pred, out in zip(preds, outs):
                 #print("pred:", pred)
