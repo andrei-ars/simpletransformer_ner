@@ -25,6 +25,8 @@ class NerModel:
         #output_dir = "outputs_{}".format(modelname)
         # Create a NERModel
         model_args = {
+            'labels_list': labels_list,
+
             'output_dir': output_dir,
             'overwrite_output_dir': True,
             'reprocess_input_data': True,
@@ -34,17 +36,13 @@ class NerModel:
             'save_model_every_epoch': False,
             #'no_save' : True,
             #'no_cache': True,
+            'evaluate_during_training' : True,
             
             'num_train_epochs': 10, # 5
             'train_batch_size': 10, # 10   (<=10 for bert, <=5 for longformer)
             'eval_batch_size' : 10,
-            'evaluate_during_training' : True,
-
             'max_seq_length': 128,  # default 128
             'gradient_accumulation_steps': 8,
-
-            'labels_list': labels_list,
-
             'learning_rate': 0.0001, # default 4e-5; a good value is 0.0001 for albert
 
             #'max_position_embeddings': 64,
