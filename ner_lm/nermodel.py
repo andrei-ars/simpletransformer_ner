@@ -53,7 +53,6 @@ class NerModel:
         #self.model = NERModel("bert", pretrained_model_name, use_cuda=False, args=model_args)
         #self.model = NERModel("bert", "bert-base-uncased", use_cuda=False, args=model_args)
         #self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
-        #self.model = NERModel("longformer", "allenai/longformer-base-4096", use_cuda=False, args=model_args)
         #self.model = NERModel("longformer", pretrained_model_name, use_cuda=False, args=model_args)
         #self.model = NERModel("xlmroberta", "xlm-roberta-base", use_cuda=False, args=model_args)
         #self.model = NERModel("albert", "albert-base-v2", use_cuda=False, args=model_args)
@@ -67,7 +66,8 @@ class NerModel:
         #model_type, english_model_name  = "squeezebert", "squeezebert/squeezebert-uncased"
         #model_type, english_model_name  = "bert", "bert-base-uncased"
         #model_type, english_model_name  = "albert", "albert-base-v2"
-        model_type, english_model_name  = "xlmroberta", "xlm-roberta-base"
+        #model_type, english_model_name  = "xlmroberta", "xlm-roberta-base"
+        model_type, english_model_name  = "roberta", "distilroberta-base"
 
         if input_dir:
             # Use a previously trained model (on NER or LM tasks)
