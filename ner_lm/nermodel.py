@@ -38,7 +38,7 @@ class NerModel:
             #'no_cache': True,
             'evaluate_during_training' : True,
             
-            'num_train_epochs': 10, # 5
+            'num_train_epochs': 1, # 5
             'train_batch_size': 10, # 10   (<=10 for bert, <=5 for longformer)
             'eval_batch_size' : 10,
             'max_seq_length': 128,  # default 128
@@ -65,8 +65,8 @@ class NerModel:
         #model_type, english_model_name  = "albert", "albert-base-v2"
         #model_type, english_model_name  = "xlmroberta", "xlm-roberta-base"
         #model_type, english_model_name  = "roberta", "distilroberta-base"
-        model_type, english_model_name  = "bert", "bert-base-uncased"
-
+        #model_type, english_model_name  = "bert", "bert-base-uncased"
+        model_type, english_model_name  = "distilbert", "distilbert-base-uncased"
 
         if input_dir:
             # Use a previously trained model (on NER or LM tasks)
