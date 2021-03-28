@@ -10,7 +10,7 @@ from ner_slot_filling import split_token_tag, ner_slot_filling
 
 if __name__ == "__main__":
 
-    #mode = "train"
+    mode = "train"
     #mode = "test"
     #mode = "infer"
     pretrained_type = "English"
