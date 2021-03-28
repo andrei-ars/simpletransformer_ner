@@ -35,7 +35,7 @@ class NerModel:
             #'no_save' : True,
             #'no_cache': True,
             
-            'num_train_epochs': 2, # 5
+            'num_train_epochs': 10, # 5
             'train_batch_size': 10, # 10   (<=10 for bert, <=5 for longformer)
             'eval_batch_size' : 10,
             'evaluate_during_training' : True,
@@ -45,7 +45,7 @@ class NerModel:
 
             'labels_list': labels_list,
 
-            'learning_rate': 0.0001, # default 4e-5; the best value is 0.0001
+            'learning_rate': 0.00005, # default 4e-5; a good value is 0.0001 for albert
 
             #'max_position_embeddings': 64,
         }
