@@ -23,6 +23,8 @@ class NerModel:
         labels_list = dataset['labels_list']
 
         #output_dir = "outputs_{}".format(modelname)
+        os.system("{} -rf".format(output_dir))
+
         # Create a NERModel
         model_args = {
             'labels_list': labels_list,
@@ -38,7 +40,7 @@ class NerModel:
             #'no_cache': True,
             'evaluate_during_training' : True,
             
-            'num_train_epochs': 1, # 5
+            'num_train_epochs': 10, # 5
             'train_batch_size': 10, # 10   (<=10 for bert, <=5 for longformer)
             'eval_batch_size' : 10,
             'max_seq_length': 128,  # default 128
@@ -64,16 +66,16 @@ class NerModel:
         #model_type, english_model_name  = "squeezebert", "squeezebert/squeezebert-uncased"
         #model_type, english_model_name  = "albert", "albert-base-v2"
         #model_type, english_model_name  = "xlmroberta", "xlm-roberta-base"
-        #model_type, english_model_name  = "roberta", "distilroberta-base"
+        model_type, english_model_name  = "roberta", "distilroberta-base"
         #model_type, english_model_name  = "bert", "bert-base-uncased"
-        model_type, english_model_name  = "distilbert", "distilbert-base-uncased"
+        #model_type, english_model_name  = "distilbert", "distilbert-base-uncased"
 
         if input_dir:
             # Use a previously trained model (on NER or LM tasks)
             self.model = NERModel(model_type, input_dir, use_cuda=False, args=model_args)
         else:
             # Use a pre-trained (English) model
-            self.model = NERModel(model_type, english_model_name, use_cuda=False, args=model_args, force_download=True)
+            self.model = NERModel(model_type, english_model_name, use_cuda=False, args=model_args) # force_download=True
 
         """
         if use_saved_model:
