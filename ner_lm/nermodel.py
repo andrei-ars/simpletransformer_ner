@@ -70,10 +70,10 @@ class NerModel:
 
         if input_dir:
             # Use a previously trained model (on NER or LM tasks)
-            self.model = NERModel(model_type, input_dir, use_cuda=False, args=model_args, force_download=True)
+            self.model = NERModel(model_type, input_dir, use_cuda=False, args=model_args)
         else:
             # Use a pre-trained (English) model
-            self.model = NERModel(model_type, english_model_name, use_cuda=False, args=model_args)
+            self.model = NERModel(model_type, english_model_name, use_cuda=False, args=model_args, force_download=True)
 
         """
         if use_saved_model:
