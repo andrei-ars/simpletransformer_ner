@@ -6,14 +6,14 @@ import pandas as pd
 from nermodel import NerModel
 from nerdataset import NerPartDataset, NerDataset
 from nerdataset import get_labels_list
-from ner_slot_filling import split_token_tag, ner_slot_filling
-
+from ner_slot_filling import split_token_tag #, ner_slot_filling
+from slot_fill import ner_slot_filling, ner_slot_filling_compound
 
 if __name__ == "__main__":
 
-    mode = "train"
+    #mode = "train"
     #mode = "test"
-    #mode = "infer"
+    mode = "infer"
     pretrained_type = "English"
     #pretrained_type = "LM"
     #pretrained_type = "continue"
@@ -142,6 +142,8 @@ if __name__ == "__main__":
 
         predictions = model.predict([input_text])
         tokens, tags = split_token_tag(predictions[0])
-        slots = ner_slot_filling(tokens, tags)
+        #slots = ner_slot_filling(tokens, tags)
+        compound_result = ner_slot_filling_compound(tokens, tags)
         print("text: {}\noutput: {}".format(input_text, predictions[0]))
-        print("slots: {}\n".format(slots))
+        #print("slots: {}\n".format(slots))
+        print("compound_result: {}\n".format(compound_result))
