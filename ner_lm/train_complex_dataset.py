@@ -64,6 +64,7 @@ if __name__ == "__main__":
         #"Double click on YYY aaa from the list on the left side of the screen",
         "enter \"username\", \"password\" and click on \"Submit\"",
         "enter username, password and click on Submit",
+        "enter username , password and click on Submit",
         ]
 
     if mode == "train":

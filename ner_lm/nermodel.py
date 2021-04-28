@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from scipy.special import softmax
 from simpletransformers.ner import NERModel
+from transformers import BertTokenizer #, BertModel, BertForMaskedLM
 from sklearn.metrics import f1_score, accuracy_score
 
 
@@ -17,7 +18,8 @@ class NerModel:
                     input_dir=None, output_dir=None):
         
         #pretrained_model_name = "lm_outputs_test/from_scratch/best_model"
-        
+        self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+
         self.dataset = dataset
         #labels_list = ["O", "B-ACT",  "I-ACT", "B-OBJ", "I-OBJ", "B-VAL", "I-VAL", "B-VAR", "I-VAR"]
         #labels_list = dataset.get_labels_list()
@@ -174,7 +176,9 @@ class NerModel:
         samples.append({'text': sentence, 'tokens': s_words, 'labels': s_labels})
 
         texts = [sample['text'] for sample in samples]
-        predictions, raw_outputs = self.model.predict(texts)
+        #predictions, raw_outputs = self.model.predict(texts)
+        tokenized_texts = [self.tokenizer.tokenize(text) for text in texts]
+        predictions, raw_outputs = self.model.predict(tokenized_texts, split_on_space=False)
         #print(predictions)
 
         acc_list = []
@@ -217,7 +221,8 @@ class NerModel:
     def simple_test(self):
         # Predictions on arbitary text strings
         sentences = ["Some arbitary sentence", "Simple Transformers sentence"]
-        predictions, raw_outputs = self.model.predict(sentences)
+        tokenized_sentences = [self.tokenizer.tokenize(sentence) for sentence in sentences]
+        predictions, raw_outputs = self.model.predict(tokenized_sentences, split_on_space=False)
         print(predictions)
 
         # More detailed preditctions
@@ -232,10 +237,14 @@ class NerModel:
 
     
     def predict(self, sentences):
-        predictions, raw_outputs = self.model.predict(sentences)
+        #predictions, raw_outputs = self.model.predict(sentences)
+        tokenized_sentences = [self.tokenizer.tokenize(sentence) for sentence in sentences]
+        predictions, raw_outputs = self.model.predict(tokenized_sentences, split_on_space=False)
         return predictions
 
     def raw_predict(self, sentences):
-        predictions, raw_outputs = self.model.predict(sentences)
+        #predictions, raw_outputs = self.model.predict(sentences)
+        tokenized_sentences = [self.tokenizer.tokenize(sentence) for sentence in sentences]
+        predictions, raw_outputs = self.model.predict(tokenized_sentences, split_on_space=False)
         #print("raw_outputs:", raw_outputs)
         return {'predictions': predictions, 'raw_outputs': raw_outputs}
