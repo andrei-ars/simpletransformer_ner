@@ -11,14 +11,14 @@ from slot_fill import ner_slot_filling, ner_slot_filling_compound
 
 if __name__ == "__main__":
 
-    #mode = "train"
+    mode = "train"
     #mode = "test"
-    mode = "infer"
+    #mode = "infer"
     pretrained_type = "English"
     #pretrained_type = "LM"
     #pretrained_type = "continue"
 
-    modelname = "nlp_complex"
+    modelname = "nlp_complex_pre"
     #complex_dataset_names = ["table", "table_nq", "nlp_ext", "nlp_ext_nq"]
     complex_dataset_names = ["nlp_ext", "nlp_ext_nq", "compound", "compound_nq"]
     #complex_dataset_names = ["nlp_ext_nq"]
@@ -64,7 +64,8 @@ if __name__ == "__main__":
         #"Double click on YYY aaa from the list on the left side of the screen",
         "enter \"username\", \"password\" and click on \"Submit\"",
         "enter username, password and click on Submit",
-        "enter username , password and click on Submit",
+        "Enter in \"abstract\", and click on \"Submit\" button",
+        "Enter in abstract, and click on Submit button",
         ]
 
     if mode == "train":

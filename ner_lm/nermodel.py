@@ -176,9 +176,7 @@ class NerModel:
         samples.append({'text': sentence, 'tokens': s_words, 'labels': s_labels})
 
         texts = [sample['text'] for sample in samples]
-        #predictions, raw_outputs = self.model.predict(texts)
-        tokenized_texts = [self.tokenizer.tokenize(text) for text in texts]
-        predictions, raw_outputs = self.model.predict(tokenized_texts, split_on_space=False)
+        predictions, raw_outputs = self.model.predict(texts)
         #print(predictions)
 
         acc_list = []
@@ -221,8 +219,7 @@ class NerModel:
     def simple_test(self):
         # Predictions on arbitary text strings
         sentences = ["Some arbitary sentence", "Simple Transformers sentence"]
-        tokenized_sentences = [self.tokenizer.tokenize(sentence) for sentence in sentences]
-        predictions, raw_outputs = self.model.predict(tokenized_sentences, split_on_space=False)
+        predictions, raw_outputs = self.model.predict(sentences)
         print(predictions)
 
         # More detailed preditctions
@@ -237,14 +234,12 @@ class NerModel:
 
     
     def predict(self, sentences):
-        #predictions, raw_outputs = self.model.predict(sentences)
-        tokenized_sentences = [self.tokenizer.tokenize(sentence) for sentence in sentences]
-        predictions, raw_outputs = self.model.predict(tokenized_sentences, split_on_space=False)
+        predictions, raw_outputs = self.model.predict(sentences)
+        #tokenized_sentences = [self.tokenizer.tokenize(sentence) for sentence in sentences]
+        #predictions, raw_outputs = self.model.predict(tokenized_sentences, split_on_space=False)
         return predictions
 
     def raw_predict(self, sentences):
-        #predictions, raw_outputs = self.model.predict(sentences)
-        tokenized_sentences = [self.tokenizer.tokenize(sentence) for sentence in sentences]
-        predictions, raw_outputs = self.model.predict(tokenized_sentences, split_on_space=False)
+        predictions, raw_outputs = self.model.predict(sentences)
         #print("raw_outputs:", raw_outputs)
         return {'predictions': predictions, 'raw_outputs': raw_outputs}
