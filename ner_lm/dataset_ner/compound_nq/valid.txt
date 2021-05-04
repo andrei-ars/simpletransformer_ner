@@ -39,7 +39,7 @@ click B-ACT
 on O
 holiday B-OBJ
 after B-PRE
-click O
+clicking B-ACT
 Remove B-OBJ
 . O
 Left O
@@ -47,6 +47,6 @@ click B-ACT
 on O
 holiday B-OBJ
 after B-PRE
-click O
+clicking B-ACT
 Remove B-OBJ
 . O

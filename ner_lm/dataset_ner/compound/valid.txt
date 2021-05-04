@@ -61,7 +61,7 @@ BOQ O
 holiday B-OBJ
 EOQ O
 after B-PRE
-click O
+clicking B-ACT
 BOQ O
 Remove B-OBJ
 EOQ O
@@ -73,7 +73,7 @@ BOQ O
 holiday B-OBJ
 EOQ O
 after B-PRE
-click O
+clicking B-ACT
 BOQ O
 Remove B-OBJ
 EOQ O
