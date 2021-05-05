@@ -11,9 +11,9 @@ from slot_fill import ner_slot_filling, ner_slot_filling_compound
 
 if __name__ == "__main__":
 
-    mode = "train"
+    #mode = "train"
     #mode = "test"
-    #mode = "infer"
+    mode = "infer"
     pretrained_type = "English"
     #pretrained_type = "LM"
     #pretrained_type = "continue"
@@ -65,7 +65,9 @@ if __name__ == "__main__":
         "enter username, password and click on Submit",
         "Enter in abstract, and click on Submit button",
         "Select document after clicking Browse",
-        "Enter in abstract after clicking on Submit button",
+        "Enter in BOQ abstract EOQ after clicking on Submit button",
+        "Enter in big value after clicking on Submit button",
+        "Enter in username box after clicking on Submit button",
         "Enter in abstract before clicking on Submit button",
         ]
 
