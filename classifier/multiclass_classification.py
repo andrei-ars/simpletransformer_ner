@@ -215,6 +215,7 @@ if __name__ == "__main__":
     # Create a ClassificationModel
     #  model_name is set to None to train a Language Model from scratch.
     if mode == "train":
+        """
         model = ClassificationModel(
             #model_type="bert", #"roberta", #"bert", 
             #model_name=None, # "bert-base-cased"; "xlnet-base-cased"
@@ -223,11 +224,31 @@ if __name__ == "__main__":
             num_labels=num_labels,
             args={"reprocess_input_data": True, 
                     "overwrite_output_dir": True,
-                    'num_train_epochs': 2,   # 5
+                    'num_train_epochs': 3,   # 5
                     'train_batch_size': 10,  # 32 for bert (but >10 gives an error for longfomer)
                  },
             use_cuda=False
+        )
+        """
+        model = ClassificationModel(
+            #model_type="bert", #"roberta", #"bert", 
+            #model_name=None, # "bert-base-cased"; "xlnet-base-cased"
+            model_type="roberta", #"roberta", #"bert", 
+            model_name="distilroberta-base", # "bert-base-cased"; "xlnet-base-cased"
+            num_labels=num_labels,
+            args={"reprocess_input_data": True, 
+                    "overwrite_output_dir": True,
+                    'save_eval_checkpoints': False,
+                    'save_steps': -1,
+                    'save_model_every_epoch': False,
+                    'num_train_epochs': 3,   # 5
+                    'train_batch_size': 32,  # 32 for bert (but >10 gives an error for longfomer)
+                    'eval_batch_size' : 32,
+                    'learning_rate': 0.0001,
+                 },
+            use_cuda=False
         )        
+
         train_model(model, dataset)
     
     elif mode == "infer":
