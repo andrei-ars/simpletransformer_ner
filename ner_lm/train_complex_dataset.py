@@ -154,3 +154,6 @@ if __name__ == "__main__":
         print("text: {}\noutput: {}".format(input_text, predictions[0]))
         #print("slots: {}\n".format(slots))
         print("compound_result: {}\n".format(compound_result))
+
+        print("\n RAW:")
+        predictions = model.raw_predict([input_text])

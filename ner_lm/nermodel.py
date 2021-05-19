@@ -241,5 +241,5 @@ class NerModel:
 
     def raw_predict(self, sentences):
         predictions, raw_outputs = self.model.predict(sentences)
-        #print("raw_outputs:", raw_outputs)
+        print("raw_outputs:", raw_outputs)
         return {'predictions': predictions, 'raw_outputs': raw_outputs}
