@@ -15,9 +15,10 @@ def calc_confidence(raw_outputs, labels_list=None):
             #logit = dc[key][0]
                 print(key, len(logit))
                 ps = softmax_probabilities(logit)
-                print('max_ps:', max(ps))
-                probs.append(ps)
+                max_ps = max(ps)
                 index = np.argmax(ps)
+                probs.append(max_ps)
+                print('max_ps:', max_ps)
                 print('index:', index)
                 if labels_list:
                     print('tag:', labels_list[index])
