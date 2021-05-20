@@ -242,7 +242,7 @@ class NerModel:
     def raw_predict(self, sentences):
         predictions, raw_outputs = self.model.predict(sentences)
         print("raw_outputs:", raw_outputs)
-        print(self.model.agrs.labels_list)
+        print(self.model.args.labels_list)
         return {'predictions': predictions, 'raw_outputs': raw_outputs}
         """
         Click on Basket
