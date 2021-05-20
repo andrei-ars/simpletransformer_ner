@@ -242,9 +242,10 @@ class NerModel:
     def raw_predict(self, sentences):
         predictions, raw_outputs = self.model.predict(sentences)
         print("raw_outputs:", raw_outputs)
-        print(self.model.__dict__)
+        print(self.model.agrs.labels_list)
         return {'predictions': predictions, 'raw_outputs': raw_outputs}
         """
+        Click on Basket
         raw_outputs: [[{'Click': [[0.9166969, 7.8369393, 0.31039014, -0.60283166, -1.2205212, -1.0528294, -0.57920927, 
         -1.8390691, -0.7053572, 0.72872484, -1.2057197, -1.1906811, -0.2462096, -0.73678666]]}, 
         {'on': [[2.864785, 0.81569016, -2.4111693, -1.753845, -1.3591471, -0.45600742, 0.22175379, 
@@ -253,4 +254,7 @@ class NerModel:
          -1.7730664, 0.10150815, 0.36229157, -1.1427803, 1.7072755, -0.07331692, -0.8622093],
           [0.2326435, -0.2758199, -0.67160505, 5.107534, -1.1315546, -0.060734212, -1.6606357, 
           -0.8778804, -0.74439603, -0.7747257, -1.1741363, 3.4446402, -0.66995436, -0.360082]]}]]
+
+          labels_list=['O', 'B-ACT', 'B-CNT', 'B-OBJ', 'B-OPE', 'B-ORD', 'B-PRE', 'B-TYP', 
+            'B-VAL', 'I-ACT', 'I-CNT', 'I-OBJ', 'I-OPE', 'I-PRE']
         """
