@@ -7,6 +7,7 @@ from simpletransformers.ner import NERModel
 from transformers import BertTokenizer #, BertModel, BertForMaskedLM
 from sklearn.metrics import f1_score, accuracy_score
 
+from confidence import calc_confidence
 
 
 def f1_multiclass(labels, preds):
@@ -241,9 +242,12 @@ class NerModel:
 
     def raw_predict(self, sentences):
         predictions, raw_outputs = self.model.predict(sentences)
-        print("raw_outputs:", raw_outputs)
-        print(self.model.args.labels_list)
-        return {'predictions': predictions, 'raw_outputs': raw_outputs}
+        #print("raw_outputs:", raw_outputs)
+        #print(self.model.args.labels_list)
+        labels_list = self.model.args.labels_list
+        confidence = calc_confidence(raw_outputs, labels_list)
+        print("confidence:", confidence)
+        return {'predictions': predictions, 'raw_outputs': raw_outputs, 'confidence': confidence}
         """
         Click on Basket
         raw_outputs: [[{'Click': [[0.9166969, 7.8369393, 0.31039014, -0.60283166, -1.2205212, -1.0528294, -0.57920927, 
