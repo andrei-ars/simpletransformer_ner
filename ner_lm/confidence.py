@@ -12,7 +12,7 @@ def calc_confidence(raw_output, labels_list=None):
     probs = []
     for dc in result:
         for key in dc:
-            print("dc:", key)
+            print("dc:", dc)
             print("key:", key)
             logits = dc[key]
             logit = logits[0]
