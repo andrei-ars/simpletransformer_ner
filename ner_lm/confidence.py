@@ -14,7 +14,8 @@ def calc_confidence(raw_output, labels_list=None):
         for key in dc:
             print("dc:", key)
             print("key:", key)
-            logit = dc[key][0]
+            logits = dc[key]
+            logit = logits[0]
             ps = softmax_probabilities(logit)
             max_ps = max(ps)
             index = np.argmax(ps)
