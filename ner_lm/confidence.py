@@ -8,13 +8,13 @@ def calc_confidence(raw_output, labels_list=None):
     The input is a single result.
     The output is a list like [0.9983, 0.9614, 0.9978, 0.9953, 0.7372, 0.5323]
     """
-    print("raw_output:", raw_output)
+    #print("raw_output:", raw_output)
     result = raw_output
     probs = []
     for dc in result:
         for key in dc:
-            print("dc:", dc)
-            print("key:", key)
+            #print("dc:", dc)
+            #print("key:", key)
             logits = dc[key]
             logit = logits[0]
             ps = softmax_probabilities(logit)
