@@ -12,6 +12,8 @@ def calc_confidence(raw_output, labels_list=None):
     probs = []
     for dc in result:
         for key in dc:
+            print("dc:", key)
+            print("key:", key)
             logit = dc[key][0]
             ps = softmax_probabilities(logit)
             max_ps = max(ps)
