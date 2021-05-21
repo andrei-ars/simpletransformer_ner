@@ -10,20 +10,19 @@ def calc_confidence(raw_outputs, labels_list=None):
     probs = []
     for dc in result:
         for key in dc:
-            print('\nTOKEN:', key)
-            for logit in dc[key]:
-            #logit = dc[key][0]
-                print(key, len(logit))
-                ps = softmax_probabilities(logit)
-                max_ps = max(ps)
-                index = np.argmax(ps)
-                probs.append(max_ps)
-                print('max_ps:', max_ps)
-                print('index:', index)
-                if labels_list:
-                    print('tag:', labels_list[index])
+            #for logit in dc[key]:
+            logit = dc[key][0]
+            #print(key, len(logit))
+            ps = softmax_probabilities(logit)
+            max_ps = max(ps)
+            index = np.argmax(ps)
+            probs.append(max_ps)
+            #print('max_ps:', max_ps)
+            #print('index:', index)
+            #if labels_list:
+            #    print('tag:', labels_list[index])
 
-    return min(probs)
+    return probs
 
 
 if __name__ == "__main__":
@@ -31,4 +30,6 @@ if __name__ == "__main__":
     labels_list = ['O', 'B-ACT', 'B-CNT', 'B-OBJ', 'B-OPE', 'B-ORD', 'B-PRE', 'B-TYP', 'B-VAL', 'I-ACT', 'I-CNT', 'I-OBJ', 'I-OPE', 'I-PRE']
     #print(raw_outputs)
 
-    calc_confidence(raw_outputs, labels_list)
+    probs = calc_confidence(raw_outputs, labels_list)
+    print(min(probs))
+    print(np.mean(probs))
