@@ -247,7 +247,7 @@ class NerModel:
         labels_list = self.model.args.labels_list
         confidences = [calc_confidence(raw_output, labels_list) for raw_output in raw_outputs]
         #print("confidence:", confidence)
-        return {'predictions': predictions, 'raw_outputs': raw_outputs, 'confidence': confidence}
+        return {'predictions': predictions, 'raw_outputs': raw_outputs, 'confidences': confidences}
         """
           labels_list=['O', 'B-ACT', 'B-CNT', 'B-OBJ', 'B-OPE', 'B-ORD', 'B-PRE', 'B-TYP', 
             'B-VAL', 'I-ACT', 'I-CNT', 'I-OBJ', 'I-OPE', 'I-PRE']
