@@ -245,7 +245,7 @@ class NerModel:
         #print("raw_outputs:", raw_outputs)
         #print(self.model.args.labels_list)
         labels_list = self.model.args.labels_list
-        confidence = calc_confidence(raw_outputs, labels_list)
+        confidences = [calc_confidence(raw_output, labels_list) for raw_output in raw_outputs]
         #print("confidence:", confidence)
         return {'predictions': predictions, 'raw_outputs': raw_outputs, 'confidence': confidence}
         """
