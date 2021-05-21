@@ -125,7 +125,6 @@ if __name__ == "__main__":
             print("{:2d} | {:.4f} {:.4f} | {:.3f}".\
                 format(i, train_loss[i], val_loss[i], f1_score[i]))
 
-
     if mode in {"infer"}:
         print("Number of test_sentences:", len(test_sentences))
         result = model.raw_predict(test_sentences)

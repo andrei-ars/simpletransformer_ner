@@ -3,16 +3,16 @@ import numpy as np
 from mathfunctions import softmax_probabilities
 
 
-def calc_confidence(raw_outputs, labels_list=None):
-
-    result = raw_outputs[0]
-    print(result)
+def calc_confidence(raw_output, labels_list=None):
+    """
+    The input is a single result.
+    The output is a list like [0.9983, 0.9614, 0.9978, 0.9953, 0.7372, 0.5323]
+    """
+    result = raw_output
     probs = []
     for dc in result:
         for key in dc:
-            #for logit in dc[key]:
             logit = dc[key][0]
-            #print(key, len(logit))
             ps = softmax_probabilities(logit)
             max_ps = max(ps)
             index = np.argmax(ps)
@@ -21,7 +21,6 @@ def calc_confidence(raw_outputs, labels_list=None):
             #print('index:', index)
             #if labels_list:
             #    print('tag:', labels_list[index])
-
     return probs
 
 
@@ -30,6 +29,6 @@ if __name__ == "__main__":
     labels_list = ['O', 'B-ACT', 'B-CNT', 'B-OBJ', 'B-OPE', 'B-ORD', 'B-PRE', 'B-TYP', 'B-VAL', 'I-ACT', 'I-CNT', 'I-OBJ', 'I-OPE', 'I-PRE']
     #print(raw_outputs)
 
-    probs = calc_confidence(raw_outputs, labels_list)
+    probs = calc_confidence(raw_outputs[0], labels_list)
     print(min(probs))
     print(np.mean(probs))
