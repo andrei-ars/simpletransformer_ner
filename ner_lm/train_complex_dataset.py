@@ -156,3 +156,4 @@ if __name__ == "__main__":
 
         print("\n RAW:")
         predictions = model.raw_predict([input_text])
+        print(predictions)
