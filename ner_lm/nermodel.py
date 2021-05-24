@@ -24,8 +24,9 @@ class NerModel:
         self.dataset = dataset
         #labels_list = ["O", "B-ACT",  "I-ACT", "B-OBJ", "I-OBJ", "B-VAL", "I-VAL", "B-VAR", "I-VAR"]
         #labels_list = dataset.get_labels_list()
+        
         #labels_list = dataset['labels_list']
-        ['O', 'B-ACT', 'I-ACT', 'B-OBJ', 'I-OBJ', 'B-CNT', 'I-CNT', 
+        labels_list = ['O', 'B-ACT', 'I-ACT', 'B-OBJ', 'I-OBJ', 'B-CNT', 'I-CNT', 
             'B-OPE', 'I-OPE', 'B-ORD', 'B-PRE', 'I-PRE', 'B-TYP', 
             'B-VAL', 'I-VAL']
 
