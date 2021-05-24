@@ -28,7 +28,7 @@ class NerModel:
         #labels_list = dataset['labels_list']
         labels_list = ['O', 'B-ACT', 'I-ACT', 'B-OBJ', 'I-OBJ', 'B-CNT', 'I-CNT', 
             'B-OPE', 'I-OPE', 'B-ORD', 'B-PRE', 'I-PRE', 'B-TYP', 
-            'B-VAL', 'I-VAL']
+            'B-VAL', 'I-VAL', 'B-ATT']
 
         #output_dir = "outputs_{}".format(modelname)
         os.system("{} -rf".format(output_dir))
