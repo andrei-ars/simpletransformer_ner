@@ -24,7 +24,10 @@ class NerModel:
         self.dataset = dataset
         #labels_list = ["O", "B-ACT",  "I-ACT", "B-OBJ", "I-OBJ", "B-VAL", "I-VAL", "B-VAR", "I-VAR"]
         #labels_list = dataset.get_labels_list()
-        labels_list = dataset['labels_list']
+        #labels_list = dataset['labels_list']
+        ['O', 'B-ACT', 'I-ACT', 'B-OBJ', 'I-OBJ', 'B-CNT', 'I-CNT', 
+            'B-OPE', 'I-OPE', 'B-ORD', 'B-PRE', 'I-PRE', 'B-TYP', 
+            'B-VAL', 'I-VAL']
 
         #output_dir = "outputs_{}".format(modelname)
         os.system("{} -rf".format(output_dir))
@@ -262,4 +265,6 @@ class NerModel:
 
         Click on OK button
         - 'confidences': [[0.9965, 0.9836, 0.9913, 0.8678]]
+
+        Click on BOQ OK EOQ button
         """
