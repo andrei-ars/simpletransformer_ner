@@ -11,9 +11,9 @@ from slot_fill import ner_slot_filling, ner_slot_filling_compound
 
 if __name__ == "__main__":
 
-    #mode = "train"
+    mode = "train"
     #mode = "test"
-    mode = "infer"
+    #mode = "infer"
     pretrained_type = "English"
     #pretrained_type = "LM"
     #pretrained_type = "continue"
@@ -22,7 +22,7 @@ if __name__ == "__main__":
     modelname = "nlp_complex_pre_table"
     #complex_dataset_names = ["table", "table_nq", "nlp_ext", "nlp_ext_nq"]
     #complex_dataset_names = ["nlp_ext", "nlp_ext_nq", "compound", "compound_nq"]
-    complex_dataset_names = ["nlp_ext", "nlp_ext_nq", "compound", "compound_nq", "table", "table_nq"]
+    complex_dataset_names = ["nlp_ext", "nlp_ext_nq", "compound", "compound_nq", "table", "table_nq", "nlp", "nlp_data"]
     #complex_dataset_names = ["nlp_ext_nq"]
 
     output_dir = "outputs_{}".format(modelname)
