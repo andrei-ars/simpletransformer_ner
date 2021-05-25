@@ -155,5 +155,9 @@ if __name__ == "__main__":
         print("compound_result: {}\n".format(compound_result))
 
         print("\n RAW:")
-        predictions = model.raw_predict([input_text])
+        results = model.raw_predict([input_text])
+        predictions = results.get('predictions')
+        raw_outputs = results.get('raw_outputs')
+        confidences = results.get('confidences')
         print(predictions)
+        print(confidences)
