@@ -160,4 +160,6 @@ if __name__ == "__main__":
         raw_outputs = results.get('raw_outputs')
         confidences = results.get('confidences')
         print(predictions)
-        print(confidences)
+        for confidence in confidences:
+            print("confidence min:",  np.min(confidence))
+            print("confidence mean:", np.mean(confidence))
