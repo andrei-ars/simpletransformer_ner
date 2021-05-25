@@ -161,4 +161,4 @@ if __name__ == "__main__":
         confidences = results.get('confidences')
         print(predictions)
         for confidence in confidences:
-            print("confidence min={:.4f}, mean={:.4f}".format(np.min(confidence), p.mean(confidence)))
+            print("confidence min={:.4f}, mean={:.4f}".format(np.min(confidence), np.mean(confidence)))
