@@ -3,6 +3,7 @@ import sys
 import numpy as np
 import pandas as pd
 from scipy.special import softmax
+import torch
 from simpletransformers.ner import NERModel
 from transformers import BertTokenizer #, BertModel, BertForMaskedLM
 from sklearn.metrics import f1_score, accuracy_score
@@ -32,6 +33,8 @@ class NerModel:
 
         #output_dir = "outputs_{}".format(modelname)
         os.system("{} -rf".format(output_dir))
+
+        use_cuda = torch.cuda.is_available()
 
         # Create a NERModel
         model_args = {
@@ -80,10 +83,10 @@ class NerModel:
 
         if input_dir:
             # Use a previously trained model (on NER or LM tasks)
-            self.model = NERModel(model_type, input_dir, use_cuda=False, args=model_args)
+            self.model = NERModel(model_type, input_dir, use_cuda=use_cuda, args=model_args)
         else:
             # Use a pre-trained (English) model
-            self.model = NERModel(model_type, english_model_name, use_cuda=False, args=model_args) # force_download=True
+            self.model = NERModel(model_type, english_model_name, use_cuda=use_cuda, args=model_args) # force_download=True
 
         """
         if use_saved_model:
