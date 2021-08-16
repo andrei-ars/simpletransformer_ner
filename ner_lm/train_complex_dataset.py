@@ -11,9 +11,9 @@ from ner_slot_filling import ner_slot_filling #, ner_slot_filling_compound
 
 if __name__ == "__main__":
 
-    #mode = "train"
+    mode = "train"
     #mode = "test"
-    mode = "infer"
+    #mode = "infer"
     #pretrained_type = "English"
     #pretrained_type = "LM"
     #pretrained_type = "continue"
