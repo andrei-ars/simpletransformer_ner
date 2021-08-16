@@ -74,7 +74,7 @@ def ner_slot_filling(tokens, ner_tags, raw_outs=None, correct_with_quotes=True):
                         last_I_tag_index = len(tokens) - 1  # if EOQ is absent            
                 
             entity_name = " ".join(tokens[B_tag_index: last_I_tag_index])
-            #logging.debug("entity_name: {}".format(entity_name))
+            logging.debug("entity_name: {}".format(entity_name))
         else:
             entity_name = None
 
@@ -83,7 +83,7 @@ def ner_slot_filling(tokens, ner_tags, raw_outs=None, correct_with_quotes=True):
         else:
             logging.warning('The type of entity_name is not str')
 
-        #print("entity_name:", entity_name)
+        print("entity_name:", entity_name)
         slots[tag] = entity_name
 
     return slots
