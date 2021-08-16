@@ -7,7 +7,7 @@ from nermodel import NerModel
 from nerdataset import NerPartDataset, NerDataset
 from nerdataset import get_labels_list
 from ner_slot_filling import split_token_tag #, ner_slot_filling
-from ner_slot_fill import ner_slot_filling, ner_slot_filling_compound
+from ner_slot_filling import ner_slot_filling, ner_slot_filling_compound
 
 if __name__ == "__main__":
 
